@@ -6,7 +6,7 @@
 
 - Caetano Sales Carvalho
 - Daniely Luz Santos
-- Fernando Luiz
+- Fernando Luiz Gomes
 - Gerson Chadi Junior
 - Isabella Abreu Comelli
 
