@@ -8,7 +8,7 @@
 - Daniely Luz Santos
 - Fernando Luiz
 - Gerson Chadi Junior
-- Isa Comelli
+- Isabella Abreu Comelli
 
 
 ## Desafio deste Laboratório
