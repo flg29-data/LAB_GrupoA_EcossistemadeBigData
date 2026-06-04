@@ -5,7 +5,6 @@
 # Integrantes - Grupo A
 
 - Caetano Sales Carvalho
-- Daniely Luz Santos
 - Fernando Luiz Gomes
 - Gerson Chadi Junior
 - Isabella Abreu Comelli
