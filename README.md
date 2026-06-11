@@ -8,6 +8,7 @@
 - Fernando Luiz Gomes
 - Gerson Chadi Junior
 - Isabella Abreu Comelli
+- Breno Tostes Garcia
 
 
 ## Desafio deste Laboratório
