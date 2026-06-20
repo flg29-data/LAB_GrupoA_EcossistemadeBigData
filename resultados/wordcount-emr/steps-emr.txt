@@ -1,0 +1,12 @@
+--------------------------------------------------
+|                    ListSteps                   |
++----------------------------------+-------------+
+|               Name               |    State    |
++----------------------------------+-------------+
+|  Step4-Copy-Output-HDFS-to-S3    |  COMPLETED  |
+|  Step3-WordCount-MapReduce-Fixed |  COMPLETED  |
+|  Debug-WordCount-MapReduce       |  FAILED     |
+|  Step3-WordCount-MapReduce       |  FAILED     |
+|  Step2-Copy-Input-S3-to-HDFS     |  COMPLETED  |
+|  Step1-Compile-JAR               |  COMPLETED  |
++----------------------------------+-------------+
