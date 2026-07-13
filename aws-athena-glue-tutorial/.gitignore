@@ -1,0 +1,14 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+
+# AWS / secrets (just in case)
+*.pem
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
