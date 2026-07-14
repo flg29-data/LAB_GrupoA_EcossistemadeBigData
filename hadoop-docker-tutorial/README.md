@@ -4,7 +4,9 @@ Projeto desenvolvido a partir do tutorial da disciplina (eEDB-006), com objetivo
 
 ## Configuração do Ambiente
 
-Inserir descrição
+- Docker
+- Hadoop
+- 
 
 
 ## Tópico
