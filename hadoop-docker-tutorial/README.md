@@ -1,5 +1,14 @@
-Laboratório: Hadoop docker
-Projeto desenvolvido a partir do tutorial da disciplina (eEDB-006), com o objetivo ...
+## Laboratório: Hadoop docker
 
-Objetivos
-Inserir objetivos_
+Projeto desenvolvido a partir do tutorial da disciplina (eEDB-006), com objetivo de montar um ambiente Hadoop Single Node Cluster com Docker 
+
+## Configuração do Ambiente
+
+Inserir descrição
+
+
+## Tópico
+
+Descrição
+
+
