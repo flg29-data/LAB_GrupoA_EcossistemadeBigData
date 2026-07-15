@@ -1,4 +1,4 @@
-cat > readme.md <<'EOF'
+
 # Laboratório: Data Warehouse com Apache Hive no AWS EMR
 
 Projeto desenvolvido a partir do tutorial da disciplina (eEDB-006), com o objetivo de construir um **data warehouse sobre Hadoop** utilizando o **Apache Hive** num cluster **AWS EMR**, provisionado inteiramente via Terraform. O laboratório demonstra o fluxo completo: dados brutos no S3, processamento com HiveQL sobre tabelas externas, cópia para o HDFS do cluster e persistência do resultado de volta no S3.
@@ -115,7 +115,3 @@ RS,Vestuario,159.8,1
 SP,Esportes,89.9,1
 AM,Esportes,89.9,1
 EOF
-
-echo "Coloque aqui os prints da execucao (apply, steps completed, resultado, destroy)." > Images/LEIA-ME.txt
-
-echo "=== PRONTO. Estrutura final: ===" && ls -R
