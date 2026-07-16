@@ -14,7 +14,7 @@ Ao longo dos laboratórios foram exploradas diferentes arquiteturas e tecnologia
 
 | Integrante                    | Perfil GitHub                                         |
 |-------------------------------|----------------------------------------------------|
-| Caetano Sales Carvalho        | [@Ctrl-Caetano](Ctrl-Caetano)       |
+| Caetano Sales Carvalho        | [@Ctrl-Caetano](https://github.com/Ctrl-Caetano)       |
 | Fernando Luiz Gomes           | [@flg29-data](https://github.com/flg29-data)       |
 | Gerson Chadi Junior           | [@GersonCJ](https://github.com/GersonCJ)           |
 | Isabella Abreu Comelli        | [@isacomelli](https://github.com/isacomelli)           |
