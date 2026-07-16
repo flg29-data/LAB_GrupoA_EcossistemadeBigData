@@ -135,17 +135,24 @@ hadoop-docker-tutorial/
 │   └── yarn-site.xml
 │
 ├── data/
+│   └── lorem.txt
 │
-├── images/
+├── images/  --- Contém todas as evidências deste Laboratório
 │
 ├── scripts/
+│   ├── docker-entrypoint.sh
+│   ├── run-custom-wordcount.sh
+│   └── test-wordcount.sh
 │
 ├── src/
+│   ├── WordCountApplication.java
+│   ├── WordCountMapper.java
+│   └── WordCountReducer.java
 │
 ├── Dockerfile
 ├── README.md
 ├── docker-compose.yml
-└── result.txt
+└── result.txt 
 ```
 
 ---
