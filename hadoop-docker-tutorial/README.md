@@ -120,9 +120,11 @@ As interfaces Web foram acessadas e validadas com sucesso:
 ***Evidências***
 
 *NameNode >> 9870*
+
 ![Hadoop](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/5.Hadoop%20NameNode.png)
 
 *ResourceManager >> 8088*
+
 ![YARN](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/daf3c95d7b7b07e12e60b3539ef15b92a2f31e1f/hadoop-docker-tutorial/images/6.Hadoop%20YARN%20ResourceManager.png)
 
 Resultado final:
