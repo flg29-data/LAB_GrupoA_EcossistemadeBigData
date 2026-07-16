@@ -1,4 +1,4 @@
-# Projeto Laboratório - Grupo A - Ecossistema de Big Data  
+## Projeto Laboratório - Grupo A - Ecossistema de Big Data  
 
 **Profº:** Leandro Ferreira
 
@@ -66,25 +66,31 @@ Os resultados dos laboratórios realizados pelos integrante do grupo estão disp
 | Spark         | [spark-tutorial](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/tree/8981e026816e5e9f0ac1186e716c50dd03e43706/spark-tutorial) |
 
 
-# Competências desenvolvidas
+---
 
-Durante a disciplina foram desenvolvidas competências relacionadas a:
+## Tecnologias utilizadas
 
-- Engenharia de Dados
-- Arquitetura Medallion
 - Apache Hadoop
-- HDFS
 - Apache Hive
-- Apache MapReduce
+- Apache HDFS
 - Apache YARN
-- Docker e Docker Compose
+- Apache MapReduce
+- Docker
+- Docker Compose
 - PostgreSQL
-- dbt (Data Build Tool)
+- dbt
+- Python
+- Terraform
 - Amazon S3
-- AWS Glue Data Catalog
+- AWS Glue
 - Amazon Athena
 - Amazon EMR
-- Terraform (Infrastructure as Code)
-- SQL
-- Python
+- AWS CLI
 
+---
+
+## Conclusão
+
+Os laboratórios permitiram aplicar, de forma prática, conceitos fundamentais do ecossistema de Big Data, abrangendo processamento distribuído, armazenamento de grandes volumes de dados, modelagem analítica, infraestrutura como código e serviços serverless em nuvem.
+
+Ao final da disciplina foi possível construir ambientes completos utilizando tecnologias amplamente adotadas pelo mercado, consolidando conhecimentos em Engenharia de Dados, Data Warehousing e processamento distribuído.
