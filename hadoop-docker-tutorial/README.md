@@ -179,7 +179,8 @@ hadoop-docker-tutorial/
 docker compose build --no-cache
 ```
 ***Evidência***
-![Docker_Compose](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/daf3c95d7b7b07e12e60b3539ef15b92a2f31e1f/hadoop-docker-tutorial/images/6.Hadoop%20YARN%20ResourceManager.png)
+![Docker_Compose build1](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/8a60e2f977daf8250a1c4448cfc2d8dffb1004f6/hadoop-docker-tutorial/images/2.1.docker%20compose%20build.png)
+![Docker_Compose build2](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/8a60e2f977daf8250a1c4448cfc2d8dffb1004f6/hadoop-docker-tutorial/images/2.docker%20compose%20build.png)
 
 **Inicialização do ambiente:**
 
