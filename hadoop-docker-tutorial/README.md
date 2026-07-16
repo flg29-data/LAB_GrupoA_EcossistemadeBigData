@@ -53,6 +53,7 @@ Durante o laboratório foram realizadas as seguintes etapas:
 4. Validação do funcionamento do cluster utilizando:
    - NameNode Web UI (porta 9870)
    - YARN ResourceManager (porta 8088)
+  ![YARN](hadoop-docker-tutorial/6.Hadoop YARN ResourceManager.png)
 5. Execução do algoritmo WordCount sobre um conjunto de arquivos texto.
 6. Geração do arquivo final `result.txt` contendo a frequência de ocorrência das palavras.
 7. Exportação do resultado para o sistema de arquivos local.
