@@ -117,12 +117,12 @@ As interfaces Web foram acessadas e validadas com sucesso:
 | NameNode | 9870 |
 | ResourceManager | 8088 |
 
-*Evidências*
+***Evidências***
 
-NameNode >> 9870
+*NameNode >> 9870*
 ![Hadoop](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/5.Hadoop%20NameNode.png)
 
-ResourceManager >> 8088
+*ResourceManager >> 8088*
 ![YARN](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/daf3c95d7b7b07e12e60b3539ef15b92a2f31e1f/hadoop-docker-tutorial/images/6.Hadoop%20YARN%20ResourceManager.png)
 
 Resultado final:
@@ -166,62 +166,62 @@ hadoop-docker-tutorial/
 ├── Dockerfile
 ├── README.md
 ├── docker-compose.yml
-└── result.txt 
+└── result.txt    --- Arquivo final gerado pelo WordCount
 ```
 
 ---
 
 # Principais comandos executados
 
-*Construção da imagem Docker:*
+**Construção da imagem Docker:**
 
 ```bash
 docker compose build --no-cache
 ```
-*Evidência*
+***Evidência***
 ![Docker_Compose](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/daf3c95d7b7b07e12e60b3539ef15b92a2f31e1f/hadoop-docker-tutorial/images/6.Hadoop%20YARN%20ResourceManager.png)
 
-*Inicialização do ambiente:*
+**Inicialização do ambiente:**
 
 ```bash
 docker compose up -d
 ```
-*Evidência*
+***Evidência***
 ![Docker_Compose_d](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/3.docker%20compose%20up%20d.png)
 
 
-*Verificação do container:*
+**Verificação do container:**
 
 ```bash
 docker ps
 ```
-*Evidência*
+***Evidência***
 ![Docker_ps](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/4.docker%20ps.png)
 
-*Acesso ao container:*
+**Acesso ao container:**
 
 ```bash
 docker exec -it hadoop bash
 ```
-*Evidência*
+***Evidência***
 ![Docker_exec](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/7.Hadoop%20Version.png)
 
 
-*Execução do WordCount:*
+**Execução do WordCount:**
 
 ```bash
 ./run-custom-wordcount.sh
 ```
-*Evidência*
+***Evidência***
 ![WordCount1](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/16_1.%20Executar%20WordCount.png)
 ![WordCount2](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/16_1.%20Conclusao_Execucao_WordCount.png)
 
-*Cópia do resultado para o computador local:*
+**Cópia do resultado para o computador local:**
 
 ```bash
 docker cp hadoop:/home/hduser/wordcount/result.txt .
 ```
-*Evidência*
+***Evidência***
 
 ---
 
