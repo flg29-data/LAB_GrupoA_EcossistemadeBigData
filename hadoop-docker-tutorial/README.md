@@ -2,6 +2,12 @@
 
 Projeto desenvolvido a partir do tutorial da disciplina **eEDB-006**, com o objetivo de construir um ambiente Hadoop utilizando Docker, explorando os principais componentes do ecossistema Hadoop (**HDFS, YARN e MapReduce**) em um cluster de nó único.
 
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Apache Hadoop](https://img.shields.io/badge/Apache-Hadoop-66CCFF?style=for-the-badge&logo=apache&logoColor=white)
+![MapReduce](https://img.shields.io/badge/MapReduce-Distributed-orange?style=for-the-badge)
+![HDFS](https://img.shields.io/badge/HDFS-Storage-success?style=for-the-badge)
+
 ---
 
 # Objetivos
