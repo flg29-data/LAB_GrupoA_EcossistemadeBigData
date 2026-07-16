@@ -227,7 +227,7 @@ docker cp hadoop:/home/hduser/wordcount/result.txt .
 ***Evidência***
 ![Copia_Result](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/c1ae1cb98adb277641a220a6f92c74f736b37e54/hadoop-docker-tutorial/images/17.%20Copia%20Arquivo%20result%20final.png)
 
-Arquivo ´result.txt´ gerado >> [result.txt](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/e146bfaf0919d312e9dfb65ec7cde2f491abb7f8/hadoop-docker-tutorial/result.txt)
+Arquivo `result.txt` gerado >> [result.txt](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/e146bfaf0919d312e9dfb65ec7cde2f491abb7f8/hadoop-docker-tutorial/result.txt)
 
 ---
 
