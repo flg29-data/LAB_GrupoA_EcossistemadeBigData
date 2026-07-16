@@ -2,9 +2,14 @@
 
 **Profº:** Leandro Ferreira
 
-# Integrantes - Grupo A
+Este repositório reúne os laboratórios desenvolvidos pelo **Grupo A** na disciplina **eEDB-006 – Ecossistema de Big Data**, abordando desde a construção de pipelines de dados até o processamento distribuído e análises serverless na AWS.
 
-| Integrante                    | Perfil Git                                         |
+Ao longo dos laboratórios foram exploradas diferentes arquiteturas e tecnologias utilizadas em plataformas modernas de Engenharia de Dados, permitindo compreender todo o ciclo de vida dos dados, desde a ingestão e transformação até o processamento analítico e consultas SQL distribuídas.
+
+
+## Integrantes - Grupo A
+
+| Integrante                    | Perfil GitHub                                         |
 |-------------------------------|----------------------------------------------------|
 | Caetano Sales Carvalho        | [@Ctrl-Caetano](Ctrl-Caetano)       |
 | Fernando Luiz Gomes           | [@flg29-data](https://github.com/flg29-data)       |
@@ -15,10 +20,42 @@
 
 ## Objetivos dos Laboratórios Realizados
 
+- Compreender os principais componentes de um ecossistema moderno de Big Data.
+- Aplicar conceitos de Engenharia de Dados utilizando ambientes locais e serviços em nuvem.
+- Desenvolver pipelines de ingestão, transformação, armazenamento e consulta de dados.
+- Explorar arquiteturas distribuídas utilizando Hadoop, Hive e HDFS.
+- Implementar soluções serverless utilizando AWS Athena e AWS Glue.
+- Automatizar o provisionamento de infraestrutura utilizando Terraform (Infrastructure as Code).
+- Documentar e reproduzir ambientes completos através de Docker e Docker Compose.
+
+
+## Estrutura do repositório
+
+```text
+LAB_GrupoA_EcossistemadeBigData/
+│
+├── aws-athena-glue-tutorial/
+│   └── Analytics Serverless com AWS Athena e AWS Glue  
+│
+├── aws-emr-hadoop/
+│   └── Hadoop
+│
+├── aws-emr-hive-tutorial/
+│   └── Data Warehouse com Apache Hive no AWS EMR 
+│
+├── hadoop-docker-tutorial/
+│   └── Hadoop Single Node com Docker e MapReduce
+│
+├── spark-tutorial/
+│   └── Spark
+│
+└── README.md
+```
 
 
 ## Resultados dos Laboratórios
 
+Os resultados dos laboratórios realizados pelos integrante do grupo estão disponíveis nos links abaixo:
 
 | Laboratórios                   | Links                                        |
 |-------------------------------|----------------------------------------------------|
@@ -27,4 +64,27 @@
 | Data Warehouse com Apache Hive no AWS EMR          | https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/tree/8981e026816e5e9f0ac1186e716c50dd03e43706/aws-emr-hive-tutorial         |
 | Hadoop Single Node com Docker e MapReduce        | https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/tree/8981e026816e5e9f0ac1186e716c50dd03e43706/aws-emr-hive-tutorial       |
 | Spark         | https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/tree/8981e026816e5e9f0ac1186e716c50dd03e43706/spark-tutorial |
+
+
+# Competências desenvolvidas
+
+Durante a disciplina foram desenvolvidas competências relacionadas a:
+
+- Engenharia de Dados
+- Arquitetura Medallion
+- Apache Hadoop
+- HDFS
+- Apache Hive
+- Apache MapReduce
+- Apache YARN
+- Docker e Docker Compose
+- PostgreSQL
+- dbt (Data Build Tool)
+- Amazon S3
+- AWS Glue Data Catalog
+- Amazon Athena
+- Amazon EMR
+- Terraform (Infrastructure as Code)
+- SQL
+- Python
 
