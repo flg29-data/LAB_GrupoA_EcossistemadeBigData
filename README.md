@@ -1,13 +1,16 @@
-## Projeto Laboratório - Grupo A - Ecossistema de Big Data  
+## Projeto Final - Laboratório - Grupo A - Ecossistema de Big Data  
 
-**Profº:** Leandro Ferreira
+**Profº:** Leandro Mendes Ferreira
+
+---
 
 Este repositório reúne os laboratórios desenvolvidos pelo **Grupo A** na disciplina **eEDB-006 – Ecossistema de Big Data**, abordando desde a construção de pipelines de dados até o processamento distribuído e análises serverless na AWS.
 
 Ao longo dos laboratórios foram exploradas diferentes arquiteturas e tecnologias utilizadas em plataformas modernas de Engenharia de Dados, permitindo compreender todo o ciclo de vida dos dados, desde a ingestão e transformação até o processamento analítico e consultas SQL distribuídas.
 
+---
 
-## Integrantes - Grupo A
+# Integrantes - Grupo A
 
 | Integrante                    | Perfil GitHub                                         |
 |-------------------------------|----------------------------------------------------|
@@ -17,8 +20,9 @@ Ao longo dos laboratórios foram exploradas diferentes arquiteturas e tecnologia
 | Isabella Abreu Comelli        | [@isacomelli](https://github.com/isacomelli)           |
 | Breno Tostes Garcia           | [@brtostes](https://github.com/brtostes)           |
 
+---
 
-## Objetivos dos Laboratórios Realizados
+# Objetivos dos Laboratórios Realizados
 
 - Compreender os principais componentes de um ecossistema moderno de Big Data.
 - Aplicar conceitos de Engenharia de Dados utilizando ambientes locais e serviços em nuvem.
@@ -28,8 +32,9 @@ Ao longo dos laboratórios foram exploradas diferentes arquiteturas e tecnologia
 - Automatizar o provisionamento de infraestrutura utilizando Terraform (Infrastructure as Code).
 - Documentar e reproduzir ambientes completos através de Docker e Docker Compose.
 
+---
 
-## Estrutura do repositório
+# Estrutura do repositório
 
 ```text
 LAB_GrupoA_EcossistemadeBigData/
@@ -52,8 +57,9 @@ LAB_GrupoA_EcossistemadeBigData/
 └── README.md
 ```
 
+---
 
-## Resultados dos Laboratórios
+# Resultados dos Laboratórios
 
 Os resultados dos laboratórios realizados pelos integrante do grupo estão disponíveis nos links abaixo:
 
@@ -68,7 +74,7 @@ Os resultados dos laboratórios realizados pelos integrante do grupo estão disp
 
 ---
 
-## Tecnologias utilizadas
+# Tecnologias utilizadas
 
 - Apache Hadoop
 - Apache Hive
@@ -89,7 +95,7 @@ Os resultados dos laboratórios realizados pelos integrante do grupo estão disp
 
 ---
 
-## Conclusão
+# Conclusão
 
 Os laboratórios permitiram aplicar, de forma prática, conceitos fundamentais do ecossistema de Big Data, abrangendo processamento distribuído, armazenamento de grandes volumes de dados, modelagem analítica, infraestrutura como código e serviços serverless em nuvem.
 
