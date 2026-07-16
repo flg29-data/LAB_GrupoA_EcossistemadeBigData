@@ -128,32 +128,24 @@ O processamento foi concluído com sucesso e o arquivo `result.txt` contém a fr
 ```text
 hadoop-docker-tutorial/
 │
-├── README.md
-├── Dockerfile
-├── docker-compose.yml
-├── hadoop-3.3.6.tar.gz
-│
 ├── config/
 │   ├── core-site.xml
 │   ├── hdfs-site.xml
 │   ├── ssh_config
 │   └── yarn-site.xml
 │
-├── scripts/
-│
-├── src/
-│
 ├── data/
 │
 ├── images/
 │
-├── result.txt
+├── scripts/
 │
-└── evidencias/
-    ├── docker-ps.png
-    ├── namenode.png
-    ├── yarn.png
-    ├── wordcount.png
+├── src/
+│
+├── Dockerfile
+├── README.md
+├── docker-compose.yml
+└── result.txt
 ```
 
 ---
