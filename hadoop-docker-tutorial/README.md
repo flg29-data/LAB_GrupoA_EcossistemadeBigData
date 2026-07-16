@@ -255,6 +255,56 @@ Todas as evidências estao disponíveis na pasta >> [hadoop-docker-tutorial/imag
 
 ---
 
+# Desafios encontrados
+
+Durante a execução do laboratório foram encontrados alguns desafios técnicos, principalmente relacionados à configuração inicial do ambiente Docker e à preparação dos arquivos necessários para a construção da imagem.
+
+Os principais problemas identificados foram:
+
+- O arquivo `Dockerfile` estava salvo como `Dockerfile.txt`, impedindo que o Docker Compose encontrasse o arquivo durante o processo de build.
+- O arquivo `config/ssh_config` também estava salvo com a extensão `.txt`, sendo necessário renomeá-lo para que pudesse ser copiado corretamente durante a construção da imagem.
+- O pacote `hadoop-3.3.6.tar.gz`, necessário para instalação do Apache Hadoop, não estava disponível inicialmente no diretório do projeto, ocasionando falha na etapa de build da imagem Docker.
+- Os comandos `hadoop` e `hdfs` foram inicialmente executados no PowerShell do Windows, sendo necessário compreender que esses comandos devem ser executados dentro do container Docker.
+- Durante o desenvolvimento também foi necessário validar a estrutura do projeto e corrigir a organização dos arquivos antes que o ambiente pudesse ser inicializado corretamente.
+
+Após os ajustes realizados, a imagem Docker foi construída com sucesso, permitindo a inicialização do ambiente Hadoop e a execução completa do processamento MapReduce utilizando o algoritmo WordCount.
+
+
+---
+
+# Descomissionamento
+
+Ao final do laboratório, o ambiente pode ser totalmente removido utilizando os comandos do Docker Compose, evitando o consumo desnecessário de recursos locais.
+
+Parar e remover o container:
+
+```bash
+docker compose down
+```
+
+Remover também os volumes persistentes utilizados pelo Hadoop:
+
+```bash
+docker compose down -v
+```
+
+Caso seja necessário remover a imagem Docker criada durante o laboratório:
+
+```bash
+docker rmi hadoop-single-node:3.3.6
+```
+
+Opcionalmente, é possível remover imagens, containers, volumes e redes não utilizados pelo Docker através do comando:
+
+```bash
+docker system prune -a
+```
+
+Após o descomissionamento, nenhum container, volume ou imagem criada especificamente para este laboratório permanece em execução, mantendo o ambiente Docker limpo para futuros experimentos.
+
+
+---
+
 # Conclusão
 
 Este laboratório demonstrou a criação de um ambiente Hadoop utilizando Docker, permitindo compreender a arquitetura básica da plataforma e executar um processamento distribuído através do algoritmo WordCount.
