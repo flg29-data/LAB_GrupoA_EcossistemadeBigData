@@ -225,6 +225,9 @@ docker exec -it hadoop bash
 docker cp hadoop:/home/hduser/wordcount/result.txt .
 ```
 ***Evidência***
+![WordCount2](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/16_1.%20Conclusao_Execucao_WordCount.png)
+
+[result.txt](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/e146bfaf0919d312e9dfb65ec7cde2f491abb7f8/hadoop-docker-tutorial/result.txt)
 
 ---
 
@@ -238,6 +241,7 @@ Todas as evidências estao disponíveis na pasta >> [hadoop-docker-tutorial/imag
 - Container Hadoop em execução (`docker ps`).
 - Interface Web do NameNode.
 - Interface Web do ResourceManager (YARN).
+- Criação de Diretório, arquivo de teste, envio e leitura arquivo HDFS
 - Execução do algoritmo WordCount.
 - Arquivo `result.txt` gerado com sucesso.
 
