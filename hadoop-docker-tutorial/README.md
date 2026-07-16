@@ -118,6 +118,7 @@ As interfaces Web foram acessadas e validadas com sucesso:
 | ResourceManager | 8088 |
 
 *Evidências*
+
 NameNode >> 9870
 ![Hadoop](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/f365bf6b1b93f3da3b77b8415b79a6fc56331ed2/hadoop-docker-tutorial/images/5.Hadoop%20NameNode.png)
 
