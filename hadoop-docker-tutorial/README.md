@@ -1,6 +1,6 @@
 # Laboratório: Hadoop Single Node com Docker e MapReduce
 
-Projeto desenvolvido a partir do tutorial da disciplina **eEDB-006**, com o objetivo de construir um ambiente Hadoop utilizando Docker, explorando os principais componentes do ecossistema Hadoop (**HDFS, YARN e MapReduce**) em um cluster de nó único.
+Projeto desenvolvido a partir do tutorial da disciplina **eEDB-006**, com o objetivo de construir um laboratório demonstrando a construção de um ambiente Hadoop utilizando Docker, configuração do HDFS, execução de processamento distribuído com MapReduce (WordCount) e validação dos principais serviços do ecossistema Hadoop.
 
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -59,7 +59,7 @@ Durante o laboratório foram realizadas as seguintes etapas:
 4. Validação do funcionamento do cluster utilizando:
    - NameNode Web UI (porta 9870)
    - YARN ResourceManager (porta 8088)
-  ![YARN](hadoop-docker-tutorial/6.Hadoop YARN ResourceManager.png)
+  ![YARN](images/6.Hadoop YARN ResourceManager.png)
 5. Execução do algoritmo WordCount sobre um conjunto de arquivos texto.
 6. Geração do arquivo final `result.txt` contendo a frequência de ocorrência das palavras.
 7. Exportação do resultado para o sistema de arquivos local.
