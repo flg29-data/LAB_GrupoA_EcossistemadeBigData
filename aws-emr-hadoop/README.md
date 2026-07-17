@@ -13,9 +13,7 @@
 
 ## Desafio deste Laboratório
 
-Inserir texto
-
-Novo## Desafio deste Laboratório
+Desafio deste Laboratório
 
 O presente laboratório teve como objetivo executar um fluxo básico de processamento distribuído utilizando o ecossistema Hadoop em ambiente de nuvem, com apoio dos serviços Amazon S3 e Amazon EMR. O exercício desenvolvido consistiu na execução de uma aplicação MapReduce do tipo WordCount, responsável por processar um arquivo de texto e contabilizar a frequência de ocorrência das palavras.
 
