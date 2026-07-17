@@ -1,0 +1,8 @@
+Tutorial: WordCount MapReduce no AWS EMR
+Data: 17/07/2026 13:00:32
+Conta AWS: 650379606721
+Cluster EMR: j-MUPMC8FELJBR
+Bucket S3: 650379606721-emr-lab-wordcount
+Resultado: s3://650379606721-emr-lab-wordcount/output/part-r-00000
+Situação: execução concluída com sucesso
+Steps concluídos: 4 de 4

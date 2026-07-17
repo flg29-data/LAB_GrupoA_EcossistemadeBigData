@@ -1,0 +1,102 @@
+{
+    "Steps": [
+        {
+            "Id": "s-008326630EBZPO7QU38O",
+            "Name": "Step4-Copy-Output-HDFS-to-S3",
+            "Config": {
+                "Jar": "command-runner.jar",
+                "Properties": {},
+                "MainClass": "",
+                "Args": [
+                    "bash",
+                    "-c",
+                    "set -e && rm -rf /tmp/wc-output && mkdir -p /tmp/wc-output && hdfs dfs -copyToLocal hdfs:///output/wordcount/* /tmp/wc-output/ && aws s3 cp /tmp/wc-output/ s3://650379606721-emr-lab-wordcount/output/ --recursive && echo COPY_DONE"
+                ]
+            },
+            "ActionOnFailure": "CONTINUE",
+            "Status": {
+                "State": "COMPLETED",
+                "StateChangeReason": {},
+                "Timeline": {
+                    "CreationDateTime": "2026-07-17T12:47:51.084000-03:00",
+                    "StartDateTime": "2026-07-17T12:54:18.735000-03:00",
+                    "EndDateTime": "2026-07-17T12:54:24.852000-03:00"
+                }
+            }
+        },
+        {
+            "Id": "s-03566222JVR6HPDH500J",
+            "Name": "Step3-WordCount-MapReduce",
+            "Config": {
+                "Jar": "command-runner.jar",
+                "Properties": {},
+                "MainClass": "",
+                "Args": [
+                    "bash",
+                    "-c",
+                    "set -e && aws s3 cp s3://650379606721-emr-lab-wordcount/jars/wordcount.jar /tmp/wordcount.jar && hadoop jar /tmp/wordcount.jar WordCountApplication hdfs:///input/ hdfs:///output/wordcount/"
+                ]
+            },
+            "ActionOnFailure": "CONTINUE",
+            "Status": {
+                "State": "COMPLETED",
+                "StateChangeReason": {},
+                "Timeline": {
+                    "CreationDateTime": "2026-07-17T12:47:51.084000-03:00",
+                    "StartDateTime": "2026-07-17T12:53:39.435000-03:00",
+                    "EndDateTime": "2026-07-17T12:54:13.727000-03:00"
+                }
+            }
+        },
+        {
+            "Id": "s-0450865UZX2UGV59HQK",
+            "Name": "Step2-Copy-Input-S3-to-HDFS",
+            "Config": {
+                "Jar": "command-runner.jar",
+                "Properties": {},
+                "MainClass": "",
+                "Args": [
+                    "s3-dist-cp",
+                    "--src",
+                    "s3://650379606721-emr-lab-wordcount/input/",
+                    "--dest",
+                    "hdfs:///input/"
+                ]
+            },
+            "ActionOnFailure": "CONTINUE",
+            "Status": {
+                "State": "COMPLETED",
+                "StateChangeReason": {},
+                "Timeline": {
+                    "CreationDateTime": "2026-07-17T12:47:51.084000-03:00",
+                    "StartDateTime": "2026-07-17T12:51:53.799000-03:00",
+                    "EndDateTime": "2026-07-17T12:53:34.426000-03:00"
+                }
+            }
+        },
+        {
+            "Id": "s-0237762YCF8TWCM39B5",
+            "Name": "Step1-Compile-JAR",
+            "Config": {
+                "Jar": "command-runner.jar",
+                "Properties": {},
+                "MainClass": "",
+                "Args": [
+                    "bash",
+                    "-c",
+                    "set -e; HCP=$(hadoop classpath); mkdir -p /home/hadoop/wc-build; aws s3 cp s3://650379606721-emr-lab-wordcount/src/ /home/hadoop/wc-build/ --recursive; javac -classpath \"$HCP\" -d /home/hadoop/wc-build /home/hadoop/wc-build/*.java; cd /home/hadoop/wc-build && jar cf wordcount.jar *.class; aws s3 cp wordcount.jar s3://650379606721-emr-lab-wordcount/jars/wordcount.jar; echo COMPILE_OK"
+                ]
+            },
+            "ActionOnFailure": "TERMINATE_CLUSTER",
+            "Status": {
+                "State": "COMPLETED",
+                "StateChangeReason": {},
+                "Timeline": {
+                    "CreationDateTime": "2026-07-17T12:47:51.084000-03:00",
+                    "StartDateTime": "2026-07-17T12:51:40.262000-03:00",
+                    "EndDateTime": "2026-07-17T12:51:48.781000-03:00"
+                }
+            }
+        }
+    ]
+}

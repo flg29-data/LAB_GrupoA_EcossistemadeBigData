@@ -1,0 +1,11 @@
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/tfplan
+**/*.pem
+**/.env
+**/credentials
+**/__pycache__/
+**/*.pyc
+**/evidencias-finais-wordcount-*/s3/logs/
+**/evidencias-finais-wordcount-*.zip
