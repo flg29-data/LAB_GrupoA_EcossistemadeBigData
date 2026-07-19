@@ -1,5 +1,5 @@
 
-# Credenciais tempor·rias do AWS Academy
+# Credenciais tempor√ürias do AWS Academy
 **/aws_credentials_lab/credentials
 **/aws_credentials_lab/labsuser.pem
 **/*.pem
@@ -14,3 +14,12 @@
 **/.venv/
 **/__pycache__/
 **/*.pyc
+**/*.tfstate
+**/*.tfstate.*
+**/tfplan
+**/evidencias-finais-wordcount-*/s3/logs/
+**/evidencias-finais-wordcount-*.zip
+**/.cluster_id
+**/build/.deps/
+**/evidencias-finais-wordcount.zip
+**/evidencias-finais-wordcount/01-identidade-aws.json
