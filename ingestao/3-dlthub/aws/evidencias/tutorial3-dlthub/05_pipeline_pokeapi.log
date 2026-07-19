@@ -1,0 +1,4 @@
+Pipeline ingestao_pokeapi load step completed in 0.27 seconds
+1 load package(s) were loaded to destination filesystem and into dataset pokeapi
+The filesystem destination used s3://650379606721-ingestao-lab location to store data
+Load package 1784433018.0845609 is LOADED and contains no failed jobs

@@ -1,0 +1,25 @@
+EVIDÊNCIA: INGESTÃO POKÉAPI → PARQUET
+Data observada: 2026-07-19
+Pipeline: tap-rest-api-msdk → target-parquet
+Endpoint: /api/v2/pokemon
+
+Indicadores registrados:
+- chamadas HTTP: 14
+- código HTTP: 200
+- registros extraídos: 1.350
+- linhas lidas pelo target: 1.353
+- schemas: 1
+- registros gravados: 1.350
+- estado final: Run completed
+- código de saída do Meltano: 0
+
+Trechos relevantes:
+METRIC record_count: 1350
+Target 'target-parquet' completed reading 1353 lines of input
+Processing batch for pokemon with 1350 records
+Pyarrow table size: 75654 | (1350 rows)
+Block run completed
+Run completed
+
+Conclusão:
+A pipeline da PokéAPI foi concluída sem erro e processou 1.350 registros.

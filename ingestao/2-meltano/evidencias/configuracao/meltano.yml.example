@@ -1,0 +1,40 @@
+# Exemplo sanitizado da configuração utilizada.
+# Não inserir senhas diretamente neste arquivo.
+
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-tap-postgres
+    config:
+      host: ${RDS}
+      port: 5432
+      user: ecommerce
+      database: ecommerce
+      ssl_enable: true
+      ssl_mode: require
+    select:
+    - public-vendas.*
+
+  - name: tap-rest-api-msdk
+    variant: widen
+    pip_url: tap-rest-api-msdk setuptools<81
+    config:
+      api_url: https://pokeapi.co/api/v2
+      pagination_request_style: simple_offset_paginator
+      pagination_response_style: offset
+      pagination_page_size: 100
+      offset_records_jsonpath: $.results
+      streams:
+      - name: pokemon
+        path: /pokemon
+        records_path: $.results[*]
+        primary_keys:
+        - name
+
+  loaders:
+  - name: target-parquet
+    variant: automattic
+    pip_url: git+https://github.com/Automattic/target-parquet.git
+    config:
+      destination_path: output

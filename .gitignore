@@ -1,0 +1,16 @@
+
+# Credenciais temporárias do AWS Academy
+**/aws_credentials_lab/credentials
+**/aws_credentials_lab/labsuser.pem
+**/*.pem
+**/aws_credentials_lab/
+**/.aws/
+**/credentials
+**/.env
+**/.terraform/
+**/terraform.tfstate
+**/terraform.tfstate.*
+**/.meltano/
+**/.venv/
+**/__pycache__/
+**/*.pyc

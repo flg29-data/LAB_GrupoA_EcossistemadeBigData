@@ -1,0 +1,23 @@
+EVIDÊNCIA: CONFIGURAÇÃO DO EXTRATOR TAP-POSTGRES
+Data observada: 2026-07-19
+Meltano: 4.2.1
+
+Comandos válidos para a versão utilizada:
+meltano config set tap-postgres ssl_enable true
+meltano config set tap-postgres ssl_mode require
+
+Resultados:
+Extractor 'tap-postgres' setting 'ssl_enable' was set in `meltano.yml`: True
+Extractor 'tap-postgres' setting 'ssl_mode' was set in `meltano.yml`: 'require'
+
+Configuração confirmada:
+- database: ecommerce
+- host: <RDS_ENDPOINT>
+- port: 5432
+- user: ecommerce
+- password: redacted
+- ssl_enable: True
+- ssl_mode: require
+
+Observação:
+A sintaxe antiga `meltano config tap-postgres set ...` foi rejeitada pela versão instalada. A ordem correta dos argumentos é `meltano config set <plugin> <setting> <value>`.

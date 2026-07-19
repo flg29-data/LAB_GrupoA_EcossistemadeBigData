@@ -1,0 +1,11 @@
+.env
+*.pem
+credentials
+config
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.meltano/
+venv/
+.venv/

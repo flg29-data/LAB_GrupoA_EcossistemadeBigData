@@ -1,0 +1,27 @@
+=== TESTE DE ESTABILIDADE DO DNS ===
+Sat Jul 18 21:06:47 -03 2026
+
+Teste 1 de 5
+DNS STS: OK
+DNS EC2: OK
+API STS: OK
+
+Teste 2 de 5
+DNS STS: OK
+DNS EC2: OK
+API STS: OK
+
+Teste 3 de 5
+DNS STS: OK
+DNS EC2: OK
+API STS: OK
+
+Teste 4 de 5
+DNS STS: OK
+DNS EC2: OK
+API STS: OK
+
+Teste 5 de 5
+DNS STS: OK
+DNS EC2: OK
+API STS: OK

@@ -1,0 +1,23 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.5.0-2ubuntu10.11).
+wget is already the newest version (1.21.4-1ubuntu4.3).
+unzip is already the newest version (6.0-28ubuntu4.1).
+zip is already the newest version (3.0-13ubuntu0.2).
+jq is already the newest version (1.7.1-3ubuntu0.24.04.2).
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+tree is already the newest version (2.1.1-2ubuntu3.24.04.2).
+dos2unix is already the newest version (7.5.1-1).
+ca-certificates is already the newest version (20260601~24.04.1).
+gnupg is already the newest version (2.4.4-2ubuntu17.4).
+lsb-release is already the newest version (12.0-2).
+openssh-client is already the newest version (1:9.6p1-3ubuntu13.18).
+The following packages were automatically installed and are no longer required:
+  libdrm-nouveau2 libdrm-radeon1 libgl1-amber-dri libglapi-mesa libllvm17t64
+  libwayland-server0 libxcb-dri2-0
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.

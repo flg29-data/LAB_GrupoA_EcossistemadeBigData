@@ -1,0 +1,21 @@
+EVIDÊNCIA: VALIDAÇÃO DO RDS POSTGRESQL
+Data observada: 2026-07-19
+Ambiente: EC2 Amazon Linux, projeto Meltano
+
+Comando executado (senha omitida):
+PGPASSWORD="***" psql \
+  "host=<RDS_ENDPOINT> port=5432 dbname=ecommerce user=ecommerce sslmode=require" \
+  -c "SELECT current_database(), current_user, COUNT(*) FROM vendas;"
+
+Resultado:
+   banco   |  usuario  | quantidade_vendas
+-----------+-----------+-------------------
+ ecommerce | ecommerce |               200
+(1 row)
+
+Conclusão:
+- resolução DNS do RDS: funcional;
+- conectividade EC2 → RDS na porta 5432: funcional;
+- autenticação do usuário ecommerce: funcional;
+- conexão SSL: funcional;
+- tabela vendas populada com 200 registros.

@@ -1,0 +1,10 @@
+arquivo;finalidade;situacao
+logs/01-validacao-rds.log;Comprovar acesso ao RDS e contagem de 200 vendas;concluida
+logs/02-configuracao-tap-postgres.log;Comprovar configuração SSL do extrator;concluida
+logs/03-ingestao-postgres.log;Comprovar execução da pipeline PostgreSQL;concluida
+logs/04-ingestao-pokeapi.log;Comprovar execução da pipeline PokéAPI com 1350 registros;concluida
+logs/05-validacao-arquivos-parquet.log;Comprovar geração dos dois arquivos Parquet;concluida
+logs/06-diagnostico-upload-s3.log;Registrar falha inicial e diagnóstico do caractere CR;concluida
+scripts/08-finalizar-upload-s3.sh;Gerar provas finais de upload e listagem no S3;pendente de execucao
+scripts/copiar-evidencias-da-ec2.ps1;Copiar logs reais da EC2 para o Windows;disponivel
+configuracao/meltano.yml.example;Registrar configuração sanitizada do projeto;concluida

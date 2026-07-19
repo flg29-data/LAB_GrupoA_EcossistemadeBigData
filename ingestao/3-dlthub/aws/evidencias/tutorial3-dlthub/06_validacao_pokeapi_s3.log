@@ -1,0 +1,7 @@
+2026-07-19 03:47:55        186 pokeapi/_dlt_loads/rest_api__1784432873.6676562.jsonl
+2026-07-19 03:50:19        186 pokeapi/_dlt_loads/rest_api__1784433018.0845609.jsonl
+2026-07-19 03:47:55        492 pokeapi/_dlt_pipeline_state/ingestao_pokeapi__1784432873.6676562__f1a14cdf94ba97e5098936135ed42c7cf158d0959163880651995a12bbbe7cfc.jsonl
+2026-07-19 03:47:55       3580 pokeapi/_dlt_version/rest_api__1784432874.1460893__f1a14cdf94ba97e5098936135ed42c7cf158d0959163880651995a12bbbe7cfc.jsonl
+2026-07-19 03:47:55         41 pokeapi/init
+2026-07-19 03:47:55       7983 pokeapi/pokemon/1784432873.6676562.b6df24b123.parquet
+2026-07-19 03:50:19       7981 pokeapi/pokemon/1784433018.0845609.2987fe9b89.parquet

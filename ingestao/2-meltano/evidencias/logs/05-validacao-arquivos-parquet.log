@@ -1,0 +1,14 @@
+EVIDÊNCIA: ARQUIVOS PARQUET GERADOS LOCALMENTE
+Data observada: 2026-07-19
+
+Comando:
+find output -type f -name "*.parquet" -printf "%p | %s bytes\n"
+
+Resultado:
+output/public-vendas/public-vendas-20260719_025026-0-0.gz.parquet | 5605 bytes
+output/pokemon/pokemon-20260719_025128-0-0.gz.parquet | 16177 bytes
+
+Conclusão:
+Foram produzidos os dois conjuntos previstos no tutorial:
+1. vendas extraídas do PostgreSQL;
+2. Pokémon extraídos da PokéAPI.

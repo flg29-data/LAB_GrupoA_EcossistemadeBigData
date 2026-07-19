@@ -1,0 +1,7 @@
+=== CHAVE SSH DO AWS ACADEMY ===
+Sat Jul 18 20:36:38 -03 2026
+
+drwx------ 2 breno breno 4096 Jul 18 20:32 /home/breno/.ssh
+-r-------- 1 breno breno 1674 Jul 18 20:32 /home/breno/.ssh/labsuser.pem
+
+2048 SHA256:E1UeLy4SgFm3TLzlqSuL+CZfpla253r+0uFFfiTS45A no comment (RSA)

@@ -1,0 +1,14 @@
+=== DIRETORIO TERRAFORM ===
+/mnt/d/GitHub/LAB_GrupoA_EcossistemadeBigData/ingestao/1-infraestrutura/aws/terraform
+
+=== ARQUIVOS TERRAFORM ===
+.terraform.lock.hcl
+main.tf
+outputs.tf
+terraform-state-antes-da-destruicao-20260716-160845.json
+terraform.tfstate
+terraform.tfstate-copia-20260716-160845
+terraform.tfstate.backup
+tfplan
+variables.tf
+versions.tf

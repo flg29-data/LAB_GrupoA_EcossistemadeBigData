@@ -1,0 +1,1 @@
+/mnt/d/GitHub/LAB_GrupoA_EcossistemadeBigData/aws-emr-hadoop-tutorial/labsuser.pem

@@ -1,0 +1,29 @@
+EVIDÊNCIA: DIAGNÓSTICO DA FALHA INICIAL NO UPLOAD AO S3
+Data observada: 2026-07-19
+Bucket esperado: 650379606721-ingestao-lab
+
+Comando tentado:
+aws s3 sync output/public-vendas "s3://${BUCKET}/meltano/vendas/" \
+  --exclude "*" --include "*.parquet"
+
+Erro registrado:
+fatal error: Parameter validation failed:
+Bucket name must match the expected S3 bucket-name regular expression.
+
+Diagnóstico posterior:
+printf 'Valor técnico do BUCKET: <%q>\n' "$BUCKET"
+printf 'Quantidade de caracteres: %s\n' "${#BUCKET}"
+
+Resultado:
+Valor técnico do BUCKET: <$'650379606721-ingestao-lab\r'>
+Quantidade de caracteres: 26
+
+Causa:
+O valor carregado a partir de um arquivo criado no Windows continha o caractere de retorno de carro `\r`. O nome correto possui 25 caracteres.
+
+Correção indicada:
+sed -i 's/\r$//' ~/tutorial2_env.sh
+source ~/tutorial2_env.sh
+
+Situação desta evidência:
+A falha e sua causa estão comprovadas. Não foi fornecido um log posterior que comprove o upload final bem-sucedido.

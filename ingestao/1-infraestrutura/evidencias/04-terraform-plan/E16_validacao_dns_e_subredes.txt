@@ -1,0 +1,18 @@
+=== VALIDACAO DE CONECTIVIDADE AWS ===
+Sat Jul 18 20:59:46 -03 2026
+
+Resolucao DNS do endpoint EC2:
+209.54.180.155  ec2.us-east-1.amazonaws.com
+
+Consulta de sub-redes:
+--------------------------------------------
+|              DescribeSubnets             |
++-------------+----------------------------+
+|     AZ      |         SubnetId           |
++-------------+----------------------------+
+|  us-east-1a |  subnet-0227eed7d58b5fce9  |
+|  us-east-1c |  subnet-09decf4624bb92a67  |
+|  us-east-1e |  subnet-094be08668e81d9f1  |
+|  us-east-1d |  subnet-06aedd53e3db68dea  |
+|  us-east-1b |  subnet-00b1a472fc31437a1  |
++-------------+----------------------------+

@@ -1,0 +1,13 @@
+EVIDÊNCIA: INGESTÃO POSTGRESQL → PARQUET
+Data observada: 2026-07-19
+Pipeline: tap-postgres → target-parquet
+Origem: tabela public.vendas no RDS PostgreSQL
+
+Código de saída do Meltano: 0
+
+Arquivo produzido:
+output/public-vendas/public-vendas-20260719_025026-0-0.gz.parquet
+Tamanho: 5.605 bytes
+
+Conclusão:
+A pipeline PostgreSQL foi concluída sem erro e gerou um arquivo Parquet local para a tabela de vendas.

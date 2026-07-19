@@ -1,0 +1,5 @@
+2026-07-19 03:39:08        195 postgres/_dlt_loads/ingestao_postgres__1784432347.1409123.jsonl
+2026-07-19 03:39:08        493 postgres/_dlt_pipeline_state/ingestao_postgres__1784432347.1409123__2b5927272185f298bd54d0f2c1dce34d85816a46d1908e87fd6cccfacb0ff351.jsonl
+2026-07-19 03:39:08       4038 postgres/_dlt_version/ingestao_postgres__1784432347.5429435__2b5927272185f298bd54d0f2c1dce34d85816a46d1908e87fd6cccfacb0ff351.jsonl
+2026-07-19 03:39:08         41 postgres/init
+2026-07-19 03:39:08       9637 postgres/vendas/1784432347.1409123.38b106953a.parquet
