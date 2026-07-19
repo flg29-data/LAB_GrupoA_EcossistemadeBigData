@@ -1,0 +1,6 @@
+﻿Data da execução: 07/18/2026 19:31:04
+Computador: LAPTOP-ACPKG3QM
+Usuário: Breno Tostes Garcia
+Projeto: D:\GitHub\LAB_GrupoA_EcossistemadeBigData
+Pasta de evidências: D:\GitHub\LAB_GrupoA_EcossistemadeBigData\evidencias\Tutorial-01-AWS-Terraform-2026-07-18_19-31-04
+Versão do PowerShell: 5.1.26100.8875

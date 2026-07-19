@@ -1,0 +1,118 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260718193104
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 3496
+PSVersion: 5.1.26100.8875
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8875
+BuildVersion: 10.0.26100.8875
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\evidencias\Tutorial-01-AWS-Terraform-2026-07-18_19-31-04\transcricao-completa-powershell.txt
+
+==============================================
+AMBIENTE DE EXECUÇÃO
+==============================================
+Data: 07/18/2026 19:31:04
+Computador: LAPTOP-ACPKG3QM
+Usuário: Breno Tostes Garcia
+Projeto: D:\GitHub\LAB_GrupoA_EcossistemadeBigData
+Evidências: D:\GitHub\LAB_GrupoA_EcossistemadeBigData\evidencias\Tutorial-01-AWS-Terraform-2026-07-18_19-31-04
+PS C:\WINDOWS\system32> Write-Host ""
+Write-Host "==============================================" -ForegroundColor Cyan
+Write-Host "VERIFICAÇÃO DAS FERRAMENTAS" -ForegroundColor Cyan
+Write-Host "==============================================" -ForegroundColor Cyan
+
+Write-Host ""
+Write-Host "Terraform:" -ForegroundColor Yellow
+terraform -version
+
+Write-Host ""
+Write-Host "AWS CLI:" -ForegroundColor Yellow
+aws --version
+
+Write-Host ""
+Write-Host "OpenSSH:" -ForegroundColor Yellow
+ssh -V
+
+Write-Host ""
+Write-Host "SCP:" -ForegroundColor Yellow
+Get-Command scp |
+    Select-Object Name, Source |
+    Format-Table -AutoSize
+
+==============================================
+VERIFICAÇÃO DAS FERRAMENTAS
+==============================================
+
+Terraform:
+Terraform v1.15.8
+on windows_amd64
+
+AWS CLI:
+aws-cli/2.36.1 Python/3.14.6 Windows/11 exe/AMD64
+
+OpenSSH:
+OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+
+SCP:
+
+Name    Source
+----    ------
+scp.exe C:\WINDOWS\System32\OpenSSH\scp.exe
+
+
+PS C:\WINDOWS\system32> terraform -version 2>&1 |
+    Tee-Object `
+        -FilePath "$EVIDENCIAS\01-versao-terraform.txt"
+
+aws --version 2>&1 |
+    Tee-Object `
+        -FilePath "$EVIDENCIAS\02-versao-aws-cli.txt"
+
+ssh -V 2>&1 |
+    Tee-Object `
+        -FilePath "$EVIDENCIAS\03-versao-openssh.txt"
+Terraform v1.15.8
+on windows_amd64
+aws-cli/2.36.1 Python/3.14.6 Windows/11 exe/AMD64
+ssh : OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+No linha:9 caractere:1
++ ssh -V 2>&1 |
++ ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (OpenSSH_for_Win... LibreSSL 3.8.2:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+PS C:\WINDOWS\system32> cmd /c "ssh -V 2>&1" |
+    Tee-Object `
+        -FilePath "$EVIDENCIAS\03-versao-openssh.txt"
+OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+PS C:\WINDOWS\system32> Get-ChildItem `
+    "$EVIDENCIAS\01-versao-terraform.txt",
+    "$EVIDENCIAS\02-versao-aws-cli.txt",
+    "$EVIDENCIAS\03-versao-openssh.txt" |
+Select-Object Name, Length, LastWriteTime |
+Format-Table -AutoSize
+
+Name                    Length LastWriteTime
+----                    ------ -------------
+01-versao-terraform.txt     76 18/07/2026 19:33:09
+02-versao-aws-cli.txt      104 18/07/2026 19:33:09
+03-versao-openssh.txt       88 18/07/2026 19:34:34
+
+
+PS C:\WINDOWS\system32> clear
+PS C:\WINDOWS\system32> wsl --install -d ubuntu
+Já existe uma distribuição com o nome fornecido. Use --name escolher um nome diferente.
+Código de erro: Wsl/InstallDistro/ERROR_ALREADY_EXISTS
+PS C:\WINDOWS\system32> wsl --install -d Ubuntu
+Já existe uma distribuição com o nome fornecido. Use --name escolher um nome diferente.
+Código de erro: Wsl/InstallDistro/ERROR_ALREADY_EXISTS
