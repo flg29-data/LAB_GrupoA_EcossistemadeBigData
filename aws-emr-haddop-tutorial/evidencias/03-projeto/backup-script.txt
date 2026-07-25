@@ -1,0 +1,2 @@
+-rwxrwxrwx 1 breno breno 10150 Jul  2 23:00 scripts/run-wordcount-emr.sh
+-rwxrwxrwx 1 breno breno 10150 Jul 16  2026 scripts/run-wordcount-emr.sh.bak-20260716_225643

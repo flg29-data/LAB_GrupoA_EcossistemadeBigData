@@ -1,0 +1,8 @@
+Data: 2026-07-16T22:48:14-03:00
+Bucket: 650379606721-emr-lab-wordcount
+
+=== JAR ===
+2026-06-19 23:06:44       3009 jars/wordcount.jar
+
+=== INPUT ===
+2026-07-16 22:35:14       9634 input/lorem.txt

@@ -1,0 +1,44 @@
++ ./scripts/run-wordcount-emr.sh:2:main: set -euo pipefail
++++ ./scripts/run-wordcount-emr.sh:4:main: dirname ./scripts/run-wordcount-emr.sh
+++ ./scripts/run-wordcount-emr.sh:4:main: cd ./scripts/..
+++ ./scripts/run-wordcount-emr.sh:4:main: pwd
++ ./scripts/run-wordcount-emr.sh:4:main: SCRIPT_DIR=/mnt/d/OneDrive/Pastas/Academico/Especializacao/Engenharia-Dados-Big-Data/C2/23_ecossistema_big_data/Trabalho/eEDB-006-tutoriais-main/eEDB-006-tutoriais-main/tutoriais/aws-emr-hadoop-tutorial
+++ ./scripts/run-wordcount-emr.sh:5:main: aws sts get-caller-identity --query Account --output text
++ ./scripts/run-wordcount-emr.sh:5:main: ACCOUNT_ID=650379606721
++ ./scripts/run-wordcount-emr.sh:6:main: BUCKET_NAME=650379606721-emr-lab-wordcount
++ ./scripts/run-wordcount-emr.sh:8:main: RED='\033[0;31m'
++ ./scripts/run-wordcount-emr.sh:9:main: GREEN='\033[0;32m'
++ ./scripts/run-wordcount-emr.sh:10:main: YELLOW='\033[1;33m'
++ ./scripts/run-wordcount-emr.sh:11:main: NC='\033[0m'
++ ./scripts/run-wordcount-emr.sh:269:main: main full
++ ./scripts/run-wordcount-emr.sh:189:main: echo ========================================
+========================================
++ ./scripts/run-wordcount-emr.sh:190:main: echo '  EMR WordCount - Modo Automatico'
+  EMR WordCount - Modo Automatico
++ ./scripts/run-wordcount-emr.sh:191:main: echo ========================================
+========================================
++ ./scripts/run-wordcount-emr.sh:192:main: echo ''
+
++ ./scripts/run-wordcount-emr.sh:194:main: command -v aws
++ ./scripts/run-wordcount-emr.sh:198:main: local mode=full
++ ./scripts/run-wordcount-emr.sh:200:main: case "$mode" in
++ ./scripts/run-wordcount-emr.sh:202:main: local cluster_id
+++ ./scripts/run-wordcount-emr.sh:203:main: create_cluster
+++ ./scripts/run-wordcount-emr.sh:91:create_cluster: info 'Criando cluster EMR...'
+++ ./scripts/run-wordcount-emr.sh:13:info: echo -e '\033[0;32m[INFO]\033[0m Criando cluster EMR...'
+++ ./scripts/run-wordcount-emr.sh:93:create_cluster: local cluster_id
++++ ./scripts/run-wordcount-emr.sh:106:create_cluster: aws emr create-cluster --name wordcount-emr-cluster --release-label emr-6.15.0 --applications Name=Hadoop Name=MapReduce --service-role EMR_DefaultRole --job-flow-role EMR_EC2_DefaultRole --ec2-attributes KeyName=vockey,InstanceProfile=EMR_EC2_DefaultRole --instance-groups '[{"InstanceGroupType":"MASTER","InstanceCount":1,"InstanceType":"m4.large","Name":"Master"},
+              {"InstanceGroupType":"CORE","InstanceCount":1,"InstanceType":"m4.large","Name":"Core"}]' --no-auto-terminate --query ClusterId --output text
+++ ./scripts/run-wordcount-emr.sh:106:create_cluster: cluster_id='
+aws: [ERROR]: An error occurred (ParamValidation): Unknown options: --job-flow-role,EMR_EC2_DefaultRole'
+++ ./scripts/run-wordcount-emr.sh:108:create_cluster: echo '
+aws: [ERROR]: An error occurred (ParamValidation): Unknown options: --job-flow-role,EMR_EC2_DefaultRole'
+++ ./scripts/run-wordcount-emr.sh:108:create_cluster: grep -qE '(An error|error)'
+++ ./scripts/run-wordcount-emr.sh:109:create_cluster: error 'Falha ao criar cluster: 
+aws: [ERROR]: An error occurred (ParamValidation): Unknown options: --job-flow-role,EMR_EC2_DefaultRole'
+++ ./scripts/run-wordcount-emr.sh:15:error: echo -e '\033[0;31m[ERROR]\033[0m Falha ao criar cluster: 
+aws: [ERROR]: An error occurred (ParamValidation): Unknown options: --job-flow-role,EMR_EC2_DefaultRole'
+++ ./scripts/run-wordcount-emr.sh:15:error: exit 1
++ ./scripts/run-wordcount-emr.sh:203:main: cluster_id='[0;32m[INFO][0m Criando cluster EMR...
+[0;31m[ERROR][0m Falha ao criar cluster: 
+aws: [ERROR]: An error occurred (ParamValidation): Unknown options: --job-flow-role,EMR_EC2_DefaultRole'

@@ -1,0 +1,11 @@
+{
+    "Id": "s-08809142LAAJ9LL78MDT",
+    "Name": "Run-WordCount-Complete",
+    "State": "COMPLETED",
+    "Failure": null,
+    "Timeline": {
+        "CreationDateTime": "2026-07-16T23:15:11.575000-03:00",
+        "StartDateTime": "2026-07-16T23:15:29.061000-03:00",
+        "EndDateTime": "2026-07-16T23:18:08.557000-03:00"
+    }
+}

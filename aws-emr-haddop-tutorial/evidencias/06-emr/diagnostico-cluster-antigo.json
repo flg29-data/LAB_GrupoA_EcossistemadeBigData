@@ -1,0 +1,13 @@
+{
+    "Id": "j-1YMIVQI3YC8YE",
+    "Name": "wordcount-emr-cluster",
+    "State": "TERMINATED_WITH_ERRORS",
+    "ReasonCode": "INSTANCE_FAILURE",
+    "ReasonMessage": "All instances in the job flow are terminated by user",
+    "Creation": "2026-06-13T12:23:34.495000-03:00",
+    "Ready": "2026-06-13T12:27:54.730000-03:00",
+    "End": "2026-06-13T12:30:16.389000-03:00",
+    "LogUri": "s3n://650379606721-emr-lab-wordcount/logs/",
+    "Release": "emr-6.15.0",
+    "Master": "ec2-54-83-92-205.compute-1.amazonaws.com"
+}

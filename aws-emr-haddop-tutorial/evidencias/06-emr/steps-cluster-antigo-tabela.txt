@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------
+|                               ListSteps                               |
++-------------------------+--------------------------------+------------+
+|           Id            |             Name               |   State    |
++-------------------------+--------------------------------+------------+
+|  s-06710312CSXNR0EB76RR |  Step4-Copy-Output-HDFS-to-S3  |  CANCELLED |
+|  s-0670412256WKC5BXGA3G |  Step3-WordCount-MapReduce     |  CANCELLED |
+|  s-02278002ETFABCNJIOR3 |  Step2-Copy-Input-S3-to-HDFS   |  CANCELLED |
+|  s-04088961WOI40SNH8IKZ |  Step1-Compile-JAR             |  COMPLETED |
++-------------------------+--------------------------------+------------+

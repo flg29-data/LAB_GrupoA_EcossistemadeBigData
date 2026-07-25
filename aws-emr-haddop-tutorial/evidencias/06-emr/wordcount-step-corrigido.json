@@ -1,0 +1,13 @@
+[
+  {
+    "Type": "CUSTOM_JAR",
+    "Name": "Run-WordCount-Complete",
+    "ActionOnFailure": "CONTINUE",
+    "Jar": "command-runner.jar",
+    "Args": [
+      "bash",
+      "-c",
+      "set -euo pipefail\n\necho \"=== DOWNLOAD DO JAR ===\"\naws s3 cp s3://650379606721-emr-lab-wordcount/jars/wordcount.jar /tmp/wordcount.jar\n\necho \"=== LIMPEZA DOS CAMINHOS ANTERIORES ===\"\nhdfs dfs -rm -r -f hdfs:///input || true\nhdfs dfs -rm -r -f hdfs:///output/wordcount || true\nrm -rf /tmp/wordcount-output /tmp/jarcheck\n\necho \"=== COPIA S3 PARA HDFS ===\"\ns3-dist-cp --src s3://650379606721-emr-lab-wordcount/input/ --dest hdfs:///input/\n\necho \"=== VERIFICACAO DO JAR ===\"\nmkdir -p /tmp/jarcheck\ncd /tmp/jarcheck\njar xf /tmp/wordcount.jar META-INF/MANIFEST.MF || true\n\necho \"=== EXECUCAO DO WORDCOUNT ===\"\nif [ -f META-INF/MANIFEST.MF ] && grep -q '^Main-Class:' META-INF/MANIFEST.MF; then\n  hadoop jar /tmp/wordcount.jar hdfs:///input/ hdfs:///output/wordcount/\nelse\n  hadoop jar /tmp/wordcount.jar WordCountApplication hdfs:///input/ hdfs:///output/wordcount/\nfi\n\necho \"=== RESULTADO NO HDFS ===\"\nhdfs dfs -ls hdfs:///output/wordcount/\nhdfs dfs -cat hdfs:///output/wordcount/part-r-00000 | head -20\n\necho \"=== COPIA HDFS PARA S3 ===\"\nhdfs dfs -copyToLocal hdfs:///output/wordcount/ /tmp/wordcount-output\naws s3 rm s3://650379606721-emr-lab-wordcount/output/ --recursive || true\naws s3 cp /tmp/wordcount-output/ s3://650379606721-emr-lab-wordcount/output/ --recursive\n\necho \"=== PROCESSAMENTO CONCLUIDO ===\""
+    ]
+  }
+]

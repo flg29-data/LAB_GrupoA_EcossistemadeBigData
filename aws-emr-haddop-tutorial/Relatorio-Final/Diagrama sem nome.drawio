@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="UWvhcR4fGA6w4xekf53A">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-5" edge="1" parent="1" source="dOkvoz6YRdjs5CQlsFdi-2" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=classic;endSize=8;" target="dOkvoz6YRdjs5CQlsFdi-4" value="1. Terraform / Upload">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Windows 11 + WSL 2&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AWS CLI, Terraform e Java&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="-380" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-7" edge="1" parent="1" source="dOkvoz6YRdjs5CQlsFdi-4" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=classic;endSize=8;" target="dOkvoz6YRdjs5CQlsFdi-6" value="2. Fontes, JAR e dados">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-13" edge="1" parent="1" source="dOkvoz6YRdjs5CQlsFdi-4" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=classic;endSize=8;" target="dOkvoz6YRdjs5CQlsFdi-10" value="4. S3 -&amp;gt; HDFS">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-450" y="320" />
+            </Array>
+            <mxPoint x="-395" y="410" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Amazon S3&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;input/, src/, jars/, logs/ e output/&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="-395" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-9" edge="1" parent="1" source="dOkvoz6YRdjs5CQlsFdi-6" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=classic;endSize=8;" target="dOkvoz6YRdjs5CQlsFdi-8" value="3. Processamento">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Amazon S3&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;input/, src/, jars/, logs/ e output/&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="-395" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="EMR Core&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;DataNode e NodeManager&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="-395" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-11" edge="1" parent="1" source="dOkvoz6YRdjs5CQlsFdi-10" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=classic;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="dOkvoz6YRdjs5CQlsFdi-6" value="5. MapReduce">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-12" edge="1" parent="1" source="dOkvoz6YRdjs5CQlsFdi-10" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;labelBackgroundColor=default;startSize=8;endArrow=classic;endSize=8;" target="dOkvoz6YRdjs5CQlsFdi-4" value="6. saída HDFS -&amp;gt; S3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-530" y="280" />
+              <mxPoint x="-347.43" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dOkvoz6YRdjs5CQlsFdi-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="HDFS&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;inputs e outputs&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="-570" y="380" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,26 @@
+[
+    {
+        "Id": "s-06710312CSXNR0EB76RR",
+        "Name": "Step4-Copy-Output-HDFS-to-S3",
+        "State": "CANCELLED",
+        "Failure": null
+    },
+    {
+        "Id": "s-0670412256WKC5BXGA3G",
+        "Name": "Step3-WordCount-MapReduce",
+        "State": "CANCELLED",
+        "Failure": null
+    },
+    {
+        "Id": "s-02278002ETFABCNJIOR3",
+        "Name": "Step2-Copy-Input-S3-to-HDFS",
+        "State": "CANCELLED",
+        "Failure": null
+    },
+    {
+        "Id": "s-04088961WOI40SNH8IKZ",
+        "Name": "Step1-Compile-JAR",
+        "State": "COMPLETED",
+        "Failure": null
+    }
+]

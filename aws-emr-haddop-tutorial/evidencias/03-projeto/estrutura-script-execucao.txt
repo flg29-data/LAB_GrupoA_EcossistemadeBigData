@@ -1,0 +1,7 @@
+94:    cluster_id=$(aws emr create-cluster \
+198:    local mode=${1:-"full"}
+200:    case "$mode" in
+201:        full)
+237:                error "Nenhum cluster encontrado. Rode './scripts/run-wordcount-emr.sh full' primeiro."
+259:            echo "Uso: $0 {full|results|ssh|status}"
+261:            echo "  full    - Cria cluster, compila (se necessario), roda WordCount (padrao)"

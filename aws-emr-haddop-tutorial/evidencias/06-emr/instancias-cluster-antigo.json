@@ -1,0 +1,24 @@
+[
+    {
+        "EMRInstanceId": "ci-10221832YSR4AS1S0821",
+        "EC2InstanceId": "i-0a869632625bf2403",
+        "InstanceType": "m4.large",
+        "Market": "ON_DEMAND",
+        "State": "TERMINATED",
+        "Reason": {
+            "Code": "INSTANCE_FAILURE",
+            "Message": "User terminated the instance."
+        }
+    },
+    {
+        "EMRInstanceId": "ci-09044482BRS4KFEOS946",
+        "EC2InstanceId": "i-0425af6920b458d07",
+        "InstanceType": "m4.large",
+        "Market": "ON_DEMAND",
+        "State": "TERMINATED",
+        "Reason": {
+            "Code": "INSTANCE_FAILURE",
+            "Message": "User terminated the instance."
+        }
+    }
+]

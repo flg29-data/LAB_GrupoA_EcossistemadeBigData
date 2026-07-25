@@ -1,0 +1,14 @@
+========================================
+  EMR WordCount - Modo Automatico
+========================================
+
+[0;32m[INFO][0m Cluster ID salvo em .cluster_id
+
+[0;32m[INFO][0m Aguardando cluster j-O4UT4STPLYZH atingir estado WAITING (max 900s)...
+  Estado: STARTING (0s / 900s)    Estado: STARTING (30s / 900s)    Estado: STARTING (60s / 900s)    Estado: STARTING (90s / 900s)    Estado: STARTING (120s / 900s)    Estado: STARTING (150s / 900s)    Estado: STARTING (180s / 900s)    Estado: STARTING (210s / 900s)    Estado: STARTING (240s / 900s)  
+[0;32m[INFO][0m Cluster no estado WAITING!
+[0;32m[INFO][0m JAR ja existe no S3. Pulando compilacao.
+[0;32m[INFO][0m [Step 2/4] Copiando dados do S3 para HDFS...
+
+aws: [ERROR]: An error occurred (ParamValidation): Parameter validation failed:
+Unknown parameter in [0]: "HadoopJarStep", must be one of: Type, Name, ActionOnFailure, Jar, Args, MainClass, Properties, LogUri, EncryptionKeyArn

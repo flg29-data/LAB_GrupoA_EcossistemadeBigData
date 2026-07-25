@@ -1,0 +1,331 @@
+data.aws_vpc.default: Reading...
+data.aws_caller_identity.current: Reading...
+data.aws_region.current: Reading...
+data.aws_region.current: Read complete after 0s [id=us-east-1]
+data.aws_caller_identity.current: Read complete after 0s [id=650379606721]
+data.aws_vpc.default: Read complete after 2s [id=vpc-0eaa9957299798865]
+data.aws_subnets.public: Reading...
+data.aws_subnets.public: Read complete after 0s [id=us-east-1]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_emr_cluster.wordcount will be created
+  + resource "aws_emr_cluster" "wordcount" {
+      + applications                      = [
+          + "Hadoop",
+        ]
+      + arn                               = (known after apply)
+      + cluster_state                     = (known after apply)
+      + id                                = (known after apply)
+      + keep_job_flow_alive_when_no_steps = true
+      + log_uri                           = (known after apply)
+      + master_public_dns                 = (known after apply)
+      + name                              = "wordcount-emr-cluster"
+      + release_label                     = "emr-6.15.0"
+      + scale_down_behavior               = (known after apply)
+      + service_role                      = "EMR_DefaultRole"
+      + step                              = [
+          + {
+              + action_on_failure = "TERMINATE_CLUSTER"
+              + hadoop_jar_step   = [
+                  + {
+                      + args = [
+                          + "bash",
+                          + "-c",
+                          + "set -e; HCP=$(hadoop classpath); mkdir -p /home/hadoop/wc-build; aws s3 cp s3://650379606721-emr-lab-wordcount/src/ /home/hadoop/wc-build/ --recursive; javac -classpath \"$HCP\" -d /home/hadoop/wc-build /home/hadoop/wc-build/*.java; cd /home/hadoop/wc-build && jar cf wordcount.jar *.class; aws s3 cp wordcount.jar s3://650379606721-emr-lab-wordcount/jars/wordcount.jar; echo COMPILE_OK",
+                        ]
+                      + jar  = "command-runner.jar"
+                    },
+                ]
+              + name              = "Step1-Compile-JAR"
+            },
+          + {
+              + action_on_failure = "CONTINUE"
+              + hadoop_jar_step   = [
+                  + {
+                      + args = [
+                          + "s3-dist-cp",
+                          + "--src",
+                          + "s3://650379606721-emr-lab-wordcount/input/",
+                          + "--dest",
+                          + "hdfs:///input/",
+                        ]
+                      + jar  = "command-runner.jar"
+                    },
+                ]
+              + name              = "Step2-Copy-Input-S3-to-HDFS"
+            },
+          + {
+              + action_on_failure = "CONTINUE"
+              + hadoop_jar_step   = [
+                  + {
+                      + args = [
+                          + "bash",
+                          + "-c",
+                          + "hadoop jar s3://650379606721-emr-lab-wordcount/jars/wordcount.jar WordCountApplication hdfs:///input/ hdfs:///output/wordcount/",
+                        ]
+                      + jar  = "command-runner.jar"
+                    },
+                ]
+              + name              = "Step3-WordCount-MapReduce"
+            },
+          + {
+              + action_on_failure = "CONTINUE"
+              + hadoop_jar_step   = [
+                  + {
+                      + args = [
+                          + "bash",
+                          + "-c",
+                          + "hadoop fs -mkdir -p /tmp/wc-output && hadoop fs -cp /output/wordcount/* /tmp/wc-output/ && s3-dist-cp --src hdfs:///tmp/wc-output/ --dest s3://650379606721-emr-lab-wordcount/output/ && echo COPY_DONE",
+                        ]
+                      + jar  = "command-runner.jar"
+                    },
+                ]
+              + name              = "Step4-Copy-Output-HDFS-to-S3"
+            },
+        ]
+      + step_concurrency_level            = 1
+      + tags                              = {
+          + "ManagedBy" = "terraform"
+          + "Project"   = "emr-wordcount-lab"
+        }
+      + tags_all                          = {
+          + "ManagedBy" = "terraform"
+          + "Project"   = "emr-wordcount-lab"
+        }
+      + termination_protection            = (known after apply)
+      + unhealthy_node_replacement        = false
+      + visible_to_all_users              = true
+
+      + bootstrap_action {
+          + name = "bootstrap"
+          + path = (known after apply)
+        }
+
+      + core_instance_fleet (known after apply)
+
+      + core_instance_group {
+          + id             = (known after apply)
+          + instance_count = 1
+          + instance_type  = "m4.large"
+
+          + ebs_config {
+              + size                 = 32
+              + type                 = "gp2"
+              + volumes_per_instance = 1
+            }
+        }
+
+      + ec2_attributes {
+          + emr_managed_master_security_group = (known after apply)
+          + emr_managed_slave_security_group  = (known after apply)
+          + instance_profile                  = "EMR_EC2_DefaultRole"
+          + key_name                          = "vockey"
+          + service_access_security_group     = (known after apply)
+          + subnet_id                         = "subnet-0227eed7d58b5fce9"
+          + subnet_ids                        = (known after apply)
+            # (2 unchanged attributes hidden)
+        }
+
+      + master_instance_fleet (known after apply)
+
+      + master_instance_group {
+          + id             = (known after apply)
+          + instance_count = 1
+          + instance_type  = "m4.large"
+
+          + ebs_config {
+              + size                 = 32
+              + type                 = "gp2"
+              + volumes_per_instance = 1
+            }
+        }
+    }
+
+  # aws_s3_bucket.emr_lab will be created
+  + resource "aws_s3_bucket" "emr_lab" {
+      + acceleration_status         = (known after apply)
+      + acl                         = (known after apply)
+      + arn                         = (known after apply)
+      + bucket                      = "650379606721-emr-lab-wordcount"
+      + bucket_domain_name          = (known after apply)
+      + bucket_prefix               = (known after apply)
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = true
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + object_lock_enabled         = (known after apply)
+      + policy                      = (known after apply)
+      + region                      = (known after apply)
+      + request_payer               = (known after apply)
+      + tags                        = {
+          + "ManagedBy" = "terraform"
+          + "Name"      = "650379606721-emr-lab-wordcount"
+          + "Project"   = "emr-wordcount-lab"
+        }
+      + tags_all                    = {
+          + "ManagedBy" = "terraform"
+          + "Name"      = "650379606721-emr-lab-wordcount"
+          + "Project"   = "emr-wordcount-lab"
+        }
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + cors_rule (known after apply)
+
+      + grant (known after apply)
+
+      + lifecycle_rule (known after apply)
+
+      + logging (known after apply)
+
+      + object_lock_configuration (known after apply)
+
+      + replication_configuration (known after apply)
+
+      + server_side_encryption_configuration (known after apply)
+
+      + versioning (known after apply)
+
+      + website (known after apply)
+    }
+
+  # aws_s3_object.bootstrap_script will be created
+  + resource "aws_s3_object" "bootstrap_script" {
+      + acl                    = (known after apply)
+      + arn                    = (known after apply)
+      + bucket                 = (known after apply)
+      + bucket_key_enabled     = (known after apply)
+      + checksum_crc32         = (known after apply)
+      + checksum_crc32c        = (known after apply)
+      + checksum_crc64nvme     = (known after apply)
+      + checksum_sha1          = (known after apply)
+      + checksum_sha256        = (known after apply)
+      + content                = <<-EOT
+            #!/bin/bash
+            echo "Bootstrap complete."
+        EOT
+      + content_type           = (known after apply)
+      + etag                   = (known after apply)
+      + force_destroy          = false
+      + id                     = (known after apply)
+      + key                    = "scripts/bootstrap.sh"
+      + kms_key_id             = (known after apply)
+      + server_side_encryption = (known after apply)
+      + storage_class          = (known after apply)
+      + tags_all               = (known after apply)
+      + version_id             = (known after apply)
+    }
+
+  # aws_s3_object.input_data["lorem.txt"] will be created
+  + resource "aws_s3_object" "input_data" {
+      + acl                    = (known after apply)
+      + arn                    = (known after apply)
+      + bucket                 = (known after apply)
+      + bucket_key_enabled     = (known after apply)
+      + checksum_crc32         = (known after apply)
+      + checksum_crc32c        = (known after apply)
+      + checksum_crc64nvme     = (known after apply)
+      + checksum_sha1          = (known after apply)
+      + checksum_sha256        = (known after apply)
+      + content_type           = (known after apply)
+      + etag                   = "3c6d3e9374a8a3ba229fde5668e9cf0f"
+      + force_destroy          = false
+      + id                     = (known after apply)
+      + key                    = "input/lorem.txt"
+      + kms_key_id             = (known after apply)
+      + server_side_encryption = (known after apply)
+      + source                 = "./../data/lorem.txt"
+      + storage_class          = (known after apply)
+      + tags_all               = (known after apply)
+      + version_id             = (known after apply)
+    }
+
+  # aws_s3_object.java_sources["WordCountApplication.java"] will be created
+  + resource "aws_s3_object" "java_sources" {
+      + acl                    = (known after apply)
+      + arn                    = (known after apply)
+      + bucket                 = (known after apply)
+      + bucket_key_enabled     = (known after apply)
+      + checksum_crc32         = (known after apply)
+      + checksum_crc32c        = (known after apply)
+      + checksum_crc64nvme     = (known after apply)
+      + checksum_sha1          = (known after apply)
+      + checksum_sha256        = (known after apply)
+      + content_type           = (known after apply)
+      + etag                   = "825ebd99720bff94cdf01c69448bf3de"
+      + force_destroy          = false
+      + id                     = (known after apply)
+      + key                    = "src/WordCountApplication.java"
+      + kms_key_id             = (known after apply)
+      + server_side_encryption = (known after apply)
+      + source                 = "./../src/WordCountApplication.java"
+      + storage_class          = (known after apply)
+      + tags_all               = (known after apply)
+      + version_id             = (known after apply)
+    }
+
+  # aws_s3_object.java_sources["WordCountMapper.java"] will be created
+  + resource "aws_s3_object" "java_sources" {
+      + acl                    = (known after apply)
+      + arn                    = (known after apply)
+      + bucket                 = (known after apply)
+      + bucket_key_enabled     = (known after apply)
+      + checksum_crc32         = (known after apply)
+      + checksum_crc32c        = (known after apply)
+      + checksum_crc64nvme     = (known after apply)
+      + checksum_sha1          = (known after apply)
+      + checksum_sha256        = (known after apply)
+      + content_type           = (known after apply)
+      + etag                   = "13d12edf8efbf23ceecdd31a927d26bd"
+      + force_destroy          = false
+      + id                     = (known after apply)
+      + key                    = "src/WordCountMapper.java"
+      + kms_key_id             = (known after apply)
+      + server_side_encryption = (known after apply)
+      + source                 = "./../src/WordCountMapper.java"
+      + storage_class          = (known after apply)
+      + tags_all               = (known after apply)
+      + version_id             = (known after apply)
+    }
+
+  # aws_s3_object.java_sources["WordCountReducer.java"] will be created
+  + resource "aws_s3_object" "java_sources" {
+      + acl                    = (known after apply)
+      + arn                    = (known after apply)
+      + bucket                 = (known after apply)
+      + bucket_key_enabled     = (known after apply)
+      + checksum_crc32         = (known after apply)
+      + checksum_crc32c        = (known after apply)
+      + checksum_crc64nvme     = (known after apply)
+      + checksum_sha1          = (known after apply)
+      + checksum_sha256        = (known after apply)
+      + content_type           = (known after apply)
+      + etag                   = "5fe6b548b599a617be33fe4abfe20c28"
+      + force_destroy          = false
+      + id                     = (known after apply)
+      + key                    = "src/WordCountReducer.java"
+      + kms_key_id             = (known after apply)
+      + server_side_encryption = (known after apply)
+      + source                 = "./../src/WordCountReducer.java"
+      + storage_class          = (known after apply)
+      + tags_all               = (known after apply)
+      + version_id             = (known after apply)
+    }
+
+Plan: 7 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + cluster_id                = (known after apply)
+  + cluster_master_public_dns = (known after apply)
+  + s3_bucket                 = (known after apply)
+  + s3_output_path            = (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

@@ -1,0 +1,8 @@
+Data: 2026-07-16T23:02:43-03:00
+
+97:        --applications Name=Hadoop \
+98:        --service-role "EMR_DefaultRole" \
+99:        --ec2-attributes KeyName=vockey,InstanceProfile=EMR_EC2_DefaultRole \
+202:            cluster_id=$(create_cluster | tail -n 1)
+
+OK: sintaxe Bash válida

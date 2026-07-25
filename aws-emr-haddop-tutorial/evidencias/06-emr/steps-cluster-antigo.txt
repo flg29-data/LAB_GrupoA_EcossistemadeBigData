@@ -1,0 +1,10 @@
+---------------------------------------------------------------------------------------------------------
+|                                               ListSteps                                               |
++-------------------------+----------+----------+--------------------------------+---------+------------+
+|           Id            | LogFile  | Message  |             Name               | Reason  |   State    |
++-------------------------+----------+----------+--------------------------------+---------+------------+
+|  s-06710312CSXNR0EB76RR |  None    |  None    |  Step4-Copy-Output-HDFS-to-S3  |  None   |  CANCELLED |
+|  s-0670412256WKC5BXGA3G |  None    |  None    |  Step3-WordCount-MapReduce     |  None   |  CANCELLED |
+|  s-02278002ETFABCNJIOR3 |  None    |  None    |  Step2-Copy-Input-S3-to-HDFS   |  None   |  CANCELLED |
+|  s-04088961WOI40SNH8IKZ |  None    |  None    |  Step1-Compile-JAR             |  None   |  COMPLETED |
++-------------------------+----------+----------+--------------------------------+---------+------------+

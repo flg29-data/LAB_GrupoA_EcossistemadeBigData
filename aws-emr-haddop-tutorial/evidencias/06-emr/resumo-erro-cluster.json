@@ -1,0 +1,6 @@
+{
+    "State": "TERMINATED_WITH_ERRORS",
+    "ReasonCode": "INSTANCE_FAILURE",
+    "ReasonMessage": "All instances in the job flow are terminated by user",
+    "ErrorDetails": null
+}
