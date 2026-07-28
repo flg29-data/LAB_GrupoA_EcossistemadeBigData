@@ -77,7 +77,7 @@ Os resultados dos laboratórios realizados pelos integrante do grupo estão disp
 | Hadoop Single Node com Docker e MapReduce        | [hadoop-docker-tutorial](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/tree/4cf036759911be273dca37b167b2ad1382072f63/hadoop-docker-tutorial)      |
 | Spark         | [spark-tutorial](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/tree/8981e026816e5e9f0ac1186e716c50dd03e43706/spark-tutorial) |
 | Ingestão de Dados        | [ingestao](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/main/ingestao/README.md) |
-| Processamento em Streaming         | [streaming](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/main/streaming/README.md) |
+| Processamento em Streaming         | [streaming](https://github.com/flg29-data/LAB_GrupoA_EcossistemadeBigData/blob/main/streaming/streaming/README.md) |
 
 
 ---
