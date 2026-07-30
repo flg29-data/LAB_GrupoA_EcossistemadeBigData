@@ -1,0 +1,86 @@
+﻿TUTORIAL 2 AWS - DIFICULDADES ENCONTRADAS E SOLUCOES
+
+1. Python 3.11 ausente na EC2
+Problema:
+A verificacao inicial constatou que a instancia nao possuia o Python 3.11, o pip correspondente e o modulo venv.
+
+Solucao:
+Foram instalados python3.11, python3.11-pip e Git com o gerenciador DNF do Amazon Linux 2023. A criacao de um ambiente virtual foi testada antes da instalacao do Meltano.
+
+2. Ambiente virtual nao permaneceu ativo
+Problema:
+O ambiente foi ativado dentro de um bloco executado em pipeline com tee. Ao terminar o bloco, a sessao principal nao manteve a ativacao.
+
+Solucao:
+O ambiente foi reativado manualmente com:
+source ~/meltano-venv/bin/activate
+
+3. Senha com caractere de exclamacao
+Problema:
+O Bash interpretou o caractere ! da senha como expansao do historico, retornando event not found.
+
+Solucao:
+A senha foi redefinida com caracteres seguros, armazenada de forma protegida e informada por leitura silenciosa.
+
+4. Conexao com a EC2 incorreta
+Problema:
+O terminal foi inicialmente aberto na instancia i-0798152a601053e79, diferente da instancia gerenciada pelo Terraform.
+
+Solucao:
+A identidade da instancia foi verificada pelo IMDSv2 e a conexao foi refeita para a instancia correta:
+i-0db119c4f19fd868e.
+
+5. Divergencia da senha do RDS
+Problema:
+A senha armazenada localmente nao correspondia ao valor aplicado na instancia RDS.
+
+Solucao:
+A senha foi redefinida no RDS e sincronizada com o terraform.tfvars. Depois disso, o Terraform apresentou plano sem alteracoes.
+
+6. Divergencia entre o tutorial e a PokeAPI
+Problema:
+O tutorial previa 1350 registros, enquanto a PokeAPI informou 1351 registros em 30/07/2026.
+
+Solucao:
+A quantidade esperada foi atualizada com base na resposta real da API, mantendo o valor original do tutorial registrado para comparacao.
+
+7. Registro bulbasaur ausente
+Problema:
+A primeira execucao gerou 1350 registros e omitiu o primeiro Pokemon, bulbasaur.
+
+Solucao:
+Foi identificado que o deslocamento inicial estava em 1. A configuracao pagination_initial_offset foi alterada para 0.
+
+8. Offset armazenado como texto
+Problema:
+O comando de configuracao gravou pagination_initial_offset: '0', interpretado como string pelo plugin.
+
+Solucao:
+O meltano.yml foi corrigido para:
+pagination_initial_offset: 0
+sem aspas, garantindo o tipo inteiro.
+
+9. Log interno do Meltano nao localizado
+Problema:
+Nao foi encontrado um arquivo interno automatico no caminho pesquisado.
+
+Solucao:
+As execucoes foram registradas integralmente por meio do comando tee e de redirecionamento para arquivos de log proprios.
+
+10. Variaveis vazias em alguns blocos
+Problema:
+Alguns comandos copiados parcialmente nao preservaram PIPESTATUS ou os codigos de saida.
+
+Solucao:
+As validacoes foram repetidas por programas Python temporarios e comandos sem pipeline, garantindo a captura correta dos codigos.
+
+RESULTADOS OBTIDOS
+
+- Vendas extraidas do RDS PostgreSQL: 200 registros.
+- Pokemon extraidos da PokeAPI: 1351 registros.
+- Nomes de Pokemon unicos: 1351.
+- Registro bulbasaur presente: SIM.
+- Parquet de vendas publicado no S3: SIM.
+- Parquet de Pokemon publicado no S3: SIM.
+- Comparacao dos hashes local e S3: APROVADA.
+- Terraform sem drift: SIM.

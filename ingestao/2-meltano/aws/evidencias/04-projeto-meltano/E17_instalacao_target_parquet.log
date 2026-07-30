@@ -1,0 +1,12 @@
+[2m2026-07-30T15:34:17.843308Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-07-30T15:34:18.045163Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mFetching plugin definition from Meltano Hub[0m
+Added loader 'target-parquet' to your project
+Variant:	automattic (default)
+Repository:	https://github.com/Automattic/target-parquet
+Documentation:	https://hub.meltano.com/loaders/target-parquet--automattic
+Python Version:	python3.12
+
+[2m2026-07-30T15:34:18.231921Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mInstalling loader 'target-parquet'[0m
+[2m2026-07-30T15:34:23.924439Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mInstalled loader 'target-parquet'[0m
+
+To learn more about loader 'target-parquet', visit https://hub.meltano.com/loaders/target-parquet--automattic

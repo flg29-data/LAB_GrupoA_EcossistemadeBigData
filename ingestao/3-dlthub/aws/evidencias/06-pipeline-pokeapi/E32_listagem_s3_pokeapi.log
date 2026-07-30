@@ -1,0 +1,8 @@
+2026-07-30 19:00:56  186 Bytes pokeapi/_dlt_loads/rest_api__1785438053.9629052.jsonl
+2026-07-30 19:00:56  516 Bytes pokeapi/_dlt_pipeline_state/ingestao_pokeapi_dlt__1785438053.9629052__5f5f24f2d2f6d36586ba8529a3e1833c4baa8fc2d202828c51f0a29ccda320ef.jsonl
+2026-07-30 19:00:55    3.5 KiB pokeapi/_dlt_version/rest_api__1785438054.9271708__5f5f24f2d2f6d36586ba8529a3e1833c4baa8fc2d202828c51f0a29ccda320ef.jsonl
+2026-07-30 19:00:55   41 Bytes pokeapi/init
+2026-07-30 19:00:56   46.0 KiB pokeapi/pokemon/1785438053.9629052.cd4d0b0c69.parquet
+
+Total Objects: 5
+   Total Size: 50.2 KiB

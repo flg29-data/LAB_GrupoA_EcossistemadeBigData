@@ -1,0 +1,97 @@
+[2m2026-07-30T15:41:51.260599Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mEnvironment 'dev' is active   [0m
+[2m2026-07-30T15:41:51.276684Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-07-30T15:41:51.643543Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRun timeout configured        [0m
+[2m2026-07-30T15:41:51.644296Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRunning job with name 'dev:tap-postgres-to-target-parquet' and run ID '019fb3b0-6b9a-7ed9-bad6-0266d2c6a329'[0m
+[2m2026-07-30T15:41:52.015546Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mPerforming full refresh, ignoring state left behind by any previous runs.[0m
+[2m2026-07-30T15:41:52.016010Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRunning catalog discovery     [0m
+[2m2026-07-30T15:41:52.579871Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping parse of env var settings...[0m
+[2m2026-07-30T15:41:53.926035Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mtap-postgres v0.10.0, Meltano SDK v0.54.5[0m
+[2m2026-07-30T15:41:53.932842Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping parse of env var settings...[0m
+[2m2026-07-30T15:41:54.071058Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-_pg_foreign_data_wrappers'.[0m
+[2m2026-07-30T15:41:54.071525Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-_pg_foreign_servers'.[0m
+[2m2026-07-30T15:41:54.071769Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-_pg_foreign_table_columns'.[0m
+[2m2026-07-30T15:41:54.071995Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-_pg_foreign_tables'.[0m
+[2m2026-07-30T15:41:54.072287Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-_pg_user_mappings'.[0m
+[2m2026-07-30T15:41:54.072500Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-administrable_role_authorizations'.[0m
+[2m2026-07-30T15:41:54.072701Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-applicable_roles'.[0m
+[2m2026-07-30T15:41:54.072958Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-attributes'.[0m
+[2m2026-07-30T15:41:54.073175Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-character_sets'.[0m
+[2m2026-07-30T15:41:54.073434Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-check_constraint_routine_usage'.[0m
+[2m2026-07-30T15:41:54.073655Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-check_constraints'.[0m
+[2m2026-07-30T15:41:54.073860Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-collation_character_set_applicability'.[0m
+[2m2026-07-30T15:41:54.074118Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-collations'.[0m
+[2m2026-07-30T15:41:54.074327Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-column_column_usage'.[0m
+[2m2026-07-30T15:41:54.074528Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-column_domain_usage'.[0m
+[2m2026-07-30T15:41:54.074712Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-column_options'.[0m
+[2m2026-07-30T15:41:54.074950Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-column_privileges'.[0m
+[2m2026-07-30T15:41:54.075152Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-column_udt_usage'.[0m
+[2m2026-07-30T15:41:54.075403Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-columns'.[0m
+[2m2026-07-30T15:41:54.075611Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-constraint_column_usage'.[0m
+[2m2026-07-30T15:41:54.075864Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-constraint_table_usage'.[0m
+[2m2026-07-30T15:41:54.076073Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-data_type_privileges'.[0m
+[2m2026-07-30T15:41:54.076337Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-domain_constraints'.[0m
+[2m2026-07-30T15:41:54.076537Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-domain_udt_usage'.[0m
+[2m2026-07-30T15:41:54.076780Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-domains'.[0m
+[2m2026-07-30T15:41:54.083651Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-element_types'.[0m
+[2m2026-07-30T15:41:54.084283Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-enabled_roles'.[0m
+[2m2026-07-30T15:41:54.084722Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-foreign_data_wrapper_options'.[0m
+[2m2026-07-30T15:41:54.085041Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-foreign_data_wrappers'.[0m
+[2m2026-07-30T15:41:54.085399Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-foreign_server_options'.[0m
+[2m2026-07-30T15:41:54.085732Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-foreign_servers'.[0m
+[2m2026-07-30T15:41:54.086033Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-foreign_table_options'.[0m
+[2m2026-07-30T15:41:54.086350Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-foreign_tables'.[0m
+[2m2026-07-30T15:41:54.086675Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-information_schema_catalog_name'.[0m
+[2m2026-07-30T15:41:54.087002Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-key_column_usage'.[0m
+[2m2026-07-30T15:41:54.087331Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-parameters'.[0m
+[2m2026-07-30T15:41:54.087653Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-referential_constraints'.[0m
+[2m2026-07-30T15:41:54.087980Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-role_column_grants'.[0m
+[2m2026-07-30T15:41:54.088359Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-role_routine_grants'.[0m
+[2m2026-07-30T15:41:54.088683Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-role_table_grants'.[0m
+[2m2026-07-30T15:41:54.089003Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-role_udt_grants'.[0m
+[2m2026-07-30T15:41:54.089322Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-role_usage_grants'.[0m
+[2m2026-07-30T15:41:54.089638Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-routine_column_usage'.[0m
+[2m2026-07-30T15:41:54.089943Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-routine_privileges'.[0m
+[2m2026-07-30T15:41:54.090267Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-routine_routine_usage'.[0m
+[2m2026-07-30T15:41:54.090585Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-routine_sequence_usage'.[0m
+[2m2026-07-30T15:41:54.090907Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-routine_table_usage'.[0m
+[2m2026-07-30T15:41:54.091239Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-routines'.[0m
+[2m2026-07-30T15:41:54.091592Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-schemata'.[0m
+[2m2026-07-30T15:41:54.091884Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-sequences'.[0m
+[2m2026-07-30T15:41:54.092188Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-sql_features'.[0m
+[2m2026-07-30T15:41:54.092610Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-sql_implementation_info'.[0m
+[2m2026-07-30T15:41:54.092960Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-sql_parts'.[0m
+[2m2026-07-30T15:41:54.093317Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-sql_sizing'.[0m
+[2m2026-07-30T15:41:54.093650Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-table_constraints'.[0m
+[2m2026-07-30T15:41:54.093964Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-table_privileges'.[0m
+[2m2026-07-30T15:41:54.094339Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-tables'.[0m
+[2m2026-07-30T15:41:54.094677Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-transforms'.[0m
+[2m2026-07-30T15:41:54.095013Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-triggered_update_columns'.[0m
+[2m2026-07-30T15:41:54.095343Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-triggers'.[0m
+[2m2026-07-30T15:41:54.095677Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-udt_privileges'.[0m
+[2m2026-07-30T15:41:54.096014Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-usage_privileges'.[0m
+[2m2026-07-30T15:41:54.096357Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-user_defined_types'.[0m
+[2m2026-07-30T15:41:54.096685Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-user_mapping_options'.[0m
+[2m2026-07-30T15:41:54.097007Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-user_mappings'.[0m
+[2m2026-07-30T15:41:54.097322Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-view_column_usage'.[0m
+[2m2026-07-30T15:41:54.097651Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-view_routine_usage'.[0m
+[2m2026-07-30T15:41:54.097974Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-view_table_usage'.[0m
+[2m2026-07-30T15:41:54.098357Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'information_schema-views'.[0m
+[2m2026-07-30T15:41:54.098707Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'public-clientes'.[0m
+[2m2026-07-30T15:41:54.099079Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mSkipping deselected stream 'public-produtos'.[0m
+[2m2026-07-30T15:41:54.099429Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mBeginning sync of 'public-vendas' in full_table mode[0m
+[2m2026-07-30T15:41:54.116169Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mInitializing 'target-parquet' target sink...[0m
+[2m2026-07-30T15:41:54.116917Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mInitializing target sink for stream 'public-vendas'...[0m
+[2m2026-07-30T15:41:54.123026Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mSetting up public-vendas      [0m
+[2m2026-07-30T15:41:54.205676Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mMETRIC                        [0m [36mmetric_name[0m=[35msync_duration[0m [36mmetric_value[0m=[35m0.1166541576385498[0m
+[2m2026-07-30T15:41:54.206196Z[0m [[32minfo     [0m] [36mtap-postgres[0m [1mMETRIC                        [0m [36mmetric_name[0m=[35mrecord_count[0m [36mmetric_value[0m=[35m200[0m
+[2m2026-07-30T15:41:54.384863Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mTarget 'target-parquet' completed reading 202 lines of input (1 schemas, 200 records, 0 batch manifests, 1 state messages).[0m
+[2m2026-07-30T15:41:54.389748Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mProcessing batch for public-vendas with 200 records.[0m
+[2m2026-07-30T15:41:54.526191Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mPyarrow table size: 15800 | (200 rows)[0m
+[2m2026-07-30T15:41:54.589049Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1m2026-07-30 15:41:54,588 | INFO     | singer_sdk.metrics   | METRIC: {"type": "timer", "metric": "batch_processing_time", "value": 0.19909000396728516, "tags": {"stream": "public-vendas", "pid": 7973, "status": "succeeded"}}[0m
+[2m2026-07-30T15:41:54.596679Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mCleaning up public-vendas     [0m
+[2m2026-07-30T15:41:54.597210Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1m2026-07-30 15:41:54,596 | INFO     | singer_sdk.metrics   | METRIC: {"type": "counter", "metric": "record_count", "value": 200, "tags": {"stream": "public-vendas", "pid": 7973}}[0m
+[2m2026-07-30T15:41:54.597461Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mEmitting completed target state {"bookmarks": {"public-vendas": {}}}[0m
+[2m2026-07-30T15:41:54.612662Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mUsing systemdb state backend  [0m
+[2m2026-07-30T15:41:54.624377Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mIncremental state has been updated at 2026-07-30 15:41:54.624321+00:00.[0m
+[2m2026-07-30T15:41:54.814293Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mBlock run completed           [0m
+[2m2026-07-30T15:41:54.814792Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRun completed                 [0m

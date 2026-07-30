@@ -1,0 +1,9 @@
+============================================================
+VALIDAÇÃO DOS ARQUIVOS PARQUET — POSTGRESQL
+============================================================
+Diretório=/home/ec2-user/projeto_ingestao/output
+QuantidadeArquivos=1
+Arquivo=public-vendas/public-vendas-20260730_154154-0-0.gz.parquet | Linhas=200 | TamanhoBytes=4785
+TotalLinhasParquet=200
+TotalEsperado=200
+Resultado=APROVADO

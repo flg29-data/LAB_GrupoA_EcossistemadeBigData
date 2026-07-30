@@ -1,0 +1,4 @@
+[2m2026-07-30T15:34:01.316882Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-07-30T15:34:01.676896Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mInstalling 1 plugins          [0m
+[2m2026-07-30T15:34:01.741068Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mInstalling extractor 'tap-rest-api-msdk'[0m
+[2m2026-07-30T15:34:07.521348Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mInstalled extractor 'tap-rest-api-msdk'[0m

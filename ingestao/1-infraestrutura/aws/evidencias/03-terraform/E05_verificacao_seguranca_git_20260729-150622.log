@@ -1,0 +1,160 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729150622
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E05_verificacao_seguranca_git_20260729-150622.log
+
+====================================================
+1. EVIDÊNCIAS EXISTENTES
+====================================================
+
+
+Name                                              Length LastWriteTime
+----                                              ------ -------------
+E03_reconstrucao_arquivos_20260729-150441.log       2346 29/07/2026 15:04:43
+E04_hashes_arquivos.txt                             1219 29/07/2026 15:04:43
+E05_verificacao_seguranca_git_20260729-150622.log      0 29/07/2026 15:06:22
+
+
+
+====================================================
+2. VERIFICAÇÃO DO REPOSITÓRIO GIT
+====================================================
+
+true
+
+Repositório Git identificado.
+
+====================================================
+3. SITUAÇÃO ATUAL DO REPOSITÓRIO
+====================================================
+
+ M .gitignore
+ M ingestao/.gitignore
+ M ingestao/1-infraestrutura/aws/terraform/main.tf
+ M ingestao/1-infraestrutura/aws/terraform/outputs.tf
+D  ingestao/1-infraestrutura/aws/terraform/terraform-state-antes-da-destruicao-20260716-160845.json
+D  ingestao/1-infraestrutura/aws/terraform/terraform.tfstate-copia-20260716-160845
+D  ingestao/1-infraestrutura/aws/terraform/tfplan
+ M ingestao/1-infraestrutura/aws/terraform/variables.tf
+ M ingestao/1-infraestrutura/aws/terraform/versions.tf
+ D ingestao/1-infraestrutura/evidencias/00-ambiente/E03_ambiente_ubuntu.txt
+ D ingestao/1-infraestrutura/evidencias/01-ferramentas/E01_apt_update.log
+ D ingestao/1-infraestrutura/evidencias/01-ferramentas/E02_apt_upgrade.log
+ D ingestao/1-infraestrutura/evidencias/01-ferramentas/E03_instalacao_utilitarios.log
+ D ingestao/1-infraestrutura/evidencias/01-ferramentas/E04_instalacao_terraform.log
+ D ingestao/1-infraestrutura/evidencias/01-ferramentas/E05_versoes_ferramentas.txt
+ D ingestao/1-infraestrutura/evidencias/01-ferramentas/E06_versoes_Terraform_AWSCLI_Git.png
+ D ingestao/1-infraestrutura/evidencias/02-credenciais-aws/E07_chave_ssh_configurada.txt
+ D ingestao/1-infraestrutura/evidencias/02-credenciais-aws/E07_localizacao_arquivos_aws.txt
+ D ingestao/1-infraestrutura/evidencias/02-credenciais-aws/E08_validacao_aws_anonimizada.json
+ D ingestao/1-infraestrutura/evidencias/02-credenciais-aws/E09_validacao_AWS.png
+ D ingestao/1-infraestrutura/evidencias/03-terraform-init/E10_arquivos_terraform.txt
+ D ingestao/1-infraestrutura/evidencias/03-terraform-init/E11_terraform_fmt_check.log
+ D ingestao/1-infraestrutura/evidencias/03-terraform-init/E12_terraform_init.log
+ D ingestao/1-infraestrutura/evidencias/03-terraform-init/E13_terraform_validate.log
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E14_tentativa1_erro_dns.log
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E15_diagnostico_dns_antes.txt
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E16_validacao_dns_e_subredes.txt
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E17_tentativa2_terraform_plan.log
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E17_terraform_validate_pre_plan.log
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E18_tentativa2_erro_dns_sts.log
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E19_codigo_saida_plan.txt
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E19_teste_estabilidade_dns.txt
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E20_tentativa3_terraform_plan.log
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E21_codigo_saida_tentativa3.txt
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E22_teste_rede_espelhada.txt
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E23_configuracao_rede_espelhada.txt
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E24_tentativa4_terraform_plan.log
+ D ingestao/1-infraestrutura/evidencias/04-terraform-plan/E25_codigo_saida_tentativa4.txt
+ D ingestao/2-meltano/evidencias/.gitignore
+ D ingestao/2-meltano/evidencias/README.md
+ D ingestao/2-meltano/evidencias/Tutorial-01-AWS-Terraform/00-contexto-da-execucao.txt
+ D ingestao/2-meltano/evidencias/Tutorial-01-AWS-Terraform/01-versao-terraform.txt
+ D ingestao/2-meltano/evidencias/Tutorial-01-AWS-Terraform/02-versao-aws-cli.txt
+ D ingestao/2-meltano/evidencias/Tutorial-01-AWS-Terraform/03-versao-openssh.txt
+ D ingestao/2-meltano/evidencias/Tutorial-01-AWS-Terraform/transcricao-completa-powershell.txt
+ D ingestao/2-meltano/evidencias/configuracao/meltano.yml.example
+ D ingestao/2-meltano/evidencias/documentacao/MANIFESTO.csv
+ D ingestao/2-meltano/evidencias/logs/01-validacao-rds.log
+ D ingestao/2-meltano/evidencias/logs/02-configuracao-tap-postgres.log
+ D ingestao/2-meltano/evidencias/logs/03-ingestao-postgres.log
+ D ingestao/2-meltano/evidencias/logs/04-ingestao-pokeapi.log
+ D ingestao/2-meltano/evidencias/logs/05-validacao-arquivos-parquet.log
+ D ingestao/2-meltano/evidencias/logs/06-diagnostico-upload-s3.log
+ D ingestao/2-meltano/evidencias/scripts/08-finalizar-upload-s3.sh
+ D ingestao/2-meltano/evidencias/scripts/copiar-evidencias-da-ec2.ps1
+ D ingestao/3-dlthub/aws/evidencias/tutorial3-dlthub/01_dlt_version.log
+ D ingestao/3-dlthub/aws/evidencias/tutorial3-dlthub/02_validacao_rds.log
+ D ingestao/3-dlthub/aws/evidencias/tutorial3-dlthub/03_pipeline_postgres.log
+ D ingestao/3-dlthub/aws/evidencias/tutorial3-dlthub/04_validacao_postgres_s3.log
+ D ingestao/3-dlthub/aws/evidencias/tutorial3-dlthub/05_pipeline_pokeapi.log
+ D ingestao/3-dlthub/aws/evidencias/tutorial3-dlthub/06_validacao_pokeapi_s3.log
+ D ingestao/3-dlthub/aws/evidencias/tutorial3-dlthub/07_validacao_final_s3.log
+ M ingestao/dados/schema.sql
+ M ingestao/dados/seed.sql
+?? evidencias/
+?? ingestao/1-infraestrutura/aws/terraform/terraform.tfvars.example
+?? ingestao/evidencias/
+
+====================================================
+4. PROTEÇÃO DO TERRAFORM.TFVARS
+====================================================
+
+Arquivo:
+ingestao/1-infraestrutura/aws/terraform/terraform.tfvars
+
+ingestao/.gitignore:11:terraform.tfvars ingestao/1-infraestrutura/aws/terraform/terraform.tfvars
+
+Resultado: PROTEGIDO PELO .gitignore
+
+====================================================
+5. PROTEÇÃO DO ARQUIVO DE SENHA
+====================================================
+
+Arquivo:
+ingestao/.secrets/db_password.txt
+
+ingestao/.gitignore:13:.secrets/        ingestao/.secrets/db_password.txt
+
+Resultado: PROTEGIDO PELO .gitignore
+
+====================================================
+6. ARQUIVOS SENSÍVEIS RASTREADOS PELO GIT
+====================================================
+
+Nenhum arquivo sensível está sendo rastreado.
+
+====================================================
+RESUMO DA VERIFICAÇÃO
+====================================================
+
+
+
+RepositorioGit        : True
+TerraformTfvarsExiste : True
+SenhaLocalExiste      : True
+TfvarsIgnorado        : True
+SenhaIgnorada         : True
+SegredosRastreados    : NÃO
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729150623
+**********************

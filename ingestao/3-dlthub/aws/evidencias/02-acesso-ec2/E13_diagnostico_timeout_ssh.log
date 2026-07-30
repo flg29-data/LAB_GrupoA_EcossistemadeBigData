@@ -1,0 +1,224 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260730152240
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 8944
+PSVersion: 5.1.26100.8972
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8972
+BuildVersion: 10.0.26100.8972
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\aws\evidencias\02-acesso-ec2\E13_diagnostico_timeout_ssh.log
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> $INSTANCIA_JSON = aws ec2 describe-instances `
+    --instance-ids $EC2_ID `
+    --region $REGION `
+    --output json
+
+$EC2_DESCRIBE_EXIT = $LASTEXITCODE
+
+$INSTANCIA = (
+    $INSTANCIA_JSON |
+    ConvertFrom-Json
+).Reservations[0].Instances[0]
+
+$PUBLIC_IP = $INSTANCIA.PublicIpAddress
+$PRIVATE_IP = $INSTANCIA.PrivateIpAddress
+$PUBLIC_DNS = $INSTANCIA.PublicDnsName
+$ESTADO = $INSTANCIA.State.Name
+$SUBNET_ID = $INSTANCIA.SubnetId
+$VPC_ID = $INSTANCIA.VpcId
+$SG_ID = $INSTANCIA.SecurityGroups[0].GroupId
+
+Write-Host "InstanceId=$EC2_ID"
+Write-Host "Estado=$ESTADO"
+Write-Host "PublicIp=$PUBLIC_IP"
+Write-Host "PrivateIp=$PRIVATE_IP"
+Write-Host "PublicDNS=$PUBLIC_DNS"
+Write-Host "SubnetId=$SUBNET_ID"
+Write-Host "VpcId=$VPC_ID"
+Write-Host "SecurityGroupId=$SG_ID"
+Write-Host "ec2_describe_exit_code=$EC2_DESCRIBE_EXIT"
+InstanceId=i-0db119c4f19fd868e
+Estado=running
+PublicIp=184.73.13.236
+PrivateIp=172.31.35.18
+PublicDNS=ec2-184-73-13-236.compute-1.amazonaws.com
+SubnetId=subnet-00b1a472fc31437a1
+VpcId=vpc-0eaa9957299798865
+SecurityGroupId=sg-0be8efd12443a2a59
+ec2_describe_exit_code=0
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> $SG_JSON = aws ec2 describe-security-groups `
+    --group-ids $SG_ID `
+    --region $REGION `
+    --output json
+
+$SG_DESCRIBE_EXIT = $LASTEXITCODE
+
+$SG = (
+    $SG_JSON |
+    ConvertFrom-Json
+).SecurityGroups[0]
+
+$REGRAS_SSH = @(
+    $SG.IpPermissions |
+    Where-Object {
+        $_.IpProtocol -eq "tcp" -and
+        $_.FromPort -eq 22 -and
+        $_.ToPort -eq 22
+    }
+)
+
+Write-Host ""
+Write-Host "===================================================="
+Write-Host "REGRAS SSH DO SECURITY GROUP"
+Write-Host "===================================================="
+
+if ($REGRAS_SSH.Count -eq 0) {
+    Write-Host "Nenhuma regra de entrada para a porta 22."
+}
+else {
+    foreach ($REGRA in $REGRAS_SSH) {
+
+        foreach ($IPV4 in @($REGRA.IpRanges)) {
+            Write-Host "SSHIPv4=$($IPV4.CidrIp)"
+            Write-Host "DescricaoIPv4=$($IPV4.Description)"
+        }
+
+        foreach ($PREFIXO in @($REGRA.PrefixListIds)) {
+            Write-Host "SSHPrefixListId=$($PREFIXO.PrefixListId)"
+            Write-Host "DescricaoPrefixList=$($PREFIXO.Description)"
+        }
+
+        foreach ($GRUPO in @($REGRA.UserIdGroupPairs)) {
+            Write-Host "SSHSourceSecurityGroup=$($GRUPO.GroupId)"
+        }
+    }
+}
+
+Write-Host "sg_describe_exit_code=$SG_DESCRIBE_EXIT"
+
+====================================================
+REGRAS SSH DO SECURITY GROUP
+====================================================
+SSHIPv4=177.27.30.49/32
+DescricaoIPv4=SSH a partir do computador do estudante
+SSHPrefixListId=pl-0e4bcff02b13bef1e
+DescricaoPrefixList=SSH pelo EC2 Instance Connect
+sg_describe_exit_code=0
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> try {
+    $MEU_IP = (
+        Invoke-RestMethod `
+            -Uri "https://checkip.amazonaws.com" `
+            -TimeoutSec 15
+    ).Trim()
+}
+catch {
+    $MEU_IP = "NAO_IDENTIFICADO"
+}
+
+Write-Host "MeuIPPublico=$MEU_IP"
+MeuIPPublico=187.62.131.36
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> $TESTE_SSH = Test-NetConnection `
+    -ComputerName $PUBLIC_IP `
+    -Port 22 `
+    -InformationLevel Detailed
+
+$TESTE_SSH |
+Format-List `
+    ComputerName,
+    RemoteAddress,
+    RemotePort,
+    InterfaceAlias,
+    SourceAddress,
+    PingSucceeded,
+    TcpTestSucceeded
+
+Write-Host "TcpTestSucceeded=$($TESTE_SSH.TcpTestSucceeded)"
+AVISO: TCP connect to (184.73.13.236 : 22) failed
+AVISO: Ping to 184.73.13.236 failed with status: TimedOut
+
+
+ComputerName     : 184.73.13.236
+RemoteAddress    : 184.73.13.236
+RemotePort       : 22
+InterfaceAlias   : Ethernet
+SourceAddress    : 10.10.25.165
+PingSucceeded    : False
+TcpTestSucceeded : False
+
+
+
+TcpTestSucceeded=False
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> $TEM_CIDR_LOCAL = $false
+$TEM_PREFIX_LIST = $false
+
+foreach ($REGRA in $REGRAS_SSH) {
+
+    foreach ($IPV4 in @($REGRA.IpRanges)) {
+        if ($IPV4.CidrIp -eq "$MEU_IP/32") {
+            $TEM_CIDR_LOCAL = $true
+        }
+    }
+
+    if (@($REGRA.PrefixListIds).Count -gt 0) {
+        $TEM_PREFIX_LIST = $true
+    }
+}
+
+Write-Host ""
+Write-Host "===================================================="
+Write-Host "RESUMO DO DIAGNOSTICO SSH"
+Write-Host "===================================================="
+
+Write-Host "EC2Estado=$ESTADO"
+Write-Host "EC2PublicIp=$PUBLIC_IP"
+Write-Host "SecurityGroup=$SG_ID"
+Write-Host "MeuIPPublico=$MEU_IP"
+Write-Host "RegraParaMeuIP=$TEM_CIDR_LOCAL"
+Write-Host "RegraComPrefixList=$TEM_PREFIX_LIST"
+Write-Host "TcpTestSucceeded=$($TESTE_SSH.TcpTestSucceeded)"
+
+if (
+    $ESTADO -eq "running" -and
+    $TEM_PREFIX_LIST -and
+    -not $TEM_CIDR_LOCAL -and
+    -not $TESTE_SSH.TcpTestSucceeded
+) {
+    Write-Host "Diagnostico=SSH_LOCAL_NAO_AUTORIZADO"
+    Write-Host "Alternativa=EC2_INSTANCE_CONNECT"
+}
+elseif ($TESTE_SSH.TcpTestSucceeded) {
+    Write-Host "Diagnostico=PORTA_22_ACESSIVEL"
+    Write-Host "Alternativa=SSH_POWERSHELL"
+}
+else {
+    Write-Host "Diagnostico=REVISAR_REDE"
+    Write-Host "Alternativa=EC2_INSTANCE_CONNECT"
+}
+
+Stop-Transcript
+
+====================================================
+RESUMO DO DIAGNOSTICO SSH
+====================================================
+EC2Estado=running
+EC2PublicIp=184.73.13.236
+SecurityGroup=sg-0be8efd12443a2a59
+MeuIPPublico=187.62.131.36
+RegraParaMeuIP=False
+RegraComPrefixList=True
+TcpTestSucceeded=False
+Diagnostico=SSH_LOCAL_NAO_AUTORIZADO
+Alternativa=EC2_INSTANCE_CONNECT
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260730152353
+**********************

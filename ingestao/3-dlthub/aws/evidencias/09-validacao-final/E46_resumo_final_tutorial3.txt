@@ -1,0 +1,167 @@
+﻿RESUMO FINAL - TUTORIAL 3 AWS DLTHUB
+
+Data da consolidacao:
+30/07/2026 16:11:14
+
+1. OBJETIVO
+
+Executar pipelines de ingestao com Python e dlt dentro de uma instancia EC2, utilizando como origens uma tabela do RDS PostgreSQL e a PokeAPI, com armazenamento final em arquivos Parquet no Amazon S3.
+
+2. INFRAESTRUTURA
+
+Conta AWS:
+650379606721
+
+Regiao:
+us-east-1
+
+EC2:
+i-0db119c4f19fd868e
+
+IP privado da EC2:
+172.31.35.18
+
+RDS:
+ingestao-postgres-20260729181449897700000004
+
+Banco de dados:
+ecommerce
+
+Bucket S3:
+650379606721-ingestao-lab-20260729181445719900000002
+
+Terraform sem drift ao final:
+SIM
+
+Recursos criados na revalidacao:
+0
+
+Recursos alterados na revalidacao:
+0
+
+Recursos destruidos na revalidacao:
+0
+
+3. SOFTWARE
+
+Sistema operacional:
+Amazon Linux 2023
+
+Python:
+3.11.15
+
+dlt:
+1.29.1
+
+Destino dlt:
+filesystem
+
+Formato:
+Parquet
+
+Driver PostgreSQL:
+psycopg2
+
+Bibliotecas de validacao:
+pyarrow e s3fs
+
+4. SEGURANCA
+
+Perfil IAM da EC2:
+LabRole
+
+Chaves AWS no codigo:
+NAO
+
+Chaves AWS no config.toml:
+NAO
+
+Senha do RDS no codigo:
+NAO
+
+Arquivo de senha enviado ao S3:
+NAO
+
+Arquivo de senha incluído nas evidencias:
+NAO
+
+5. PIPELINE POSTGRESQL
+
+Origem:
+RDS PostgreSQL
+
+Schema:
+public
+
+Tabela:
+vendas
+
+Pipeline:
+ingestao_postgres_dlt
+
+Dataset:
+postgres
+
+Destino:
+s3://650379606721-ingestao-lab-20260729181445719900000002/postgres/vendas/
+
+Registros extraidos:
+200
+
+Quantidade esperada:
+200
+
+Resultado:
+APROVADO
+
+6. PIPELINE POKEAPI
+
+Origem:
+https://pokeapi.co/api/v2/pokemon
+
+Pipeline:
+ingestao_pokeapi_dlt
+
+Dataset:
+pokeapi
+
+Destino:
+s3://650379606721-ingestao-lab-20260729181445719900000002/pokeapi/pokemon/
+
+Registros extraidos:
+1351
+
+Nomes unicos:
+1351
+
+Bulbasaur presente:
+SIM
+
+Registros ausentes:
+0
+
+Registros extras:
+0
+
+Resultado:
+APROVADO
+
+7. EVIDENCIAS
+
+Quantidade total de arquivos:
+61
+
+Inventario:
+E44_inventario_evidencias_tutorial3.csv
+
+Hashes SHA-256:
+E45_hashes_evidencias_tutorial3_sha256.csv
+
+Dificuldades e solucoes:
+E43_dificuldades_e_solucoes_tutorial3.txt
+
+8. CONCLUSAO
+
+As pipelines foram executadas com sucesso na EC2. Os dados do RDS PostgreSQL e da PokeAPI foram extraidos pelo dlt e armazenados em Parquet no Amazon S3. As validacoes independentes comprovaram a quantidade e a integridade logica dos registros. A autenticacao no S3 ocorreu pelo perfil IAM da EC2, sem uso de chaves AWS estaticas no codigo.
+
+RESULTADO=APROVADO

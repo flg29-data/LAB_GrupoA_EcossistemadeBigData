@@ -1,0 +1,5 @@
+# Copie este arquivo como terraform.tfvars.
+# Nunca publique o terraform.tfvars real no GitHub.
+
+ssh_cidr   = "203.0.113.10/32"
+db_password = "SUBSTITUA_POR_UMA_SENHA_FORTE"

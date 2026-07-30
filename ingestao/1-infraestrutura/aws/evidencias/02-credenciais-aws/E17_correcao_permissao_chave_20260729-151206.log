@@ -1,0 +1,87 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729151206
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\02-credenciais-aws\E17_correcao_permissao_chave_20260729-151206.log
+
+====================================================
+1. VERIFICAÇÃO DA CHAVE DE ORIGEM
+====================================================
+
+
+Name         Length LastWriteTime
+----         ------ -------------
+labsuser.pem   1674 29/07/2026 15:09:59
+
+
+
+Usuário atual: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+
+====================================================
+2. TRATAMENTO DA CHAVE ANTIGA
+====================================================
+
+Existe uma chave antiga no destino.
+
+ÊXITO: o arquivo (ou o diretório): "C:\Users\Breno Tostes Garcia\.ssh\labsuser.pem" agora é de propriedade de "LAPTOP-ACPKG3QM\Breno Tostes Garcia".
+arquivo processado: C:\Users\Breno Tostes Garcia\.ssh\labsuser.pem
+Processados com sucesso 1 arquivos; falha no processamento de 0 arquivos
+arquivo processado: C:\Users\Breno Tostes Garcia\.ssh\labsuser.pem
+Processados com sucesso 1 arquivos; falha no processamento de 0 arquivos
+Chave antiga removida.
+
+====================================================
+3. CÓPIA DA NOVA CHAVE
+====================================================
+
+Nova chave copiada com sucesso.
+
+====================================================
+4. RESTRIÇÃO DAS PERMISSÕES
+====================================================
+
+arquivo processado: C:\Users\Breno Tostes Garcia\.ssh\labsuser.pem
+Processados com sucesso 1 arquivos; falha no processamento de 0 arquivos
+arquivo processado: C:\Users\Breno Tostes Garcia\.ssh\labsuser.pem
+Processados com sucesso 1 arquivos; falha no processamento de 0 arquivos
+
+Permissões finais:
+C:\Users\Breno Tostes Garcia\.ssh\labsuser.pem AUTORIDADE NT\SISTEMA:(F)
+                                               BUILTIN\Administradores:(F)
+                                               LAPTOP-ACPKG3QM\Breno Tostes Garcia:(R)
+
+Processados com sucesso 1 arquivos; falha no processamento de 0 arquivos
+
+====================================================
+RESUMO DA CORREÇÃO DA CHAVE
+====================================================
+
+
+
+OrigemExiste        : True
+DestinoExiste       : True
+TamanhoMaiorQueZero : True
+CabecalhoValido     : True
+ConteudoExibido     : NÃO
+Resultado           : APROVADO
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729151206
+**********************

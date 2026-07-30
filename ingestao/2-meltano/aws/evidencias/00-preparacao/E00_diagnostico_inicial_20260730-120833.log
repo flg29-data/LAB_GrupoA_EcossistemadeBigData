@@ -1,0 +1,168 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260730120833
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 8944
+PSVersion: 5.1.26100.8972
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8972
+BuildVersion: 10.0.26100.8972
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\aws\evidencias\00-preparacao\E00_diagnostico_inicial_20260730-120833.log
+
+====================================================
+1. PASTAS E ARQUIVOS
+====================================================
+
+
+
+PastaTerraform  : True
+MainTf          : True
+TerraformState  : True
+TerraformTfvars : True
+SenhaExibida    : NAO
+
+
+
+
+====================================================
+2. VERSOES DAS FERRAMENTAS
+====================================================
+
+aws-cli/2.36.2 Python/3.14.6 Windows/11 exe/AMD64
+Terraform v1.15.8
+on windows_amd64
++ provider registry.terraform.io/hashicorp/aws v5.100.0
+git version 2.55.0.windows.3
+OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+
+====================================================
+3. SESSAO AWS
+====================================================
+
+Sessao AWS: VALIDADA
+Conta anonimizada: ********6721
+sts_exit_code=0
+
+====================================================
+4. VALIDACAO DO TERRAFORM
+====================================================
+
+Success! The configuration is valid.
+validate_exit_code=0
+
+====================================================
+5. RECURSOS NO ESTADO
+====================================================
+
+data.aws_ami.amazon_linux_2023
+data.aws_caller_identity.current
+data.aws_ec2_managed_prefix_list.ec2_instance_connect
+data.aws_subnets.default
+data.aws_subnets.ec2
+data.aws_vpc.default
+aws_db_instance.postgres
+aws_db_subnet_group.ingestao
+aws_instance.runner
+aws_s3_bucket.datalake
+aws_s3_bucket_public_access_block.datalake
+aws_security_group.ingestao
+EC2 ID: i-0db119c4f19fd868e
+RDS ID: ingestao-postgres-20260729181449897700000004
+S3 Bucket: 650379606721-ingestao-lab-20260729181445719900000002
+
+====================================================
+6. ESTADO REAL DA EC2
+====================================================
+
+Estado: running
+IP privado: 172.31.35.18
+Security Group: sg-0be8efd12443a2a59
+IPv4 publico existe: True
+
+====================================================
+7. ESTADO REAL DO RDS
+====================================================
+
+Estado: available
+Endpoint: ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com
+Porta: 5432
+Banco: ecommerce
+Usuario: ecommerce
+Security Groups: sg-0be8efd12443a2a59
+
+====================================================
+8. ACESSO AO S3
+====================================================
+
+Bucket acessivel: True
+head_bucket_exit_code=0
+
+====================================================
+9. PLANO TERRAFORM SEM ALTERACOES
+====================================================
+
+data.aws_ec2_managed_prefix_list.ec2_instance_connect: Reading...
+data.aws_vpc.default: Reading...
+data.aws_caller_identity.current: Reading...
+data.aws_ami.amazon_linux_2023: Reading...
+data.aws_caller_identity.current: Read complete after 0s [id=650379606721]
+aws_s3_bucket.datalake: Refreshing state... [id=650379606721-ingestao-lab-20260729181445719900000002]
+data.aws_ec2_managed_prefix_list.ec2_instance_connect: Read complete after 1s [id=pl-0e4bcff02b13bef1e]
+data.aws_ami.amazon_linux_2023: Read complete after 1s [id=ami-0006118602dfc1c09]
+data.aws_vpc.default: Read complete after 2s [id=vpc-0eaa9957299798865]
+data.aws_subnets.default: Reading...
+data.aws_subnets.ec2: Reading...
+aws_security_group.ingestao: Refreshing state... [id=sg-0be8efd12443a2a59]
+data.aws_subnets.default: Read complete after 0s [id=us-east-1]
+data.aws_subnets.ec2: Read complete after 0s [id=us-east-1]
+aws_db_subnet_group.ingestao: Refreshing state... [id=ingestao-db-subnet-20260729181445717100000001]
+aws_db_instance.postgres: Refreshing state... [id=db-TBPIPWYPKF3L6MXVSWNJE3JTXM]
+aws_s3_bucket_public_access_block.datalake: Refreshing state... [id=650379606721-ingestao-lab-20260729181445719900000002]
+aws_instance.runner: Refreshing state... [id=i-0db119c4f19fd868e]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.
+
+terraform_plan_exit_code=0
+
+====================================================
+RESUMO DA ETAPA 0
+====================================================
+
+
+
+SessaoAWS         : VALIDADA
+TerraformValidate : APROVADO
+TerraformSemDrift : SIM
+EC2Id             : i-0db119c4f19fd868e
+EC2Estado         : running
+EC2IpPrivado      : 172.31.35.18
+EC2SecurityGroup  : sg-0be8efd12443a2a59
+RDSId             : ingestao-postgres-20260729181449897700000004
+RDSEstado         : available
+RDSEndpoint       : ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com
+RDSBanco          : ecommerce
+RDSUsuario        : ecommerce
+RDSSecurityGroups : sg-0be8efd12443a2a59
+S3Bucket          : 650379606721-ingestao-lab-20260729181445719900000002
+S3Acessivel       : True
+SenhaExibida      : NAO
+Resultado         : APROVADO
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260730120914
+**********************

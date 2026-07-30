@@ -1,0 +1,85 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729151252
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\02-credenciais-aws\E14_validacao_credenciais_20260729-151252.log
+
+====================================================
+1. VERIFICAÇÃO DOS ARQUIVOS
+====================================================
+
+
+Arquivo                                        Existe Tamanho
+-------                                        ------ -------
+C:\Users\Breno Tostes Garcia\.aws\credentials    True     926
+C:\Users\Breno Tostes Garcia\.aws\config         True      38
+C:\Users\Breno Tostes Garcia\.ssh\labsuser.pem   True    1674
+
+
+
+Conteúdo das credenciais exibido: NÃO
+
+====================================================
+2. REGIÃO AWS
+====================================================
+
+Região configurada: us-east-1
+region_exit_code=0
+
+====================================================
+3. IDENTIDADE AWS
+====================================================
+
+Identidade AWS validada.
+Conta anonimizada: ********6721
+ARN anonimizado: arn:aws:sts::************:assumed-role/voclabs/user5098101=Breno_Tostes_de_Gomes_Garcia
+
+sts_exit_code=0
+
+====================================================
+4. CONECTIVIDADE AWS STS
+====================================================
+
+DNS do AWS STS resolvido.
+
+Name                        Type IPAddress
+----                        ---- ---------
+sts.us-east-1.amazonaws.com    A 13.217.78.225
+com                           NS
+com                           NS
+
+
+
+====================================================
+RESUMO DA ETAPA 4
+====================================================
+
+
+
+ArquivosCredenciais  : APROVADO
+RegiaoConfigurada    : us-east-1
+IdentidadeAWS        : VALIDADA
+DNS_STS              : APROVADO
+EvidenciaAnonimizada : True
+Resultado            : APROVADO
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729151255
+**********************

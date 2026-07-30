@@ -1,0 +1,22 @@
+﻿
+
+SessaoAWS         : VALIDADA
+TerraformValidate : APROVADO
+TerraformSemDrift : SIM
+EC2Id             : i-0db119c4f19fd868e
+EC2Estado         : running
+EC2IpPrivado      : 172.31.35.18
+EC2SecurityGroup  : sg-0be8efd12443a2a59
+RDSId             : ingestao-postgres-20260729181449897700000004
+RDSEstado         : available
+RDSEndpoint       : ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com
+RDSBanco          : ecommerce
+RDSUsuario        : ecommerce
+RDSSecurityGroups : sg-0be8efd12443a2a59
+S3Bucket          : 650379606721-ingestao-lab-20260729181445719900000002
+S3Acessivel       : True
+SenhaExibida      : NAO
+Resultado         : APROVADO
+
+
+

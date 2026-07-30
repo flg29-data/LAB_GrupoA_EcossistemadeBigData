@@ -1,0 +1,1 @@
+b307fed10af3426e9532d63c7ec65761cf55a5cd6899bd1e91c7f35b264cbb86  /home/ec2-user/projeto_ingestao/output/public-vendas/public-vendas-20260730_154154-0-0.gz.parquet

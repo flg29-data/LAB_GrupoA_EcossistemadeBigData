@@ -1,0 +1,39 @@
+﻿REVALIDACAO DA INFRAESTRUTURA - TUTORIAL 3 DLT
+
+Data=2026-07-30 15:17:27
+
+ProblemaInicial=Credenciais AWS canceladas
+CredenciaisRecuperadas=SIM
+
+AlteracaoDetectada=Novo IP publico da EC2
+IPPublicoAnterior=52.90.119.81
+IPPublicoAtual=184.73.13.236
+ImpactoNaInfraestrutura=NENHUM
+
+TerraformPlanInicialExitCode=2
+RefreshOnlyPlanExitCode=0
+RefreshOnlyShowExitCode=0
+AcoesEmRecursos=0
+RefreshOnlyApplyExitCode=0
+TerraformPlanFinalExitCode=0
+TerraformOutputExitCode=0
+
+EC2Id=i-0db119c4f19fd868e
+EC2Status=running
+EC2PublicIp=184.73.13.236
+EC2ExitCode=0
+
+RDSId=ingestao-postgres-20260729181449897700000004
+RDSStatus=available
+RDSEndpoint=ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com
+RDSExitCode=0
+
+S3Bucket=650379606721-ingestao-lab-20260729181445719900000002
+S3ExitCode=0
+
+RecursosCriados=0
+RecursosAlterados=0
+RecursosDestruidos=0
+SegredosExibidos=NAO
+
+Resultado=APROVADO

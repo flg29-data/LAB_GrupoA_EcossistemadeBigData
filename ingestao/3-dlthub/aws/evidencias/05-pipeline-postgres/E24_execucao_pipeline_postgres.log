@@ -1,0 +1,19 @@
+======================================================================
+PIPELINE POSTGRESQL → S3 — DLT
+======================================================================
+Origem=RDS PostgreSQL
+Schema=public
+Tabela=vendas
+Destino=filesystem/S3
+Dataset=postgres
+Formato=parquet
+SenhaExibida=NAO
+
+Pipeline ingestao_postgres_dlt load step completed in 0.40 seconds
+1 load package(s) were loaded to destination filesystem and into dataset postgres
+The filesystem destination used s3://650379606721-ingestao-lab-20260729181445719900000002 location to store data
+Load package 1785437813.6685205 is LOADED and contains no failed jobs
+
+PipelineName=ingestao_postgres_dlt
+DatasetName=postgres
+Resultado=EXECUCAO_CONCLUIDA

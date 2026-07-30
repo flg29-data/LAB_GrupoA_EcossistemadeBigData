@@ -1,0 +1,37 @@
+﻿
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  # aws_security_group.ingestao will be updated in-place
+  ~ resource "aws_security_group" "ingestao" {
+        id                     = "sg-0be8efd12443a2a59"
+      ~ ingress                = [
+          - {
+              - cidr_blocks      = []
+              - from_port        = 22
+              - ipv6_cidr_blocks = []
+              - prefix_list_ids  = [
+                  - "pl-0e4bcff02b13bef1e",
+                ]
+              - protocol         = "tcp"
+              - security_groups  = []
+              - self             = false
+              - to_port          = 22
+                # (1 unchanged attribute hidden)
+            },
+            # (2 unchanged elements hidden)
+        ]
+        name                   = "ingestao-sg-20260729181445736800000003"
+        tags                   = {
+            "Environment" = "AWS Academy Learner Lab"
+            "ManagedBy"   = "Terraform"
+            "Name"        = "ingestao-lab-sg"
+            "Project"     = "ingestao-lab"
+        }
+        # (8 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.

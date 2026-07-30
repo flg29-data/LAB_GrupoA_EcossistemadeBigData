@@ -1,0 +1,15 @@
+﻿
+
+SessaoAWS       : VALIDADA
+EC2Estado       : running
+StatusSistema   : ok
+StatusInstancia : ok
+PortaSSH        : False
+ConexaoSSH      : FALHOU
+UserData        : PENDENTE OU FALHOU
+ClientePSQL     : AUSENTE
+Docker          : AUSENTE
+Resultado       : REVISAR
+
+
+

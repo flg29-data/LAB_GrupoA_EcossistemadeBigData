@@ -1,0 +1,28 @@
+﻿CLASSIFICAÇÃO DOS OBJETOS DO TERRAFORM STATE
+
+Data: 29/07/2026 15:20:24
+
+FONTES DE DADOS
+data.aws_ami.amazon_linux_2023
+data.aws_caller_identity.current
+data.aws_subnets.default
+data.aws_subnets.ec2
+data.aws_vpc.default
+
+RECURSOS GERENCIADOS
+aws_db_instance.postgres
+aws_db_subnet_group.ingestao
+aws_instance.runner
+aws_s3_bucket.datalake
+aws_s3_bucket_public_access_block.datalake
+aws_security_group.ingestao
+
+RESUMO
+Fontes de dados: 5
+Recursos gerenciados: 6
+Total no state: 11
+Resultado: APROVADO
+
+Conclusão:
+O total de 11 objetos decorre da presença de cinco fontes de dados e
+seis recursos gerenciados. A infraestrutura foi provisionada corretamente.

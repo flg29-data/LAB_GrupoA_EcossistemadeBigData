@@ -1,0 +1,18 @@
+====================================================
+RESUMO FINAL DA CARGA DO RDS
+====================================================
+Data: 2026-07-29T19:43:36+00:00
+Instancia EC2: ip-172-31-35-18.ec2.internal
+RDS: ingestao-postgres
+Banco: ecommerce
+
+Contagens validadas:
+  tabela  | quantidade 
+----------+------------
+ clientes |         20
+ produtos |         15
+ vendas   |        200
+(3 rows)
+
+
+Resultado geral: CARGA CONCLUIDA

@@ -1,0 +1,130 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260730151202
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 8944
+PSVersion: 5.1.26100.8972
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8972
+BuildVersion: 10.0.26100.8972
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\aws\evidencias\00-preparacao\E04_recuperacao_credenciais_aws.log
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> aws sts get-caller-identity `
+    --profile default `
+    --region us-east-1 `
+    --output table
+
+$STS_EXIT = $LASTEXITCODE
+
+Write-Host "sts_exit_code=$STS_EXIT"
+--------------------------------------------------------------------------------------------------------
+|                                           GetCallerIdentity                                          |
++---------+--------------------------------------------------------------------------------------------+
+|  Account|  650379606721                                                                              |
+|  Arn    |  arn:aws:sts::650379606721:assumed-role/voclabs/user5098101=Breno_Tostes_de_Gomes_Garcia   |
+|  UserId |  AROAZO3NFHLAYRHUFHW2D:user5098101=Breno_Tostes_de_Gomes_Garcia                            |
++---------+--------------------------------------------------------------------------------------------+
+sts_exit_code=0
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> $EC2_ID = "i-0db119c4f19fd868e"
+
+aws ec2 describe-instances `
+    --instance-ids $EC2_ID `
+    --profile default `
+    --region us-east-1 `
+    --query "Reservations[0].Instances[0].[InstanceId,State.Name,PrivateIpAddress,SecurityGroups[0].GroupId]" `
+    --output table
+
+$EC2_EXIT = $LASTEXITCODE
+
+Write-Host "ec2_describe_exit_code=$EC2_EXIT"
+--------------------------
+|    DescribeInstances   |
++------------------------+
+|  i-0db119c4f19fd868e   |
+|  running               |
+|  172.31.35.18          |
+|  sg-0be8efd12443a2a59  |
++------------------------+
+ec2_describe_exit_code=0
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> $RDS_ID = "ingestao-postgres-20260729181449897700000004"
+
+aws rds describe-db-instances `
+    --db-instance-identifier $RDS_ID `
+    --profile default `
+    --region us-east-1 `
+    --query "DBInstances[0].[DBInstanceIdentifier,DBInstanceStatus,Endpoint.Address,DBName,MasterUsername]" `
+    --output table
+
+$RDS_EXIT = $LASTEXITCODE
+
+Write-Host "rds_describe_exit_code=$RDS_EXIT"
+-------------------------------------------------------------------------------------------
+|                                   DescribeDBInstances                                   |
++-----------------------------------------------------------------------------------------+
+|  ingestao-postgres-20260729181449897700000004                                           |
+|  available                                                                              |
+|  ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com  |
+|  ecommerce                                                                              |
+|  ecommerce                                                                              |
++-----------------------------------------------------------------------------------------+
+rds_describe_exit_code=0
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> $BUCKET = "650379606721-ingestao-lab-20260729181445719900000002"
+
+aws s3api head-bucket `
+    --bucket $BUCKET `
+    --profile default `
+    --region us-east-1
+
+$S3_EXIT = $LASTEXITCODE
+
+Write-Host "s3_head_bucket_exit_code=$S3_EXIT"
+{
+    "BucketArn": "arn:aws:s3:::650379606721-ingestao-lab-20260729181445719900000002",
+    "BucketRegion": "us-east-1",
+    "AccessPointAlias": false
+}
+s3_head_bucket_exit_code=0
+PS D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform> Write-Host ""
+Write-Host "===================================================="
+Write-Host "RESUMO DA RECUPERACAO"
+Write-Host "===================================================="
+
+Write-Host "STSExitCode=$STS_EXIT"
+Write-Host "EC2ExitCode=$EC2_EXIT"
+Write-Host "RDSExitCode=$RDS_EXIT"
+Write-Host "S3ExitCode=$S3_EXIT"
+
+if (
+    $STS_EXIT -eq 0 -and
+    $EC2_EXIT -eq 0 -and
+    $RDS_EXIT -eq 0 -and
+    $S3_EXIT -eq 0
+) {
+    Write-Host "Resultado=APROVADO"
+}
+else {
+    Write-Host "Resultado=REVISAR"
+}
+
+Stop-Transcript
+
+====================================================
+RESUMO DA RECUPERACAO
+====================================================
+STSExitCode=0
+EC2ExitCode=0
+RDSExitCode=0
+S3ExitCode=0
+Resultado=APROVADO
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260730151235
+**********************

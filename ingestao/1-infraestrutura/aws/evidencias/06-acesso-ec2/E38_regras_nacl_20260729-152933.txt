@@ -1,0 +1,9 @@
+﻿
+Direcao NumeroRegra Acao  Protocolo CIDR      PortaInicio PortaFim
+------- ----------- ----  --------- ----      ----------- --------
+ENTRADA         100 allow -1        0.0.0.0/0                     
+ENTRADA       32767 deny  -1        0.0.0.0/0                     
+SAÍDA           100 allow -1        0.0.0.0/0                     
+SAÍDA         32767 deny  -1        0.0.0.0/0                     
+
+

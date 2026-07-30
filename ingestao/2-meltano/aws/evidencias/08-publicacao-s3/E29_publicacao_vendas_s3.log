@@ -1,0 +1,20 @@
+====================================================
+TUTORIAL 2 AWS - PUBLICACAO DAS VENDAS NO S3
+====================================================
+Data=2026-07-30T15:49:52+00:00
+Origem=/home/ec2-user/projeto_ingestao/output/public-vendas
+Destino=s3://650379606721-ingestao-lab-20260729181445719900000002/meltano/vendas
+
+public-vendas-20260730_154154-0-0.gz.parquet | 4785 bytes
+arquivos_origem=1
+clean_s3_exit_code=0
+Completed 4.7 KiB/4.7 KiB (146.3 KiB/s) with 1 file(s) remainingupload: output/public-vendas/public-vendas-20260730_154154-0-0.gz.parquet to s3://650379606721-ingestao-lab-20260729181445719900000002/meltano/vendas/public-vendas-20260730_154154-0-0.gz.parquet
+sync_vendas_s3_exit_code=0
+listagem_s3_exit_code=0
+arquivos_parquet_s3=1
+total_bytes_s3=4785
+download_s3_exit_code=0
+hash_local=b307fed10af3426e9532d63c7ec65761cf55a5cd6899bd1e91c7f35b264cbb86
+hash_baixado_s3=b307fed10af3426e9532d63c7ec65761cf55a5cd6899bd1e91c7f35b264cbb86
+hashs_iguais=SIM
+content_validation_exit_code=

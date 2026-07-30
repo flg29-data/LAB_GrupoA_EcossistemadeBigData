@@ -1,0 +1,9 @@
+============================================================
+VALIDAÇÃO DO PARQUET BAIXADO DO S3
+============================================================
+Diretório=/home/ec2-user/validacao-s3-vendas
+QuantidadeArquivos=1
+Arquivo=public-vendas-20260730_154154-0-0.gz.parquet | Linhas=200 | TamanhoBytes=4785
+TotalLinhas=200
+TotalEsperado=200
+Resultado=APROVADO

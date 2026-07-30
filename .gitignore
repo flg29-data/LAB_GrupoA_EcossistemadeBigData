@@ -23,3 +23,46 @@
 **/build/.deps/
 **/evidencias-finais-wordcount.zip
 **/evidencias-finais-wordcount/01-identidade-aws.json
+# Arquivos sensiveis e temporarios do Terraform
+*terraform.tfstate*
+terraform.tfvars
+*.auto.tfvars
+tfplan*
+**/.terraform/*
+# Credenciais e chaves
+**/.secrets/
+**/aws_credenciais/
+**/labsuser.pem
+*.pem
+*terraform-state*
+# Credenciais e segredos
+**/.secrets/
+**/.env
+**/*.pem
+**/credentials
+**/tutorial3.env
+**/secrets.toml
+
+# Terraform
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfvars
+**/.terraform.lock.hcl.backup
+
+# Ambientes Python e estados locais
+**/.venv/
+**/venv/
+**/meltano-venv/
+**/dlt-venv/
+**/__pycache__/
+**/*.pyc
+
+# Arquivos temporários
+**/~$*
+**/*.tmp
+**/*.bak
+
+# Segredos e arquivos locais de infraestrutura
+**/terraform.tfvars
+**/tfplan*

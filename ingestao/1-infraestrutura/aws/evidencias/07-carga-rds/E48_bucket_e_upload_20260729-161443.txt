@@ -1,0 +1,5 @@
+﻿Bucket=650379606721-ingestao-lab-20260729181445719900000002
+TerraformResource=aws_s3_bucket.datalake
+schema_upload_exit=0
+seed_upload_exit=0
+list_objects_exit=0

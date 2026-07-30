@@ -1,0 +1,21 @@
+﻿
+
+SessaoAWS         : VALIDADA
+TerraformValidate : APROVADO
+TerraformSemDrift : ERRO
+EC2Id             : i-0db119c4f19fd868e
+EC2Estado         : 
+EC2IpPrivado      : 
+EC2SecurityGroup  : 
+RDSId             : ingestao-postgres-20260729181449897700000004
+RDSEstado         : 
+RDSEndpoint       : 
+RDSBanco          : 
+RDSUsuario        : 
+S3Bucket          : 650379606721-ingestao-lab-20260729181445719900000002
+S3Acessivel       : False
+SegredosExibidos  : NAO
+Resultado         : REVISAR
+
+
+

@@ -1,0 +1,66 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729153958
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\06-acesso-ec2\E46_autorizacao_ec2_instance_connect_20260729-153958.log
+
+====================================================
+1. VALIDAÇÃO DA SESSÃO AWS
+====================================================
+
+Sessão AWS: VALIDADA
+
+====================================================
+2. AUTORIZAÇÃO DA REGRA
+====================================================
+
+Regra incluída com sucesso.
+
+authorize_exit_code=0
+
+====================================================
+3. CONFIRMAÇÃO DA REGRA
+====================================================
+
+Regra confirmada.
+Rule ID: sgr-0ce29ac58368372a4
+Prefix List: pl-0e4bcff02b13bef1e
+Protocolo: tcp
+Porta inicial: 22
+Porta final: 22
+
+====================================================
+RESUMO DA ETAPA 7.6
+====================================================
+
+
+
+SessaoAWS         : VALIDADA
+SecurityGroup     : sg-0be8efd12443a2a59
+PrefixList        : pl-0e4bcff02b13bef1e
+RegraNova         : True
+RegraJaExistia    : False
+RegraConfirmada   : True
+SecurityGroupRule : sgr-0ce29ac58368372a4
+Resultado         : APROVADO
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729154003
+**********************

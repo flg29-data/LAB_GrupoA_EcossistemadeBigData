@@ -1,0 +1,16 @@
+﻿
+
+SessaoAWS        : VALIDADA
+NovoCIDRSSH      : 177.27.***.***/32
+TerraformPlan    : APROVADO
+RecursosDestruir : 0
+TerraformApply   : APROVADO
+PortaTCP22       : False
+ConexaoSSH       : FALHOU
+UserData         : PENDENTE OU FALHOU
+ClientePSQL      : AUSENTE
+Docker           : AUSENTE
+Resultado        : REVISAR
+
+
+

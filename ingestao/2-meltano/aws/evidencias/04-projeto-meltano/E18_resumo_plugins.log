@@ -1,0 +1,30 @@
+====================================================
+RESUMO DA ETAPA 5
+====================================================
+Data=2026-07-30T15:34:46+00:00
+Projeto=/home/ec2-user/projeto_ingestao
+MeltanoVersion=meltano, version 4.2.1
+TapPostgresAddExitCode=0
+TapRestAddExitCode=0
+PatchPipUrlExitCode=0
+TapRestInstallExitCode=0
+TargetParquetAddExitCode=0
+TapPostgresInvokeExitCode=0
+TapRestInvokeExitCode=0
+TargetParquetInvokeExitCode=0
+SenhaExibida=NAO
+Resultado=APROVADO
+
+PLUGINS REGISTRADOS
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-tap-postgres
+  - name: tap-rest-api-msdk
+    variant: widen
+    pip_url: tap-rest-api-msdk setuptools<81
+  loaders:
+  - name: target-parquet
+    variant: automattic
+    pip_url: git+https://github.com/Automattic/target-parquet.git

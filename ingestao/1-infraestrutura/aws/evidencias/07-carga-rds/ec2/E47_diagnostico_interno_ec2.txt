@@ -1,0 +1,105 @@
+-bash: $'\E[200~echo': command not found
+DIAGNOSTICO INTERNO DA EC2
+====================================================
+
+====================================================
+DIAGNOSTICO INTERNO DA EC2
+====================================================
+
+1. DATA E USUARIO
+Wed Jul 29 18:54:06 UTC 2026
+ec2-user
+ip-172-31-35-18.ec2.internal
+
+2. SISTEMA OPERACIONAL
+NAME="Amazon Linux"
+VERSION="2023"
+ID="amzn"
+ID_LIKE="fedora"
+VERSION_ID="2023"
+PLATFORM_ID="platform:al2023"
+PRETTY_NAME="Amazon Linux 2023.12.20260727"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2023"
+HOME_URL="https://aws.amazon.com/linux/amazon-linux-2023/"
+DOCUMENTATION_URL="https://docs.aws.amazon.com/linux/"
+SUPPORT_URL="https://aws.amazon.com/premiumsupport/"
+BUG_REPORT_URL="https://github.com/amazonlinux/amazon-linux-2023"
+VENDOR_NAME="AWS"
+VENDOR_URL="https://aws.amazon.com/"
+SUPPORT_END="2029-06-30"
+
+3. SERVICO SSH
+active
+
+4. CLOUD-INIT
+status: done
+time: Wed, 29 Jul 2026 18:16:21 +0000
+detail:
+DataSourceEc2
+
+5. USER DATA
+USER_DATA_OK
+
+6. CLIENTE POSTGRESQL
+PSQL_OK
+psql (PostgreSQL) 16.14
+
+7. DOCKER
+DOCKER_OK
+Docker version 25.0.14, build 0bab007
+active
+-bash: eçse: command not found
+
+8. AWS CLI
+AWS_CLI_OK
+aws-cli/2.33.15 Python/3.9.25 Linux/6.1.176-223.369.amzn2023.x86_64 source/x86_64.amzn.2023
+
+9. IDENTIDADE IAM DA EC2
+{
+    "UserId": "AROAZO3NFHLA6BKFEH42Z:i-0db119c4f19fd868e",
+    "Account": "650379606721",
+    "Arn": "arn:aws:sts::650379606721:assumed-role/LabRole/i-0db119c4f19fd868e"
+}
+
+10. FINAL DO CLOUD-INIT
+ci-info: |   2   |    local    |    ::   |    ens5   |   U   |
+ci-info: |   3   |  multicast  |    ::   |    ens5   |   U   |
+ci-info: +-------+-------------+---------+-----------+-------+
+Generating public/private ed25519 key pair.
+Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+The key fingerprint is:
+SHA256:S/KCsTul40Uk65ovw4dE+HXgdiHWWqF8cmKyECYe3dY root@ip-172-31-35-18.ec2.internal
+The key's randomart image is:
++--[ED25519 256]--+
+|oo. ..o.         |
+|+..o+++E         |
+|.o.oO=+.         |
+|...+=Oo          |
+| o.oooo S        |
+|  o. =.+ .       |
+| o .+oo o        |
+|  =o=o .         |
+|  o*+o           |
++----[SHA256]-----+
+Generating public/private ecdsa key pair.
+Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+The key fingerprint is:
+SHA256:JxGI3fmlljnY+/41BAr+dN1Hsi3nw79jBd6/fSWQlMI root@ip-172-31-35-18.ec2.internal
+The key's randomart image is:
++---[ECDSA 256]---+
+|     o o.o   .   |
+|    . o o.E +    |
+|        .= B o. .|
+|        o.X + +=.|
+|        So.= +o==|
+|         o+ . =+=|
+|           o   =*|
+|            .  +B|
+|           ...ooB|
++----[SHA256]-----+
+Cloud-init v. 22.2.2 running 'modules:config' at Wed, 29 Jul 2026 18:15:07 +0000. Up 11.27 seconds.
+Cloud-init v. 22.2.2 running 'modules:final' at Wed, 29 Jul 2026 18:15:08 +0000. Up 11.92 seconds.
+Cloud-init v. 22.2.2 finished at Wed, 29 Jul 2026 18:16:21 +0000. Datasource DataSourceEc2.  Up 85.35 seconds

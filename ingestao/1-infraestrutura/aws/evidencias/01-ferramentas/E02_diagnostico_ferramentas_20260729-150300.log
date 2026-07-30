@@ -1,0 +1,108 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729150300
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\01-ferramentas\E02_diagnostico_ferramentas_20260729-150300.log
+
+====================================================
+DIAGNÓSTICO DAS FERRAMENTAS
+====================================================
+
+Data e hora:
+29/07/2026 15:03:00
+
+----------------------------------------------------
+1. TERRAFORM
+----------------------------------------------------
+Status: ENCONTRADO
+Caminho: C:\Users\Breno Tostes Garcia\AppData\Local\Microsoft\WinGet\Packages\Hashicorp.Terraform_Microsoft.Winget.Source_8wekyb3d8bbwe\terraform.exe
+Terraform v1.15.8
+on windows_amd64
+exit_code=0
+
+----------------------------------------------------
+2. AWS CLI
+----------------------------------------------------
+Status: ENCONTRADA
+Caminho: C:\Program Files\Amazon\AWSCLIV2\aws.exe
+aws-cli/2.36.2 Python/3.14.6 Windows/11 exe/AMD64
+exit_code=0
+
+----------------------------------------------------
+3. GIT
+----------------------------------------------------
+Status: ENCONTRADO
+Caminho: C:\Program Files\Git\cmd\git.exe
+git version 2.55.0.windows.3
+exit_code=0
+
+----------------------------------------------------
+4. OPENSSH
+----------------------------------------------------
+Capacidade instalada no Windows:
+
+Name                          State
+----                          -----
+OpenSSH.Client~~~~0.0.1.0 Installed
+
+
+
+SSH: ENCONTRADO
+Caminho: C:\WINDOWS\System32\OpenSSH\ssh.exe
+ssh : OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+No linha:105 caractere:5
++     ssh -V 2>&1
++     ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (OpenSSH_for_Win... LibreSSL 3.8.2:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+ssh : OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+No linha:105 caractere:5
++     ssh -V 2>&1
++     ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (OpenSSH_for_Win... LibreSSL 3.8.2:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+SCP: ENCONTRADO
+Caminho: C:\WINDOWS\System32\OpenSSH\scp.exe
+
+----------------------------------------------------
+5. WINGET
+----------------------------------------------------
+Status: ENCONTRADO
+Caminho: C:\Users\Breno Tostes Garcia\AppData\Local\Microsoft\WindowsApps\winget.exe
+v1.29.280
+exit_code=0
+
+====================================================
+RESUMO
+====================================================
+
+
+Terraform : Instalado
+AWS_CLI   : Instalada
+Git       : Instalado
+SSH       : Instalado
+SCP       : Instalado
+Winget    : Instalado
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729150305
+**********************

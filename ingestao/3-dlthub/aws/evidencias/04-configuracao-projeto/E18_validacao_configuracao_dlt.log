@@ -1,0 +1,27 @@
+======================================================================
+VALIDAÇÃO DA CONFIGURAÇÃO — TUTORIAL 3 DLT
+======================================================================
+Projeto=/home/ec2-user/projeto_dlthub
+ConfigFile=/home/ec2-user/projeto_dlthub/.dlt/config.toml
+BucketURL=s3://650379606721-ingestao-lab-20260729181445719900000002
+Region=us-east-1
+SecretFile=/home/ec2-user/.config/dlthub/tutorial3.env
+SecretPermission=600
+SecretInsideProject=False
+SenhaEncontradaNoProjeto=NAO
+AWSCredentialMethod=iam-role
+AWSStaticCredentialsPresent=NAO
+S3HeadBucketHTTPStatus=200
+PostgresDatabase=ecommerce
+PostgresUser=ecommerce
+VendasCount=200
+Check_config_toml=APROVADO
+Check_secret_permission=APROVADO
+Check_secret_outside_project=APROVADO
+Check_password_not_in_project=APROVADO
+Check_aws_role=APROVADO
+Check_no_static_aws_credentials=APROVADO
+Check_s3_access=APROVADO
+Check_postgres_connection=APROVADO
+Check_vendas_count=APROVADO
+Resultado=APROVADO

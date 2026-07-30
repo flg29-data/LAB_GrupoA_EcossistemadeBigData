@@ -1,0 +1,58 @@
+﻿
+FullName                                                                                                             Le
+                                                                                                                     ng
+                                                                                                                     th
+--------                                                                                                             --
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\.secrets                                                            
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura                                                    
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano                                                           
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub                                                            
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\aws_credenciais                                                     
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\dados                                                               
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias                                                          
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\relatorio-final                                                     
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\.gitignore                                                        32
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\README.md                                                         39
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\.secrets\db_password.txt                                          36
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws                                                
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local                                              
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform                                      
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\QUICK_TUTORIAL.md                            20
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\TUTORIAL.md                                  14
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\docker                                       
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\QUICK_TUTORIAL.md                          20
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\TUTORIAL.md                                17
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\validar.sh                                 17
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\docker\ministack-init                        
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\docker\docker-compose.yml                  17
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\docker\ministack-init\ready.d                
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\docker\ministack-init\ready.d\01-bucket.sh 73
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\aws                                                       
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\local                                                     
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\aws\QUICK_TUTORIAL.md                                   17
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\aws\TUTORIAL.md                                         62
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\local\QUICK_TUTORIAL.md                                 25
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\local\TUTORIAL.md                                       10
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\aws                                                        
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\local                                                      
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\aws\QUICK_TUTORIAL.md                                    35
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\aws\TUTORIAL.md                                          11
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\local\QUICK_TUTORIAL.md                                  35
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\local\TUTORIAL.md                                        18
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\dados\clientes.csv                                                14
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\dados\produtos.csv                                                57
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\dados\schema.sql                                                  13
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\dados\seed.sql                                                    17
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\dados\vendas.csv                                                  78
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\00-preparacao                                            
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\01-ferramentas                                           
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\02-credenciais-aws                                       
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform                                             
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\04-seed-rds                                              
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\05-validacao                                             
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\06-destruicao                                            
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\prints                                                   
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\00-preparacao\E00_preparacao_20260729-150234.log       41
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\00-preparacao\E01_estrutura_inicial.txt                0 
+
+

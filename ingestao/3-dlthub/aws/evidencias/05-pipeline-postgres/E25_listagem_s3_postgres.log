@@ -1,0 +1,9 @@
+2026-07-30 18:55:24  199 Bytes postgres/_dlt_loads/ingestao_postgres_dlt__1785437722.2868414.jsonl
+2026-07-30 18:56:55  199 Bytes postgres/_dlt_loads/ingestao_postgres_dlt__1785437813.6685205.jsonl
+2026-07-30 18:55:24  505 Bytes postgres/_dlt_pipeline_state/ingestao_postgres_dlt__1785437722.2868414__9aac3aff1e16e84536e906e73208ff9fa20376c65bf4e1df96315ca9546f56d5.jsonl
+2026-07-30 18:55:23    4.1 KiB postgres/_dlt_version/ingestao_postgres_dlt__1785437722.7151227__9aac3aff1e16e84536e906e73208ff9fa20376c65bf4e1df96315ca9546f56d5.jsonl
+2026-07-30 18:55:23   41 Bytes postgres/init
+2026-07-30 18:56:55    9.0 KiB postgres/vendas/1785437813.6685205.944e366583.parquet
+
+Total Objects: 6
+   Total Size: 14.0 KiB

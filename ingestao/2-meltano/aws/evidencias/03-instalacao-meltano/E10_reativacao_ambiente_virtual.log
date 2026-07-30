@@ -1,0 +1,11 @@
+====================================================
+TUTORIAL 2 AWS - REATIVACAO DO AMBIENTE VIRTUAL
+====================================================
+Data=2026-07-30T15:21:23+00:00
+VIRTUAL_ENV=/home/ec2-user/meltano-venv
+Python=/home/ec2-user/meltano-venv/bin/python
+Pip=/home/ec2-user/meltano-venv/bin/pip
+Meltano=/home/ec2-user/meltano-venv/bin/meltano
+PythonVersion=Python 3.11.15
+MeltanoVersion=meltano, version 4.2.1
+Resultado=APROVADO

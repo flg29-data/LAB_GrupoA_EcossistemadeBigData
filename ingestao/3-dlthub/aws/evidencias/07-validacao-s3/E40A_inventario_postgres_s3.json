@@ -1,0 +1,32 @@
+[
+    {
+        "Key": "postgres/_dlt_loads/ingestao_postgres_dlt__1785437722.2868414.jsonl",
+        "Size": 199,
+        "LastModified": "2026-07-30T18:55:24+00:00"
+    },
+    {
+        "Key": "postgres/_dlt_loads/ingestao_postgres_dlt__1785437813.6685205.jsonl",
+        "Size": 199,
+        "LastModified": "2026-07-30T18:56:55+00:00"
+    },
+    {
+        "Key": "postgres/_dlt_pipeline_state/ingestao_postgres_dlt__1785437722.2868414__9aac3aff1e16e84536e906e73208ff9fa20376c65bf4e1df96315ca9546f56d5.jsonl",
+        "Size": 505,
+        "LastModified": "2026-07-30T18:55:24+00:00"
+    },
+    {
+        "Key": "postgres/_dlt_version/ingestao_postgres_dlt__1785437722.7151227__9aac3aff1e16e84536e906e73208ff9fa20376c65bf4e1df96315ca9546f56d5.jsonl",
+        "Size": 4163,
+        "LastModified": "2026-07-30T18:55:23+00:00"
+    },
+    {
+        "Key": "postgres/init",
+        "Size": 41,
+        "LastModified": "2026-07-30T18:55:23+00:00"
+    },
+    {
+        "Key": "postgres/vendas/1785437813.6685205.944e366583.parquet",
+        "Size": 9184,
+        "LastModified": "2026-07-30T18:56:55+00:00"
+    }
+]

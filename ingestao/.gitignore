@@ -1,32 +1,30 @@
-# Artefatos gerados ao executar os tutoriais (não versionar)
-
-# Ambientes Python
-.venv/
-venv/
-**/.venv/
-__pycache__/
-
-# Projetos/execução do Meltano
-**/projeto_ingestao/
-.meltano/
-**/.meltano/
-*.env
-.env
-
-# Artefatos do dlt
-.dlt/
-**/.dlt/
-*.duckdb
-
-# Scripts de exemplo que o aluno cria ao seguir os tutoriais (não versionar)
-**/pipeline_*.py
-
-# Saídas de ingestão (Parquet local antes do sync)
-**/output/
-
-# Terraform (estado e provider baixado)
-**/.terraform/
+# Terraform
+**/.terraform/*
 *.tfstate
 *.tfstate.*
 *.tfplan
-.terraform.lock.hcl
+tfplan
+crash.log
+crash.*.log
+
+# Variaveis locais e arquivos sensiveis
+terraform.tfvars
+*.auto.tfvars
+.secrets/
+aws_credenciais/
+credentials
+labsuser.pem
+*.pem
+
+# Arquivos temporarios
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

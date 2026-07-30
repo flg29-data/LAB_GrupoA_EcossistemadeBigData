@@ -1,0 +1,19 @@
+[2m2026-07-30T15:56:55.614870Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano select`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:56:55.616695Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-07-30T15:56:56.203920Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRunning catalog discovery     [0m
+[2m2026-07-30T15:56:56.425280Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1m/home/ec2-user/projeto_ingestao/.meltano/extractors/tap-rest-api-msdk/venv/lib64/python3.11/site-packages/fs/__init__.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.[0m
+[2m2026-07-30T15:56:56.425629Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1m  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore[0m
+[2m2026-07-30T15:56:56.745693Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mNo schema found. Inferring schema from API call.[0m
+[2m2026-07-30T15:56:56.799346Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 20[0m
+Legend:
+	selected
+	excluded
+	automatic
+	unsupported
+
+Enabled patterns:
+	*.*
+
+Selected properties:
+	[automatic  ] pokemon.name
+	[selected   ] pokemon.url

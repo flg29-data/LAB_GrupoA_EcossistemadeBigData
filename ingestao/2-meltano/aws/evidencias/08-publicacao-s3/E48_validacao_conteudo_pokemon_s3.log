@@ -1,0 +1,13 @@
+======================================================================
+VALIDAÇÃO DO PARQUET DA POKÉAPI BAIXADO DO S3
+======================================================================
+Diretório=/home/ec2-user/validacao-s3-pokemon
+QuantidadeArquivos=1
+Arquivo=pokemon-20260730_175224-0-0.gz.parquet | Linhas=1351 | TamanhoBytes=16185
+TotalLinhas=1351
+TotalNomesUnicos=1351
+TotalEsperadoAPI=1351
+TotalPrevistoTutorial=1350
+DiferencaTutorial=1
+BulbasaurPresente=SIM
+Resultado=APROVADO

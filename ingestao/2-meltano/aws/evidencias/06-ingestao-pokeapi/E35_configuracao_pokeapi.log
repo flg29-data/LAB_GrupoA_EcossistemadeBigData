@@ -1,0 +1,110 @@
+====================================================
+TUTORIAL 2 AWS - CONFIGURAÇÃO DA POKÉAPI
+====================================================
+Data=2026-07-30T15:56:10+00:00
+Projeto=/home/ec2-user/projeto_ingestao
+MeltanoVersion=meltano, version 4.2.1
+PokeAPICountAtual=1351
+TotalPrevistoTutorial=1350
+
+[2m2026-07-30T15:56:17.821134Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:56:17.824036Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-rest-api-msdk' setting 'api_url' was set in `meltano.yml`: 'https://pokeapi.co/api/v2'
+api_url_exit_code=0
+[2m2026-07-30T15:56:24.750601Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:56:24.752851Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-rest-api-msdk' setting 'pagination_request_style' was set in `meltano.yml`: 'simple_offset_paginator'
+[2m2026-07-30T15:56:26.269720Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:56:26.272201Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-rest-api-msdk' setting 'pagination_response_style' was set in `meltano.yml`: 'offset'
+[2m2026-07-30T15:56:27.750581Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:56:27.752798Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-rest-api-msdk' setting 'pagination_page_size' was set in `meltano.yml`: 100
+[2m2026-07-30T15:56:29.365222Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:56:29.367529Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-07-30T15:56:29.519899Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1m/home/ec2-user/meltano-venv/lib64/python3.11/site-packages/meltano/cli/interactive/config.py:419: RuntimeWarning: Unknown setting 'offset_records_jsonpath'
+  value, metadata = settings.set_with_metadata(
+[0m
+Extractor 'tap-rest-api-msdk' setting 'offset_records_jsonpath' was set in `meltano.yml`: '$.results'
+pagination_request_exit_code=0
+pagination_response_exit_code=0
+page_size_exit_code=0
+offset_path_exit_code=0
+[2m2026-07-30T15:56:33.747016Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:56:33.749655Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-rest-api-msdk' setting 'streams' was set in `meltano.yml`: [{'name': 'pokemon', 'path': '/pokemon', 'records_path': '$.results[*]', 'primary_keys': ['name']}]
+streams_config_exit_code=0
+
+CONFIGURAÇÃO APLICADA:
+[2m2026-07-30T15:56:39.574784Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:56:39.577064Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+{
+  "api_url": "https://pokeapi.co/api/v2",
+  "auth_method": "no_auth",
+  "backoff_param": "Retry-After",
+  "backoff_time_extension": 0,
+  "except_keys": [],
+  "num_inference_records": 50,
+  "pagination_page_size": 100,
+  "pagination_request_style": "simple_offset_paginator",
+  "pagination_response_style": "offset",
+  "pagination_total_limit_param": "total",
+  "params": {},
+  "store_raw_json_message": false,
+  "streams": [
+    {
+      "name": "pokemon",
+      "path": "/pokemon",
+      "records_path": "$.results[*]",
+      "primary_keys": [
+        "name"
+      ]
+    }
+  ],
+  "use_request_body_not_params": false,
+  "offset_records_jsonpath": "$.results"
+}
+config_print_exit_code=0
+    select:
+    - public-vendas.*
+  - name: tap-rest-api-msdk
+    variant: widen
+    pip_url: tap-rest-api-msdk setuptools<81
+    config:
+      api_url: https://pokeapi.co/api/v2
+      pagination_request_style: simple_offset_paginator
+      pagination_response_style: offset
+      pagination_page_size: 100
+      offset_records_jsonpath: $.results
+      streams:
+      - name: pokemon
+        path: /pokemon
+        records_path: $.results[*]
+        primary_keys:
+        - name
+  loaders:
+  - name: target-parquet
+    variant: automattic
+    pip_url: git+https://github.com/Automattic/target-parquet.git
+    config:
+      destination_path: output
+discover_pokeapi_exit_code=0
+pokemon_stream_exit_code=0
+[2m2026-07-30T15:57:10.534909Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano select`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:57:10.536725Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+select_pokemon_exit_code=0
+[2m2026-07-30T15:57:16.055587Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano select`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:57:16.057838Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Legend:
+	selected
+	excluded
+	automatic
+	unsupported
+
+Enabled patterns:
+	pokemon.*
+
+Selected properties:
+	[automatic  ] pokemon.name
+	[selected   ] pokemon.url
+select_list_exit_code=0

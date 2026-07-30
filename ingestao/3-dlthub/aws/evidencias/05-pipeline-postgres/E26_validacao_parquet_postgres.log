@@ -1,0 +1,12 @@
+======================================================================
+VALIDAÇÃO POSTGRESQL → PARQUET → S3
+======================================================================
+Bucket=650379606721-ingestao-lab-20260729181445719900000002
+Prefixo=postgres/vendas/
+QuantidadeArquivosParquet=1
+Arquivo=650379606721-ingestao-lab-20260729181445719900000002/postgres/vendas/1785437813.6685205.944e366583.parquet | Linhas=200 | TamanhoBytes=9184
+TotalLinhasParquet=200
+QuantidadeColunas=9
+Colunas=venda_id,cliente_id,produto_id,data_venda,quantidade,valor_unitario,desconto,_dlt_load_id,_dlt_id
+TotalEsperado=200
+Resultado=APROVADO

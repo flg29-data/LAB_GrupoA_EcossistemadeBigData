@@ -1,0 +1,24 @@
+INSTALAÇÃO DO DLT — TUTORIAL 3 AWS
+
+Data=2026-07-30T18:40:43+00:00
+Projeto=/home/ec2-user/projeto_dlthub
+AmbienteVirtual=/home/ec2-user/dlt-venv
+Python=Python 3.11.15
+DLTVersion=1.29.1
+
+VenvCreateExitCode=0
+ActivateExitCode=0
+PipUpgradeExitCode=0
+DLTInstallExitCode=0
+DLTCLIExitCode=0
+ValidacaoComponentesObrigatoriosExitCode=0
+
+ComponentesObrigatorios=dlt,sql_table,rest_api_source,pyarrow,s3fs,sqlalchemy,psycopg2,botocore
+PandasObrigatorio=NAO
+NumpyImportDiretoObrigatorio=NAO
+
+VenvSize=319M
+DiskAvailable=4.8G
+AmbienteMeltanoReutilizado=NAO
+SegredosExibidos=NAO
+Resultado=APROVADO

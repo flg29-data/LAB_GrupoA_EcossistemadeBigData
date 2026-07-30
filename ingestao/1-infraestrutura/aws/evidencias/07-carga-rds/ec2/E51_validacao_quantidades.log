@@ -1,0 +1,7 @@
+  tabela  | quantidade 
+----------+------------
+ clientes |         20
+ produtos |         15
+ vendas   |        200
+(3 rows)
+

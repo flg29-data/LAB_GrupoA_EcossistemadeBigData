@@ -1,0 +1,97 @@
+﻿RESUMO FINAL - TUTORIAL 2 AWS MELTANO
+
+Data da consolidacao:
+30/07/2026 15:01:39
+
+1. INFRAESTRUTURA
+
+EC2:
+i-0db119c4f19fd868e
+
+Endereco privado da EC2:
+172.31.35.18
+
+RDS:
+ingestao-postgres-20260729181449897700000004
+
+Banco de dados:
+ecommerce
+
+Bucket S3:
+650379606721-ingestao-lab-20260729181445719900000002
+
+Terraform sem drift:
+SIM
+
+2. SOFTWARE
+
+Sistema operacional:
+Amazon Linux 2023
+
+Python:
+3.11.15
+
+Meltano:
+4.2.1
+
+Extrator PostgreSQL:
+tap-postgres
+
+Extrator REST:
+tap-rest-api-msdk
+
+Loader:
+target-parquet
+
+3. RESULTADOS
+
+Vendas extraidas do RDS:
+200
+
+Pokemon extraidos da PokeAPI:
+1351
+
+Pokemon unicos:
+1351
+
+Total previsto originalmente no tutorial:
+1350
+
+Diferenca em relacao ao tutorial:
+1
+
+Bulbasaur presente:
+SIM
+
+Parquet de vendas publicado no S3:
+SIM
+
+Parquet de Pokemon publicado no S3:
+SIM
+
+Hashes locais e dos arquivos baixados do S3:
+COINCIDENTES
+
+4. CAMINHOS NO S3
+
+Vendas:
+s3://650379606721-ingestao-lab-20260729181445719900000002/meltano/vendas/
+
+Pokemon:
+s3://650379606721-ingestao-lab-20260729181445719900000002/meltano/pokemon/
+
+5. EVIDENCIAS
+
+Quantidade total de arquivos:
+50
+
+Inventario:
+E53_inventario_evidencias.csv
+
+Hashes SHA-256:
+E54_hashes_evidencias_sha256.csv
+
+Dificuldades:
+E52_dificuldades_e_solucoes.txt
+
+RESULTADO=APROVADO

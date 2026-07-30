@@ -1,0 +1,19 @@
+[2m2026-07-30T15:41:44.726607Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mEnvironment 'dev' is active   [0m
+[2m2026-07-30T15:41:44.742867Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-07-30T15:41:44.855292Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mSetting 'console' handler log level to 'debug' for dry run[0m
+[2m2026-07-30T15:41:44.859953Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mFound plugin parent           [0m
+[2m2026-07-30T15:41:44.860665Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mfound plugin in cli invocation[0m
+[2m2026-07-30T15:41:44.861922Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mFound plugin parent           [0m
+[2m2026-07-30T15:41:44.862443Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mfound plugin in cli invocation[0m
+[2m2026-07-30T15:41:44.862684Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mhead of set is extractor as expected[0m
+[2m2026-07-30T15:41:45.066487Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mfound block                   [0m
+[2m2026-07-30T15:41:45.066748Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mblocks                        [0m
+[2m2026-07-30T15:41:45.124097Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mfound ExtractLoadBlocks set   [0m
+[2m2026-07-30T15:41:45.124551Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mvalidating ExtractLoadBlock.  [0m
+[2m2026-07-30T15:41:45.124726Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mAll ExtractLoadBlocks validated, starting execution.[0m
+[2m2026-07-30T15:41:45.141836Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mSkipped installing extractor 'tap-postgres'. Requirements have not changed.[0m
+[2m2026-07-30T15:41:45.160334Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mSkipped installing loader 'target-parquet'. Requirements have not changed.[0m
+[2m2026-07-30T15:41:45.160764Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mInstalled 0/2 plugins         [0m
+[2m2026-07-30T15:41:45.160948Z[0m [[32mdebug    [0m] [36mmeltano     [0m [1mSkipped installing 2/2 plugins[0m
+[2m2026-07-30T15:41:45.161344Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mDry run, but would have run block 1/1.[0m
+[2m2026-07-30T15:41:45.161575Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRun completed                 [0m

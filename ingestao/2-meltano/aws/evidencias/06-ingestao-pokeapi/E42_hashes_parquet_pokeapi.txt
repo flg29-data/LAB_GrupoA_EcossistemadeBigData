@@ -1,0 +1,1 @@
+febf4e3f25f9e4b26deaaddcfeeb39c60e575867f4a6b41118330599c814502d  /home/ec2-user/projeto_ingestao/output/pokemon/pokemon-20260730_175224-0-0.gz.parquet

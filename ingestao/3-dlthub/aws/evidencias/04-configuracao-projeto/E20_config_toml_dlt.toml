@@ -1,0 +1,2 @@
+[destination.filesystem]
+bucket_url = "s3://650379606721-ingestao-lab-20260729181445719900000002"

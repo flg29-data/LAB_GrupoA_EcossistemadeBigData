@@ -1,0 +1,71 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729150441
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E03_reconstrucao_arquivos_20260729-150441.log
+
+====================================================
+RECONSTRUÇÃO DOS ARQUIVOS
+====================================================
+
+main.tf
+
+====================================================
+RESUMO DA ETAPA 2
+====================================================
+
+Situacao do IP:
+IP publico identificado com sucesso
+CIDR SSH configurado: 187.62.131.36/32
+
+Resultado do terraform fmt:
+exit_code=0
+
+Arquivos principais:
+
+Name                     Length LastWriteTime
+----                     ------ -------------
+.gitignore                  321 29/07/2026 15:04:41
+versions.tf                 194 29/07/2026 15:04:41
+variables.tf               1916 29/07/2026 15:04:41
+main.tf                    4358 29/07/2026 15:04:42
+outputs.tf                 1185 29/07/2026 15:04:41
+terraform.tfvars.example    173 29/07/2026 15:04:41
+schema.sql                 1373 29/07/2026 15:04:41
+seed.sql                   1734 29/07/2026 15:04:41
+
+
+
+Arquivos sensiveis locais:
+
+
+TerraformTfvars : True
+SenhaLocal      : True
+SenhaExibida    : NAO
+
+
+
+
+Hashes registrados em:
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E04_hashes_arquivos.txt
+
+Evidencia da reconstrucao:
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E03_reconstrucao_arquivos_20260729-150441.log
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729150443
+**********************

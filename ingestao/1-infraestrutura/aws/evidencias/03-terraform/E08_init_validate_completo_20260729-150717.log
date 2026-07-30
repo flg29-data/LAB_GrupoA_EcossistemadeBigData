@@ -1,0 +1,123 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729150717
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E08_init_validate_completo_20260729-150717.log
+
+====================================================
+ETAPA 3 - INICIALIZAÇÃO E VALIDAÇÃO
+====================================================
+
+Pasta atual:
+
+
+Arquivos Terraform encontrados:
+Path
+----
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform
+
+
+
+Name         Length LastWriteTime
+----         ------ -------------
+main.tf        4358 29/07/2026 15:04:42
+outputs.tf     1185 29/07/2026 15:04:41
+variables.tf   1916 29/07/2026 15:04:41
+versions.tf     194 29/07/2026 15:04:41
+
+
+
+====================================================
+1. TERRAFORM FMT CHECK
+====================================================
+
+
+fmt_exit_code=0
+
+====================================================
+2. TERRAFORM INIT
+====================================================
+
+Initializing the backend...
+
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "~> 5.0"...
+- Installing hashicorp/aws v5.100.0...
+- Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+
+init_exit_code=0
+
+====================================================
+3. TERRAFORM VALIDATE
+====================================================
+
+Success! The configuration is valid.
+
+
+validate_exit_code=0
+
+====================================================
+4. TERRAFORM PROVIDERS
+====================================================
+
+
+Providers required by configuration:
+.
+ÔööÔöÇÔöÇ provider[registry.terraform.io/hashicorp/aws] ~> 5.0
+
+
+====================================================
+RESUMO DA ETAPA 3
+====================================================
+
+
+
+TerraformFmt      : APROVADO
+TerraformInit     : APROVADO
+TerraformValidate : APROVADO
+LockFileCriado    : True
+ProviderInstalado : True
+Resultado         : APROVADO
+
+
+
+
+Arquivos de evidência:
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E09_terraform_fmt_check_20260729-150717.log
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E10_terraform_init_20260729-150717.log
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E11_terraform_validate_20260729-150717.log
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E12_terraform_providers_20260729-150717.log
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform\E13_resumo_init_validate_20260729-150717.txt
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729150754
+**********************

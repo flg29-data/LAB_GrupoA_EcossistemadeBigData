@@ -1,0 +1,17 @@
+﻿
+
+SessaoAWS          : VALIDADA
+ContaAnonimizada   : ********6721
+Regiao             : us-east-1
+CIDR_SSH           : 187.62.131.36/32
+TerraformValidate  : APROVADO
+TerraformPlan      : APROVADO
+RecursosAdicionar  : 6
+RecursosAlterar    : 0
+RecursosDestruir   : 0
+PlanoBinarioExiste : True
+PlanoIgnoradoGit   : True
+Resultado          : APROVADO
+
+
+

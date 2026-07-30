@@ -1,0 +1,23 @@
+﻿VALIDAÇÃO DIRETA DOS RECURSOS AWS
+
+Data: 29/07/2026 15:20:16
+Região: us-east-1
+Conta anonimizada: ********6721
+
+EC2
+Instance ID: i-0db119c4f19fd868e
+Estado: running
+Status da instância: running	ok	ok
+describe-instances exit code: 0
+describe-instance-status exit code: 0
+
+RDS
+Identificador: ingestao-postgres-20260729181449897700000004
+Estado: available
+describe-db-instances exit code: 0
+
+S3
+Bucket anonimizado: ************-ingestao-lab-20260729181445719900000002
+head-bucket exit code: 0
+Bloqueio de acesso público: True	True	True	True
+get-public-access-block exit code: 0

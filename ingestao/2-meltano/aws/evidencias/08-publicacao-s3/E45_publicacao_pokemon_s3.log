@@ -1,0 +1,18 @@
+====================================================
+TUTORIAL 2 AWS - PUBLICAÇÃO DA POKÉAPI NO S3
+====================================================
+Data=2026-07-30T17:53:57+00:00
+Origem=/home/ec2-user/projeto_ingestao/output/pokemon
+Destino=s3://650379606721-ingestao-lab-20260729181445719900000002/meltano/pokemon
+ArquivosOrigem=1
+
+clean_s3_exit_code=0
+Completed 15.8 KiB/15.8 KiB (513.3 KiB/s) with 1 file(s) remainingupload: output/pokemon/pokemon-20260730_175224-0-0.gz.parquet to s3://650379606721-ingestao-lab-20260729181445719900000002/meltano/pokemon/pokemon-20260730_175224-0-0.gz.parquet
+sync_pokemon_s3_exit_code=0
+listagem_s3_exit_code=0
+arquivos_parquet_s3=1
+total_bytes_s3=16185
+download_s3_exit_code=0
+hash_local=febf4e3f25f9e4b26deaaddcfeeb39c60e575867f4a6b41118330599c814502d
+hash_baixado_s3=febf4e3f25f9e4b26deaaddcfeeb39c60e575867f4a6b41118330599c814502d
+hashes_iguais=SIM

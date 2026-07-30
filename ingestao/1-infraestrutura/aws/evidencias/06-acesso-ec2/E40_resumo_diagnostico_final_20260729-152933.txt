@@ -1,0 +1,18 @@
+﻿
+
+SessaoAWS                : VALIDADA
+NACLPadrao               : True
+NACLEntradaTCP22         : True
+NACLSaidaPortasEfemeras  : True
+ConsoleEC2Obtido         : False
+CloudInitFinalizado      : False
+ErroUserDataIdentificado : False
+TesteEC2Porta22          : False
+TesteGitHubPorta22       : True
+TesteGitHubPorta443      : True
+CodigoSaidaSSH           : 255
+CausaProvavel            : PORTA_22_INACESSIVEL_APENAS_NA_EC2
+Resultado                : REVISAR
+
+
+

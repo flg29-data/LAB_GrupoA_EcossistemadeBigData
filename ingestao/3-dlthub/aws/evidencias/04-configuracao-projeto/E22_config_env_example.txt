@@ -1,0 +1,11 @@
+# Modelo sem dados sigilosos
+
+export DLT_DB_USER="ecommerce"
+export DLT_DB_PASSWORD="<INFORMAR_FORA_DO_REPOSITORIO>"
+export DLT_DB_HOST="<RDS_ENDPOINT>"
+export DLT_DB_PORT="5432"
+export DLT_DB_NAME="ecommerce"
+
+export DLT_S3_BUCKET="<BUCKET_S3>"
+export AWS_REGION="us-east-1"
+export AWS_DEFAULT_REGION="us-east-1"

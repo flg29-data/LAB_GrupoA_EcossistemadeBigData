@@ -1,0 +1,231 @@
+data "aws_ec2_managed_prefix_list" "ec2_instance_connect" {
+  name = "com.amazonaws.us-east-1.ec2-instance-connect"
+}
+
+data "aws_caller_identity" "current" {}
+
+data "aws_vpc" "default" {
+  default = true
+}
+
+data "aws_subnets" "default" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.default.id]
+  }
+}
+
+data "aws_subnets" "ec2" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.default.id]
+  }
+
+  filter {
+    name   = "availability-zone"
+    values = var.ec2_availability_zones
+  }
+}
+
+data "aws_ami" "amazon_linux_2023" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["al2023-ami-2023.*-x86_64"]
+  }
+
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
+locals {
+  common_tags = {
+    Project     = var.project_name
+    Environment = "AWS Academy Learner Lab"
+    ManagedBy   = "Terraform"
+  }
+}
+
+resource "aws_s3_bucket" "datalake" {
+  bucket_prefix = "${data.aws_caller_identity.current.account_id}-${var.project_name}-"
+  force_destroy = true
+
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-datalake"
+    }
+  )
+}
+
+resource "aws_s3_bucket_public_access_block" "datalake" {
+  bucket = aws_s3_bucket.datalake.id
+
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_security_group" "ingestao" {
+  ingress {
+    description = "SSH pelo EC2 Instance Connect"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    prefix_list_ids = [
+      data.aws_ec2_managed_prefix_list.ec2_instance_connect.id
+    ]
+  }
+  name_prefix = "ingestao-sg-"
+  description = "Security group do laboratorio de ingestao"
+  vpc_id      = data.aws_vpc.default.id
+
+  ingress {
+    description = "SSH a partir do computador do estudante"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = [var.ssh_cidr]
+  }
+
+  ingress {
+    description = "PostgreSQL entre recursos do mesmo security group"
+    from_port   = 5432
+    to_port     = 5432
+    protocol    = "tcp"
+    self        = true
+  }
+
+  egress {
+    description = "Saida para atualizacoes e servicos AWS"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-sg"
+    }
+  )
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+resource "aws_db_subnet_group" "ingestao" {
+  name_prefix = "ingestao-db-subnet-"
+  description = "Subnets do RDS PostgreSQL"
+  subnet_ids  = data.aws_subnets.default.ids
+
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-db-subnet"
+    }
+  )
+}
+
+resource "aws_db_instance" "postgres" {
+  identifier = "ingestao-postgres-"
+
+  engine         = "postgres"
+  instance_class = var.db_instance_class
+
+  allocated_storage = 20
+  storage_type      = "gp3"
+
+  db_name  = var.db_name
+  username = var.db_username
+  password = var.db_password
+  port     = 5432
+
+  db_subnet_group_name = aws_db_subnet_group.ingestao.name
+
+  vpc_security_group_ids = [
+    aws_security_group.ingestao.id
+  ]
+
+  publicly_accessible     = false
+  multi_az                = false
+  backup_retention_period = 0
+  skip_final_snapshot     = true
+  deletion_protection     = false
+  apply_immediately       = true
+
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-postgres"
+    }
+  )
+}
+
+resource "aws_instance" "runner" {
+  ami                         = data.aws_ami.amazon_linux_2023.id
+  instance_type               = var.instance_type
+  subnet_id                   = sort(data.aws_subnets.ec2.ids)[0]
+  associate_public_ip_address = true
+
+  key_name             = var.key_name
+  iam_instance_profile = var.lab_instance_profile
+
+  vpc_security_group_ids = [
+    aws_security_group.ingestao.id
+  ]
+
+  user_data = <<-EOF
+    #!/bin/bash
+
+    exec > >(tee /var/log/user-data.log | logger -t user-data -s 2>/dev/console) 2>&1
+
+    dnf update -y
+
+    dnf install -y \
+      git \
+      python3 \
+      python3-pip \
+      jq \
+      unzip \
+      docker
+
+    dnf install -y postgresql16 || \
+    dnf install -y postgresql15 || \
+    dnf install -y postgresql
+
+    systemctl enable --now docker
+    usermod -aG docker ec2-user
+
+    touch /home/ec2-user/USER_DATA_OK
+    chown ec2-user:ec2-user /home/ec2-user/USER_DATA_OK
+  EOF
+
+  tags = merge(
+    local.common_tags,
+    {
+      Name = "${var.project_name}-runner"
+    }
+  )
+
+  depends_on = [
+    aws_s3_bucket_public_access_block.datalake
+  ]
+}

@@ -1,0 +1,76 @@
+[2m2026-07-30T17:52:22.163861Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mEnvironment 'dev' is active   [0m
+[2m2026-07-30T17:52:22.180128Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-07-30T17:52:22.594597Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRun timeout configured        [0m
+[2m2026-07-30T17:52:22.595209Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRunning job with name 'dev:tap-rest-api-msdk-to-target-parquet' and run ID '019fb427-e919-7673-a774-d06484c4980a'[0m
+[2m2026-07-30T17:52:23.062757Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mPerforming full refresh, ignoring state left behind by any previous runs.[0m
+[2m2026-07-30T17:52:23.063144Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRunning catalog discovery     [0m
+[2m2026-07-30T17:52:23.286387Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1m/home/ec2-user/projeto_ingestao/.meltano/extractors/tap-rest-api-msdk/venv/lib64/python3.11/site-packages/fs/__init__.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.[0m
+[2m2026-07-30T17:52:23.286771Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1m  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore[0m
+[2m2026-07-30T17:52:23.603398Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mNo schema found. Inferring schema from API call.[0m
+[2m2026-07-30T17:52:23.654766Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 20[0m
+[2m2026-07-30T17:52:24.153591Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1m/home/ec2-user/projeto_ingestao/.meltano/extractors/tap-rest-api-msdk/venv/lib64/python3.11/site-packages/fs/__init__.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.[0m
+[2m2026-07-30T17:52:24.153989Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1m  __import__("pkg_resources").declare_namespace(__name__)  # type: ignore[0m
+[2m2026-07-30T17:52:24.685386Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mNo schema found. Inferring schema from API call.[0m
+[2m2026-07-30T17:52:24.762992Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 20[0m
+[2m2026-07-30T17:52:24.767971Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mBeginning full_table sync of 'pokemon'...[0m
+[2m2026-07-30T17:52:24.768614Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mTap has custom mapper. Using 1 provided map(s).[0m
+[2m2026-07-30T17:52:24.769283Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mthe next_page_token_jsonpath = None.[0m
+[2m2026-07-30T17:52:24.780883Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mInitializing 'target-parquet' target sink...[0m
+[2m2026-07-30T17:52:24.781316Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mInitializing target sink for stream 'pokemon'...[0m
+[2m2026-07-30T17:52:24.783320Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mSetting up pokemon            [0m
+[2m2026-07-30T17:52:24.809351Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.037281, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:24.809927Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:24.839191Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:24.857574Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.016645, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:24.857981Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:24.868589Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:24.884857Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.014768, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:24.885251Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:24.893581Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:24.917255Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.02275, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:24.917656Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:24.926520Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:24.940278Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.013251, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:24.940676Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:24.947951Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:24.969284Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.01918, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:24.969689Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:24.977304Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:24.993806Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.014516, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:24.994219Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:25.002995Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:25.019696Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.016065, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.020124Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:25.028393Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:25.043292Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.013781, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.043696Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:25.051914Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:25.076239Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.015406, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.076525Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:25.077115Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:25.089590Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.014728, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.090008Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:25.098212Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:25.112489Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.012843, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.112888Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:25.120661Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:25.136548Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.014142, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.136944Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 100[0m
+[2m2026-07-30T17:52:25.144789Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:25.164402Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "http_request_duration", "value": 0.018081, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "http_status_code": 200, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.164876Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results[*] match count: 51[0m
+[2m2026-07-30T17:52:25.169064Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mJSONPath $.results match count: 1[0m
+[2m2026-07-30T17:52:25.169358Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "counter", "metric": "http_request_count", "value": 14, "tags": {"stream": "pokemon", "endpoint": "/pokemon", "pid": 12612}}[0m
+[2m2026-07-30T17:52:25.169511Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "timer", "metric": "sync_duration", "value": 0.3991971015930176, "tags": {"stream": "pokemon", "pid": 12612, "context": {}, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.169651Z[0m [[32minfo     [0m] [36mtap-rest-api-msdk[0m [1mMETRIC: {"type": "counter", "metric": "record_count", "value": 1351, "tags": {"stream": "pokemon", "pid": 12612, "context": {}}}[0m
+[2m2026-07-30T17:52:25.324712Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mTarget 'target-parquet' completed reading 1354 lines of input (1 schemas, 1351 records, 0 batch manifests, 2 state messages).[0m
+[2m2026-07-30T17:52:25.327800Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mProcessing batch for pokemon with 1351 records.[0m
+[2m2026-07-30T17:52:25.369136Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mPyarrow table size: 75707 | (1351 rows)[0m
+[2m2026-07-30T17:52:25.380121Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1m2026-07-30 17:52:25,379 | INFO     | singer_sdk.metrics   | METRIC: {"type": "timer", "metric": "batch_processing_time", "value": 0.0521388053894043, "tags": {"stream": "pokemon", "pid": 12614, "status": "succeeded"}}[0m
+[2m2026-07-30T17:52:25.395041Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mCleaning up pokemon           [0m
+[2m2026-07-30T17:52:25.395498Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1m2026-07-30 17:52:25,394 | INFO     | singer_sdk.metrics   | METRIC: {"type": "counter", "metric": "record_count", "value": 1351, "tags": {"stream": "pokemon", "pid": 12614}}[0m
+[2m2026-07-30T17:52:25.395802Z[0m [[32minfo     [0m] [36mtarget-parquet[0m [1mEmitting completed target state {"bookmarks": {"pokemon": {}}}[0m
+[2m2026-07-30T17:52:25.410808Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mUsing systemdb state backend  [0m
+[2m2026-07-30T17:52:25.423085Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mIncremental state has been updated at 2026-07-30 17:52:25.423025+00:00.[0m
+[2m2026-07-30T17:52:25.573134Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mBlock run completed           [0m
+[2m2026-07-30T17:52:25.573477Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mRun completed                 [0m

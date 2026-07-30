@@ -1,0 +1,32 @@
+Found pipeline ingestao_postgres_dlt in /home/ec2-user/.dlt/pipelines
+Synchronized state:
+_state_version: 1
+_state_engine_version: 4
+pipeline_name: ingestao_postgres_dlt
+default_schema_name: ingestao_postgres_dlt
+schema_names: ['ingestao_postgres_dlt']
+dataset_name: postgres
+destination_type: dlt.destinations.filesystem
+destination_name: None
+_version_hash: 1ktZtqsJkBZNAaJl4UG9MUp43UkqsqzdALibsJ5aNK0=
+
+sources:
+Add -v option to see sources state. Note that it could be large.
+
+Local state:
+first_run: False
+_dev_mode: False
+initial_cwd: /home/ec2-user/projeto_dlthub
+last_run_context['uri']: file:///home/ec2-user/projeto_dlthub
+_last_extracted_at: 2026-07-30 18:55:22.341760+00:00
+_last_extracted_hash: 1ktZtqsJkBZNAaJl4UG9MUp43UkqsqzdALibsJ5aNK0=
+
+Resources in schema: ingestao_postgres_dlt
+vendas with 1 table(s) and 0 resource state slot(s)
+
+Working dir content:
+Has 2 completed load packages with following load ids:
+1785437722.2868414
+1785437813.6685205
+
+Pipeline has last run trace. Use 'dlt pipeline ingestao_postgres_dlt trace' to inspect 

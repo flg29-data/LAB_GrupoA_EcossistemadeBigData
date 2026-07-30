@@ -1,0 +1,12 @@
+======================================================================
+VALIDAÇÃO FINAL DO PARQUET — POKÉAPI
+======================================================================
+QuantidadeArquivos=1
+Arquivo=pokemon-20260730_175224-0-0.gz.parquet | Linhas=1351 | TamanhoBytes=16185
+TotalLinhasParquet=1351
+TotalNomesUnicos=1351
+TotalEsperadoAPI=1351
+TotalPrevistoTutorial=1350
+DiferencaTutorial=1
+BulbasaurPresente=SIM
+Resultado=APROVADO

@@ -1,0 +1,100 @@
+﻿TUTORIAL 3 AWS - DIFICULDADES ENCONTRADAS E SOLUCOES
+
+1. Credenciais temporarias do AWS Academy canceladas
+
+Problema:
+A primeira verificacao apresentou erros de autorizacao para consultar EC2, RDS e S3. Embora o comando aws sts get-caller-identity tivesse retornado uma identidade, as operacoes estavam bloqueadas pela politica voc-cancel-cred.
+
+Solucao:
+O Learner Lab foi encerrado e iniciado novamente. As credenciais temporarias foram substituidas no arquivo .aws\credentials e as variaveis de ambiente antigas foram removidas. Depois da atualizacao, os testes de EC2, RDS e S3 retornaram codigo zero.
+
+2. Alteracao do endereco IP publico da EC2
+
+Problema:
+O Terraform identificou que o IP publico da instancia havia mudado de 52.90.119.81 para 184.73.13.236, resultando em terraform plan com codigo 2.
+
+Solucao:
+Foi executado um plano refresh-only. A verificacao confirmou zero acoes sobre recursos. O estado do Terraform foi atualizado sem criar, alterar ou destruir infraestrutura. Depois disso, o plano final retornou codigo zero.
+
+3. Timeout no acesso SSH pelo PowerShell
+
+Problema:
+A conexao direta na porta 22 para o novo IP publico apresentou timeout.
+
+Solucao:
+Foi identificado que o Security Group autorizava o servico EC2 Instance Connect, mas nao necessariamente o IP publico da conexao local. O acesso foi realizado pelo EC2 Instance Connect no console AWS, sem abrir a porta 22 para toda a internet.
+
+4. Perda de variaveis em subshell no script Bash
+
+Problema:
+O primeiro script de diagnostico utilizou um bloco direcionado para tee por meio de pipeline. As variaveis definidas dentro do bloco ficaram restritas ao subshell. O script encerrou com a mensagem INSTANCE_ID: unbound variable.
+
+Solucao:
+O registro foi alterado para process substitution com:
+exec > >(tee arquivo.log) 2>&1
+Assim, as variaveis permaneceram disponiveis no processo principal.
+
+5. Teste de importacoes excessivamente restritivo
+
+Problema:
+A instalacao do dlt foi inicialmente marcada como REVISAR porque o teste incluiu pandas e numpy como componentes obrigatorios.
+
+Solucao:
+Foi criada uma validacao especifica para os componentes efetivamente necessarios: dlt, sql_table, rest_api_source, pyarrow, s3fs, sqlalchemy, psycopg2 e botocore. Todos foram aprovados.
+
+6. Credenciais do filesystem no config.toml
+
+Problema:
+A primeira pipeline PostgreSQL falhou com ValueNotSecretException. O dlt 1.29.1 classificou destination.filesystem.credentials como configuracao sigilosa, mesmo contendo apenas region_name.
+
+Solucao:
+A secao destination.filesystem.credentials foi removida do config.toml. A regiao foi configurada por variaveis de ambiente, e as credenciais AWS continuaram sendo obtidas automaticamente pelo perfil IAM LabRole da EC2.
+
+7. Protecao da senha do RDS
+
+Problema:
+O exemplo simplificado do tutorial apresentava a senha diretamente na string de conexao do programa.
+
+Solucao:
+A senha foi mantida fora do projeto, no arquivo protegido:
+~/.config/dlthub/tutorial3.env
+O arquivo recebeu permissao 600 e nao foi enviado ao S3, ao GitHub ou incluido nas evidencias.
+
+8. Quantidade dinamica de registros da PokeAPI
+
+Problema:
+A quantidade de Pokemon pode mudar ao longo do tempo. O exemplo do tutorial tambem apresentava maximum_offset igual a 200, limitando a extracao.
+
+Solucao:
+Foi criado um snapshot da fonte antes da carga. A pipeline utilizou paginacao por offset, iniciada em zero, sem maximum_offset, e o campo count da API como referencia. O Parquet foi comparado nominalmente com o snapshot.
+
+9. Validacao independente dos arquivos Parquet
+
+Problema:
+Uma mensagem de carga concluida nao comprova, isoladamente, que todos os registros foram gravados corretamente.
+
+Solucao:
+Os Parquet foram lidos diretamente do S3 com s3fs e pyarrow. Foram validadas as quantidades, colunas, nomes unicos, presenca de bulbasaur e diferencas entre o snapshot da API e o arquivo final.
+
+RESULTADOS OBTIDOS
+
+- Infraestrutura Terraform sem drift: SIM.
+- Recursos criados durante a revalidacao: 0.
+- Recursos alterados durante a revalidacao: 0.
+- Recursos destruidos durante a revalidacao: 0.
+- EC2 utilizada: i-0db119c4f19fd868e.
+- Perfil IAM utilizado: LabRole.
+- Python utilizado: 3.11.15.
+- dlt utilizado: 1.29.1.
+- Vendas extraidas do RDS PostgreSQL: 200.
+- Pokemon extraidos da PokeAPI: 1351.
+- Nomes de Pokemon unicos: 1351.
+- Registro bulbasaur presente: SIM.
+- Registros ausentes da PokeAPI: 0.
+- Registros extras da PokeAPI: 0.
+- Parquet de vendas publicado no S3: SIM.
+- Parquet da PokeAPI publicado no S3: SIM.
+- Chaves AWS armazenadas no codigo: NAO.
+- Senha do RDS armazenada no codigo: NAO.
+
+RESULTADO=APROVADO

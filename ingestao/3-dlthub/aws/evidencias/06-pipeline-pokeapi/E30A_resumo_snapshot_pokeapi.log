@@ -1,0 +1,12 @@
+======================================================================
+SNAPSHOT DA POKÉAPI
+======================================================================
+HTTPStatus=200
+APICountInformado=1351
+ResultadosRetornados=1351
+NomesUnicos=1351
+PrimeiroNome=bulbasaur
+UltimoNome=meowstic-female-mega
+BulbasaurPresente=SIM
+ArquivoSnapshot=/home/ec2-user/evidencias-dlt/06-pipeline-pokeapi/E30_snapshot_pokeapi.json
+Resultado=APROVADO

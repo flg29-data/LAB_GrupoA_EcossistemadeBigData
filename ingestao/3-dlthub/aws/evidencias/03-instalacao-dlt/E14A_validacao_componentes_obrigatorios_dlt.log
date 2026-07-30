@@ -1,0 +1,14 @@
+======================================================================
+VALIDAÇÃO DO AMBIENTE DLT
+======================================================================
+PythonExecutavel=/home/ec2-user/dlt-venv/bin/python
+DLTVersion=1.29.1
+dlt=OK
+sql_table=OK
+rest_api_source=OK
+pyarrow=OK
+s3fs=OK
+sqlalchemy=OK
+psycopg2=OK
+botocore=OK
+Resultado=APROVADO

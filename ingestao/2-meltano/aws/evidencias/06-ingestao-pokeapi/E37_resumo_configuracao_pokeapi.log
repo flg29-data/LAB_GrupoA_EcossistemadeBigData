@@ -1,0 +1,22 @@
+====================================================
+RESUMO DA ETAPA 9
+====================================================
+Data=2026-07-30T15:57:20+00:00
+PokeAPICheckExitCode=0
+PokeAPICountAtual=1351
+PokeAPICountValido=SIM
+TotalPrevistoTutorial=1350
+JsonValidationExitCode=0
+ApiUrlExitCode=0
+PaginationRequestExitCode=0
+PaginationResponseExitCode=0
+PageSizeExitCode=0
+OffsetPathExitCode=0
+StreamsConfigExitCode=0
+ConfigPrintExitCode=0
+DiscoverPokeAPIExitCode=0
+PokemonStreamExitCode=0
+SelectPokemonExitCode=0
+SelectListExitCode=0
+CredencialNecessaria=NAO
+Resultado=APROVADO

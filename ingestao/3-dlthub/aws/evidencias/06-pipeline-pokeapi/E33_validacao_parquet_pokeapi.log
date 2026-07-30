@@ -1,0 +1,18 @@
+======================================================================
+VALIDAÇÃO POKÉAPI → PARQUET → S3
+======================================================================
+Bucket=650379606721-ingestao-lab-20260729181445719900000002
+Prefixo=pokeapi/pokemon/
+APICountSnapshot=1351
+APIResultadosSnapshot=1351
+QuantidadeArquivosParquet=1
+Arquivo=650379606721-ingestao-lab-20260729181445719900000002/pokeapi/pokemon/1785438053.9629052.cd4d0b0c69.parquet | Linhas=1351 | TamanhoBytes=47063
+TotalLinhasParquet=1351
+TotalNomesParquet=1351
+TotalNomesUnicosParquet=1351
+QuantidadeColunas=4
+Colunas=name,url,_dlt_load_id,_dlt_id
+BulbasaurPresente=SIM
+RegistrosAusentes=0
+RegistrosExtras=0
+Resultado=APROVADO

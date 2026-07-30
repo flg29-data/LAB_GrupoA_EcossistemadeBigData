@@ -1,0 +1,9 @@
+============================================================
+VERIFICAÇÃO DA POKÉAPI
+============================================================
+URL=https://pokeapi.co/api/v2/pokemon?limit=1&offset=0
+HTTPStatus=200
+CountAtual=1351
+ResultadosRecebidos=1
+TotalPrevistoTutorial=1350
+Resultado=APROVADO

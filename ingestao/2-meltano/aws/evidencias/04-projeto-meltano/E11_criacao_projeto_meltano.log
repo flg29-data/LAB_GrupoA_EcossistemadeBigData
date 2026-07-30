@@ -1,0 +1,123 @@
+====================================================
+TUTORIAL 2 AWS - CRIACAO DO PROJETO MELTANO
+====================================================
+
+Data=2026-07-30T15:26:44+00:00
+Usuario=ec2-user
+Host=ip-172-31-35-18.ec2.internal
+Projeto=/home/ec2-user/projeto_ingestao
+VIRTUAL_ENV=/home/ec2-user/meltano-venv
+MeltanoVersion=meltano, version 4.2.1
+
+1. DESATIVAR TELEMETRIA ANONIMA
+MELTANO_SEND_ANONYMOUS_USAGE_STATS=False
+
+2. CRIAR O PROJETO
+Creating .meltano folder
+created .meltano in /home/ec2-user/projeto_ingestao/.meltano
+Creating project files...
+  projeto_ingestao/
+   |-- meltano.yml
+   |-- README.md
+   |-- requirements.txt
+   |-- output/.gitignore
+   |-- .gitignore
+   |-- extract/.gitkeep
+   |-- load/.gitkeep
+   |-- transform/.gitkeep
+   |-- analyze/.gitkeep
+   |-- notebook/.gitkeep
+   |-- orchestrate/.gitkeep
+Creating system database...  Done!
+
+
+
+                          ████   █████
+                         ░░███  ░░███
+ █████████████    ██████  ░███  ███████    ██████   ████████    ██████
+░░███░░███░░███  ███░░███ ░███ ░░░███░    ░░░░░███ ░░███░░███  ███░░███
+ ░███ ░███ ░███ ░███████  ░███   ░███      ███████  ░███ ░███ ░███ ░███
+ ░███ ░███ ░███ ░███░░░   ░███   ░███ ███ ███░░███  ░███ ░███ ░███ ░███
+ █████░███ █████░░██████  █████  ░░█████ ░░████████ ████ █████░░██████
+░░░░░ ░░░ ░░░░░  ░░░░░░  ░░░░░    ░░░░░   ░░░░░░░░ ░░░░ ░░░░░  ░░░░░░
+
+
+
+Your project has been created!
+
+Meltano Environments initialized with dev, staging, and prod.
+To learn more about Environments visit: https://docs.meltano.com/concepts/environments
+
+Next steps:
+  cd projeto_ingestao
+  Visit https://docs.meltano.com/getting-started/part1 to learn where to go from here
+
+meltano_init_exit_code=0
+
+3. VERIFICAR A PASTA
+Pasta do projeto encontrada.
+
+4. VERIFICAR O MELTANO.YML
+meltano.yml encontrado.
+-rw-------. 1 ec2-user ec2-user 163 Jul 30 15:26 /home/ec2-user/projeto_ingestao/meltano.yml
+
+5. LISTAR A ESTRUTURA INICIAL
+d /home/ec2-user/projeto_ingestao/.meltano
+d /home/ec2-user/projeto_ingestao/.meltano/run
+d /home/ec2-user/projeto_ingestao/analyze
+d /home/ec2-user/projeto_ingestao/extract
+d /home/ec2-user/projeto_ingestao/load
+d /home/ec2-user/projeto_ingestao/notebook
+d /home/ec2-user/projeto_ingestao/orchestrate
+d /home/ec2-user/projeto_ingestao/output
+d /home/ec2-user/projeto_ingestao/transform
+f /home/ec2-user/projeto_ingestao/.gitignore
+f /home/ec2-user/projeto_ingestao/.meltano/.gitignore
+f /home/ec2-user/projeto_ingestao/.meltano/CACHEDIR.TAG
+f /home/ec2-user/projeto_ingestao/.meltano/analytics.json
+f /home/ec2-user/projeto_ingestao/.meltano/meltano.db
+f /home/ec2-user/projeto_ingestao/README.md
+f /home/ec2-user/projeto_ingestao/analyze/.gitkeep
+f /home/ec2-user/projeto_ingestao/extract/.gitkeep
+f /home/ec2-user/projeto_ingestao/load/.gitkeep
+f /home/ec2-user/projeto_ingestao/meltano.yml
+f /home/ec2-user/projeto_ingestao/notebook/.gitkeep
+f /home/ec2-user/projeto_ingestao/orchestrate/.gitkeep
+f /home/ec2-user/projeto_ingestao/output/.gitignore
+f /home/ec2-user/projeto_ingestao/requirements.txt
+f /home/ec2-user/projeto_ingestao/transform/.gitkeep
+
+6. ENTRAR NO PROJETO
+cd_exit_code=0
+DiretorioAtual=/home/ec2-user/projeto_ingestao
+
+7. VALIDAR O PROJETO
+meltano, version 4.2.1
+config_list_exit_code=0
+meltano_project_exit_code=0
+
+8. EXIBIR CABECALHO DO MELTANO.YML
+default_environment: dev
+project_id: 019fb3a2-9dd7-7375-a988-b9a97ca75b4e
+environments:
+- name: dev
+- name: staging
+- name: prod
+send_anonymous_usage_stats: false
+
+9. VERIFICAR ARQUIVOS SENSIVEIS
+Arquivo .env existe: NAO
+Senha exibida: NAO
+
+====================================================
+RESUMO DA ETAPA 4
+====================================================
+MeltanoInitExitCode=0
+ProjectDirectory=SIM
+MeltanoYml=SIM
+ChangeDirectoryExitCode=0
+ConfigListExitCode=0
+MeltanoProjectExitCode=0
+ArquivoEnv=NAO
+SenhaExibida=NAO
+Resultado=APROVADO

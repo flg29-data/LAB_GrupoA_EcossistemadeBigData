@@ -1,0 +1,95 @@
+====================================================
+DIAGNÓSTICO DA EC2 — TUTORIAL 3 DLT
+====================================================
+Data=2026-07-30T18:25:45+00:00
+Usuario=ec2-user
+Hostname=ip-172-31-35-18.ec2.internal
+
+====================================================
+1. IDENTIDADE DA INSTÂNCIA
+====================================================
+InstanceId=i-0db119c4f19fd868e
+PrivateIp=172.31.35.18
+IAMRole=LabRole
+MetadataTokenExitCode=0
+InstanceMetadataExitCode=0
+PrivateIpMetadataExitCode=0
+IAMRoleMetadataExitCode=0
+
+====================================================
+2. SISTEMA OPERACIONAL
+====================================================
+NAME="Amazon Linux"
+VERSION="2023"
+ID="amzn"
+ID_LIKE="fedora"
+VERSION_ID="2023"
+PLATFORM_ID="platform:al2023"
+PRETTY_NAME="Amazon Linux 2023.12.20260727"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2023"
+HOME_URL="https://aws.amazon.com/linux/amazon-linux-2023/"
+DOCUMENTATION_URL="https://docs.aws.amazon.com/linux/"
+SUPPORT_URL="https://aws.amazon.com/premiumsupport/"
+BUG_REPORT_URL="https://github.com/amazonlinux/amazon-linux-2023"
+VENDOR_NAME="AWS"
+VENDOR_URL="https://aws.amazon.com/"
+SUPPORT_END="2029-06-30"
+
+Linux ip-172-31-35-18.ec2.internal 6.1.176-223.369.amzn2023.x86_64 #1 SMP PREEMPT_DYNAMIC Fri Jul 24 13:34:27 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+
+====================================================
+3. PYTHON E FERRAMENTAS
+====================================================
+Python 3.11.15
+pip 22.3.1 from /usr/lib/python3.11/site-packages/pip (python 3.11)
+git version 2.50.1
+curl 8.17.0 (x86_64-amazon-linux-gnu) libcurl/8.17.0 OpenSSL/3.5.5 zlib/1.2.11 libidn2/2.3.2 libpsl/0.21.5 nghttp2/1.59.0 mit-krb5/1.21.3
+PythonExitCode=0
+PipExitCode=0
+GitExitCode=0
+CurlExitCode=0
+VenvExitCode=0
+
+====================================================
+4. AWS CLI E PERFIL IAM
+====================================================
+aws-cli/2.33.15 Python/3.9.25 Linux/6.1.176-223.369.amzn2023.x86_64 source/x86_64.amzn.2023
+{
+    "UserId": "AROAZO3NFHLA6BKFEH42Z:i-0db119c4f19fd868e",
+    "Account": "650379606721",
+    "Arn": "arn:aws:sts::650379606721:assumed-role/LabRole/i-0db119c4f19fd868e"
+}
+AWSCLIExitCode=0
+STSExitCode=0
+
+====================================================
+5. ACESSO AO S3
+====================================================
+{
+    "BucketArn": "arn:aws:s3:::650379606721-ingestao-lab-20260729181445719900000002",
+    "BucketRegion": "us-east-1",
+    "AccessPointAlias": false
+}
+S3Bucket=650379606721-ingestao-lab-20260729181445719900000002
+S3ExitCode=0
+
+====================================================
+6. CONECTIVIDADE COM O RDS
+====================================================
+RDSEndpoint=ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com
+RDSPort=5432
+RDSTCPExitCode=0
+
+====================================================
+7. CONECTIVIDADE COM A POKÉAPI
+====================================================
+PokeAPIHTTPCode=200
+PokeAPIExitCode=0
+
+====================================================
+8. ESPAÇO EM DISCO
+====================================================
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1  8.0G  2.8G  5.2G  36% /
+DiskExitCode=0

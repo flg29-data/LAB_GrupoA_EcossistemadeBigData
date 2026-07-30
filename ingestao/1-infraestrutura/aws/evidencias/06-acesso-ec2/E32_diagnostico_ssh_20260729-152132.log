@@ -1,0 +1,84 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729152132
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\06-acesso-ec2\E32_diagnostico_ssh_20260729-152132.log
+
+====================================================
+1. SESSÃO AWS
+====================================================
+
+Sessão AWS: VALIDADA
+
+====================================================
+2. ENDEREÇO DE ORIGEM
+====================================================
+
+IP atual corresponde ao terraform.tfvars: True
+
+====================================================
+3. CONFIGURAÇÃO DA EC2
+====================================================
+
+Estado: running
+Possui IPv4 público: True
+Subnet ID: subnet-00b1a472fc31437a1
+Security Group: sg-0be8efd12443a2a59
+
+====================================================
+4. REGRA SSH DO SECURITY GROUP
+====================================================
+
+Existe regra TCP/22: True
+Regra contém o IP público atual: True
+Quantidade de origens autorizadas: 1
+
+====================================================
+5. ROTA DA SUB-REDE
+====================================================
+
+Rota 0.0.0.0/0 para Internet Gateway: True
+
+====================================================
+6. TESTE TCP/22
+====================================================
+
+Porta TCP/22 acessível: False
+
+====================================================
+RESUMO DA ETAPA 7.2
+====================================================
+
+
+
+SessaoAWS             : VALIDADA
+EC2Estado             : running
+EC2PossuiIPv4Publico  : True
+IPAtualIgualTfvars    : True
+RegraSSHExiste        : True
+IPAtualAutorizadoNoSG : True
+RotaInternetGateway   : True
+PortaTCP22            : False
+CausaProvavel         : AWS_CONFIGURADA_MAS_TCP_22_INACESSIVEL
+Resultado             : REVISAR
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729152206
+**********************

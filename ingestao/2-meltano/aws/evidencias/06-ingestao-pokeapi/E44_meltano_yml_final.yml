@@ -1,0 +1,43 @@
+default_environment: dev
+project_id: 019fb3a2-9dd7-7375-a988-b9a97ca75b4e
+environments:
+- name: dev
+- name: staging
+- name: prod
+send_anonymous_usage_stats: false
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-tap-postgres
+    config:
+      host: ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com
+      port: 5432
+      user: ecommerce
+      database: ecommerce
+    select:
+    - public-vendas.*
+  - name: tap-rest-api-msdk
+    variant: widen
+    pip_url: tap-rest-api-msdk setuptools<81
+    config:
+      api_url: https://pokeapi.co/api/v2
+      pagination_request_style: simple_offset_paginator
+      pagination_response_style: offset
+      pagination_page_size: 100
+      offset_records_jsonpath: $.results
+      streams:
+      - name: pokemon
+        path: /pokemon
+        records_path: $.results[*]
+        primary_keys:
+        - name
+      pagination_initial_offset: 0
+    select:
+    - pokemon.*
+  loaders:
+  - name: target-parquet
+    variant: automattic
+    pip_url: git+https://github.com/Automattic/target-parquet.git
+    config:
+      destination_path: output

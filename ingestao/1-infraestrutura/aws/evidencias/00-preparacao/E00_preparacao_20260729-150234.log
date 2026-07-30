@@ -1,0 +1,102 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729150234
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\00-preparacao\E00_preparacao_20260729-150234.log
+========================================
+DIAGNÓSTICO INICIAL DO AMBIENTE
+========================================
+
+Data e hora:
+29/07/2026 15:02:34
+
+Sistema operacional:
+
+
+Versão do PowerShell:
+
+Comandos encontrados:
+WindowsProductName              WindowsVersion OsBuildNumber OsArchitecture
+------------------              -------------- ------------- --------------
+Windows 10 Home Single Language 2009           26200         64 bits
+
+
+
+
+Name          Source
+----          ------
+terraform.exe C:\Users\Breno Tostes Garcia\AppData\Local\Microsoft\WinGet\Packages\Hashicorp.Terraform_Microsoft.Win...
+aws.exe       C:\Program Files\Amazon\AWSCLIV2\aws.exe
+ssh.exe       C:\WINDOWS\System32\OpenSSH\ssh.exe
+scp.exe       C:\WINDOWS\System32\OpenSSH\scp.exe
+git.exe       C:\Program Files\Git\cmd\git.exe
+winget.exe    C:\Users\Breno Tostes Garcia\AppData\Local\Microsoft\WindowsApps\winget.exe
+
+
+
+Versão do Terraform:
+Terraform v1.15.8
+on windows_amd64
+
+Versão da AWS CLI:
+aws-cli/2.36.2 Python/3.14.6 Windows/11 exe/AMD64
+
+Versão do SSH:
+OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+
+Versão do Git:
+git version 2.55.0.windows.3
+
+Versão do Winget:
+v1.29.280
+
+Estrutura inicial criada:
+
+FullName
+--------
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\.secrets
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\aws_credenciais
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\dados
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\relatorio-final
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\aws\terraform
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\docker
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\docker\ministack-init
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\1-infraestrutura\local\docker\ministack-init\ready.d
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\aws
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\2-meltano\local
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\aws
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\local
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\00-preparacao
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\01-ferramentas
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\02-credenciais-aws
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\03-terraform
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\04-seed-rds
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\05-validacao
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\06-destruicao
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\prints
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729150238
+**********************

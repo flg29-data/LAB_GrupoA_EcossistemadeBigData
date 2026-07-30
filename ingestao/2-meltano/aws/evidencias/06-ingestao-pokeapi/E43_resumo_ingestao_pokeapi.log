@@ -1,0 +1,23 @@
+====================================================
+RESUMO DA ETAPA 10
+====================================================
+Data=2026-07-30T17:59:57+00:00
+Origem=PokéAPI
+Extrator=tap-rest-api-msdk
+Destino=target-parquet
+Stream=pokemon
+ProblemaInicial=offset_inicial_1_omitiu_bulbasaur
+ProblemaConfiguracao=offset_0_gravado_como_texto
+CorrecaoAplicada=pagination_initial_offset_inteiro_0
+PipelineResultado=APROVADO
+QuantidadeArquivosParquet=1
+TotalLinhasParquet=1351
+TotalNomesUnicos=1351
+TotalEsperadoAPI=1351
+TotalPrevistoTutorial=1350
+DiferencaTutorial=1
+BulbasaurPresente=SIM
+ResultadoValidacao=APROVADO
+HashesRegistrados=1
+CredencialNecessaria=NAO
+Resultado=APROVADO

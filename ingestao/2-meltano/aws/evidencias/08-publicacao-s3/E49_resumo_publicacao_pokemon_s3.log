@@ -1,0 +1,22 @@
+====================================================
+RESUMO DA ETAPA 11
+====================================================
+Data=2026-07-30T17:54:55+00:00
+Origem=/home/ec2-user/projeto_ingestao/output/pokemon
+Destino=s3://650379606721-ingestao-lab-20260729181445719900000002/meltano/pokemon
+ArquivosOrigem=1
+CleanS3ExitCode=0
+SyncS3ExitCode=0
+ListagemS3ExitCode=0
+ArquivosParquetS3=1
+TotalBytesS3=16185
+DownloadS3ExitCode=0
+HashesIguais=SIM
+TotalLinhasS3=1351
+TotalNomesUnicosS3=1351
+BulbasaurPresenteS3=SIM
+ContentValidationExitCode=0
+ResultadoConteudo=APROVADO
+TotalEsperadoAPI=1351
+TotalPrevistoTutorial=1350
+Resultado=APROVADO

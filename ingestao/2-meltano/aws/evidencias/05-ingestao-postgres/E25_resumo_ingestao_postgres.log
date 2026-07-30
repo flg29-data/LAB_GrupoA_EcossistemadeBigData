@@ -1,0 +1,22 @@
+====================================================
+RESUMO DA ETAPA 7
+====================================================
+Data=2026-07-30T15:48:37+00:00
+Projeto=/home/ec2-user/projeto_ingestao
+Origem=Amazon RDS PostgreSQL
+Extrator=tap-postgres
+Destino=target-parquet
+Stream=public-vendas
+DryRunLogPresente=SIM
+PipelineLogPresente=SIM
+ValidacaoLogPresente=SIM
+QuantidadeArquivosParquet=1
+TotalLinhasParquet=200
+TotalEsperado=200
+ResultadoValidacao=APROVADO
+HashLogPresente=SIM
+HashesRegistrados=1
+LogInternoMeltanoPresente=NAO
+LogInternoObrigatorio=NAO
+SenhaExibida=NAO
+Resultado=APROVADO

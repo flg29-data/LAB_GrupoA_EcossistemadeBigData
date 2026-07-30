@@ -1,0 +1,62 @@
+====================================================
+DIAGNOSTICO EC2 -> RDS
+====================================================
+
+1. INFORMACOES DO RDS
+{
+    "Identificador": "ingestao-postgres",
+    "Status": "available",
+    "Endpoint": "ingestao-postgres.csoa8fqdbrgu.us-east-1.rds.amazonaws.com",
+    "Porta": 5432,
+    "Banco": "ecommerce",
+    "Usuario": "ecommerce",
+    "VPC": "vpc-0eaa9957299798865",
+    "Publico": false,
+    "SecurityGroups": [
+        {
+            "VpcSecurityGroupId": "sg-0e83d9d4d823ed010",
+            "Status": "active"
+        }
+    ]
+}
+
+2. INFORMACOES DA EC2
+{
+    "Estado": "running",
+    "VPC": "vpc-0eaa9957299798865",
+    "Subnet": "subnet-00b1a472fc31437a1",
+    "IPPrivado": "172.31.35.18",
+    "SecurityGroups": [
+        {
+            "GroupId": "sg-0be8efd12443a2a59",
+            "GroupName": "ingestao-sg-20260729181445736800000003"
+        }
+    ]
+}
+
+3. RESOLUCAO DNS
+172.31.72.127   STREAM ingestao-postgres.csoa8fqdbrgu.us-east-1.rds.amazonaws.com
+172.31.72.127   DGRAM  
+172.31.72.127   RAW    
+
+4. REGRAS DE ENTRADA DO SECURITY GROUP DO RDS
+--------------------------------------------------------------------------------------------------------------------------
+|                                               DescribeSecurityGroupRules                                               |
++-----------------------+------+-------+-------+------------+-----------------------+------------------------------------+
+|  sgr-0dfe12fe7025c217f|  tcp |  22   |  22   |  0.0.0.0/0 |  None                 |  SSH                               |
+|  sgr-0fdc9c7673617bce0|  tcp |  5432 |  5432 |  None      |  sg-0e83d9d4d823ed010 |  Postgres interno (EC2 para RDS)   |
++-----------------------+------+-------+-------+------------+-----------------------+------------------------------------+
+
+5. TESTE TCP DIRETO
+6. RESUMO
+RDS_STATUS=available
+RDS_HOST=ingestao-postgres.csoa8fqdbrgu.us-east-1.rds.amazonaws.com
+RDS_PORT=5432
+RDS_VPC=vpc-0eaa9957299798865
+EC2_VPC=vpc-0eaa9957299798865
+RDS_SG=sg-0e83d9d4d823ed010
+EC2_SG=sg-0be8efd12443a2a59
+MESMA_VPC=SIM
+MESMO_SECURITY_GROUP=NAO
+TCP_5432=BLOQUEADO_OU_INDISPONIVEL
+tcp_exit_code=124

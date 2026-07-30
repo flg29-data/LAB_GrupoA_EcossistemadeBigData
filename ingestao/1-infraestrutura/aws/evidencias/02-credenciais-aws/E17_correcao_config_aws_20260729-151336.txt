@@ -1,0 +1,13 @@
+﻿CORREÇÃO DO ARQUIVO DE CONFIGURAÇÃO DA AWS CLI
+
+Data: 29/07/2026 15:13:36
+Arquivo: C:\Users\Breno Tostes Garcia\.aws\config
+Perfil: default
+Região: us-east-1
+Formato de saída: json
+Codificação: UTF-8 sem BOM
+Identidade AWS: VALIDADA
+Conta anonimizada: ********6721
+Código de saída STS: 0
+Credenciais exibidas: NÃO
+Resultado: APROVADO

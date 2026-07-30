@@ -1,0 +1,123 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729152933
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\06-acesso-ec2\E36_diagnostico_rede_console_20260729-152933.log
+
+====================================================
+1. SESSÃO AWS
+====================================================
+
+Sessão AWS: VALIDADA
+
+====================================================
+2. IDENTIFICAÇÃO DA EC2
+====================================================
+
+Instance ID: i-0db119c4f19fd868e
+IP anonimizado: 54.165.***.***
+Sub-rede: subnet-00b1a472fc31437a1
+
+====================================================
+3. NETWORK ACL DA SUB-REDE
+====================================================
+
+
+Direcao NumeroRegra Acao  Protocolo CIDR      PortaInicio PortaFim
+------- ----------- ----  --------- ----      ----------- --------
+ENTRADA         100 allow -1        0.0.0.0/0
+ENTRADA       32767 deny  -1        0.0.0.0/0
+SAÍDA           100 allow -1        0.0.0.0/0
+SAÍDA         32767 deny  -1        0.0.0.0/0
+
+
+
+NACL ID: acl-0e7b313a977423370
+NACL padrão: True
+Entrada TCP/22 permitida: True
+Saída para portas efêmeras permitida: True
+
+====================================================
+4. CONSOLE DA EC2 E CLOUD-INIT
+====================================================
+
+Não foi possível recuperar o console da EC2.
+{
+    "InstanceId": "i-0db119c4f19fd868e",
+    "Timestamp": "2026-07-29T18:29:50+00:00",
+System.Management.Automation.RemoteException
+aws: [ERROR]: 'charmap' codec can't encode character '\u2192' in position 20509: character maps to <undefined>
+    "Output":
+
+====================================================
+5. TESTES DA REDE LOCAL
+====================================================
+
+EC2 na porta 22: False
+GitHub na porta 22: True
+SSH do GitHub na porta 443: True
+
+====================================================
+6. CLIENTE SSH EM MODO DETALHADO
+====================================================
+
+ssh.exe : OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2
+No linha:370 caractere:19
++     $SSH_OUTPUT = & ssh `
++                   ~~~~~~~
+    + CategoryInfo          : NotSpecified: (OpenSSH_for_Win... LibreSSL 3.8.2:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+debug3: Failed to open file:C:/Users/Breno Tostes Garcia/.ssh/config error:2
+debug3: Failed to open file:C:/ProgramData/ssh/ssh_config error:2
+debug2: resolve_canonicalize: hostname 54.165.115.149 is address
+debug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> 'C:\\Users\\Breno Tostes Garcia/.ssh/known_hosts'
+debug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> 'C:\\Users\\Breno Tostes Garcia/.ssh/known_hosts2'
+debug3: ssh_connect_direct: entering
+debug1: Connecting to 54.165.115.149 [54.165.115.149] port 22.
+debug2: fd 3 setting O_NONBLOCK
+debug1: connect to address 54.165.115.149 port 22: Connection timed out
+ssh: connect to host 54.165.115.149 port 22: Connection timed out
+
+ssh_exit_code=255
+
+====================================================
+RESUMO DA ETAPA 7.4
+====================================================
+
+
+
+SessaoAWS                : VALIDADA
+NACLPadrao               : True
+NACLEntradaTCP22         : True
+NACLSaidaPortasEfemeras  : True
+ConsoleEC2Obtido         : False
+CloudInitFinalizado      : False
+ErroUserDataIdentificado : False
+TesteEC2Porta22          : False
+TesteGitHubPorta22       : True
+TesteGitHubPorta443      : True
+CodigoSaidaSSH           : 255
+CausaProvavel            : PORTA_22_INACESSIVEL_APENAS_NA_EC2
+Resultado                : REVISAR
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729153024
+**********************

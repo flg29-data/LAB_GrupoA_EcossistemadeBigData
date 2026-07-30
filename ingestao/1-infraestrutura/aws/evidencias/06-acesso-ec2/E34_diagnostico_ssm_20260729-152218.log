@@ -1,0 +1,106 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729152218
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\06-acesso-ec2\E34_diagnostico_ssm_20260729-152218.log
+
+====================================================
+1. IDENTIFICAÇÃO DA INSTÂNCIA
+====================================================
+
+Instance ID: i-0db119c4f19fd868e
+
+====================================================
+2. SESSÃO AWS
+====================================================
+
+Sessão AWS: VALIDADA
+
+====================================================
+3. REGISTRO NO SYSTEMS MANAGER
+====================================================
+
+PingStatus: Online
+Versão do SSM Agent: 3.3.4624.0
+Plataforma: Amazon Linux
+
+====================================================
+4. DIAGNÓSTICO INTERNO DA EC2
+====================================================
+
+Comando enviado ao SSM.
+Command ID: 068966db-761f-4ad6-a84b-1eb80fe5db1e
+Tentativa 1 - execução ainda não disponível.
+Tentativa 2 - execução ainda não disponível.
+Tentativa 3 - execução ainda não disponível.
+Tentativa 4 - execução ainda não disponível.
+Tentativa 5 - execução ainda não disponível.
+Tentativa 6 - execução ainda não disponível.
+Tentativa 7 - execução ainda não disponível.
+Tentativa 8 - execução ainda não disponível.
+Tentativa 9 - execução ainda não disponível.
+Tentativa 10 - execução ainda não disponível.
+Tentativa 11 - execução ainda não disponível.
+Tentativa 12 - execução ainda não disponível.
+Tentativa 13 - execução ainda não disponível.
+Tentativa 14 - execução ainda não disponível.
+Tentativa 15 - execução ainda não disponível.
+Tentativa 16 - execução ainda não disponível.
+Tentativa 17 - execução ainda não disponível.
+Tentativa 18 - execução ainda não disponível.
+Tentativa 19 - execução ainda não disponível.
+Tentativa 20 - execução ainda não disponível.
+Tentativa 21 - execução ainda não disponível.
+Tentativa 22 - execução ainda não disponível.
+Tentativa 23 - execução ainda não disponível.
+Tentativa 24 - execução ainda não disponível.
+Tentativa 25 - execução ainda não disponível.
+Tentativa 26 - execução ainda não disponível.
+Tentativa 27 - execução ainda não disponível.
+Tentativa 28 - execução ainda não disponível.
+Tentativa 29 - execução ainda não disponível.
+Tentativa 30 - execução ainda não disponível.
+
+Saída do diagnóstico:
+----------------------------------------------------
+
+
+====================================================
+RESUMO DA ETAPA 7.3
+====================================================
+
+
+
+InstanciaGerenciadaSSM : True
+PingStatusSSM          : Online
+VersaoSSMAgent         : 3.3.4624.0
+ComandoSSM             : NÃO EXECUTADO
+SSMAgentAtivo          : False
+SSHDAtivo              : False
+Porta22Escutando       : False
+UserData               : PENDENTE OU FALHOU
+ClientePSQL            : AUSENTE
+Docker                 : AUSENTE
+CausaProvavel          : COMANDO_SSM_NAO_CONCLUIDO
+Resultado              : REVISAR
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729152536
+**********************

@@ -1,0 +1,14 @@
+﻿
+
+TerraformApply     : APROVADO
+ApplyComplete      : True
+RecursosNoState    : 11
+EC2Estado          : running
+RDSEstado          : available
+S3Validado         : SIM
+AcessoPublicoS3    : BLOQUEADO
+OutputsRegistrados : True
+Resultado          : REVISAR
+
+
+

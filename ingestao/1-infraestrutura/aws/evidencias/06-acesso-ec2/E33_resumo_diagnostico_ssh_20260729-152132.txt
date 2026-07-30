@@ -1,0 +1,15 @@
+﻿
+
+SessaoAWS             : VALIDADA
+EC2Estado             : running
+EC2PossuiIPv4Publico  : True
+IPAtualIgualTfvars    : True
+RegraSSHExiste        : True
+IPAtualAutorizadoNoSG : True
+RotaInternetGateway   : True
+PortaTCP22            : False
+CausaProvavel         : AWS_CONFIGURADA_MAS_TCP_22_INACESSIVEL
+Resultado             : REVISAR
+
+
+

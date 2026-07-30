@@ -1,0 +1,18 @@
+﻿
+
+SessaoAWS                : VALIDADA
+NACLPadrao               : True
+NACLEntradaTCP22         : True
+NACLSaidaPortasEfemeras  : True
+ConsoleEC2Obtido         : False
+CloudInitFinalizado      : False
+ErroUserDataIdentificado : False
+TesteEC2Porta22          : False
+TesteGitHubPorta22       : False
+TesteGitHubPorta443      : True
+CodigoSaidaSSH           : 255
+CausaProvavel            : POSSIVEL_BLOQUEIO_LOCAL_OU_DO_PROVEDOR_NA_PORTA_22
+Resultado                : REVISAR
+
+
+

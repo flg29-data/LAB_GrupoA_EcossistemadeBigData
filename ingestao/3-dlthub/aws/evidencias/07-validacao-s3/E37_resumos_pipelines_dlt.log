@@ -1,0 +1,24 @@
+====================================================
+RESUMO DA PIPELINE POSTGRESQL
+====================================================
+PipelineExitCode=0
+ValidationExitCode=0
+TotalLinhasParquet=200
+TotalEsperado=200
+ResultadoValidacao=APROVADO
+Resultado=APROVADO
+
+====================================================
+RESUMO DA PIPELINE POKÉAPI
+====================================================
+APICountSnapshot=1351
+APIResultadosSnapshot=1351
+TotalLinhasParquet=1351
+TotalNomesUnicos=1351
+BulbasaurPresente=SIM
+RegistrosAusentes=0
+RegistrosExtras=0
+PipelineExitCode=0
+ValidationExitCode=0
+ResultadoValidacao=APROVADO
+Resultado=APROVADO

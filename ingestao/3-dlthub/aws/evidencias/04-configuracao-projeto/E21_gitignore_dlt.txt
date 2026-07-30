@@ -1,0 +1,24 @@
+# Credenciais e segredos
+.env
+*.env
+.dlt/secrets.toml
+secrets.toml
+
+# Estado local do dlt
+.dlt/pipelines/
+.dlt/.sources/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+
+# Dados locais
+output/
+downloads/

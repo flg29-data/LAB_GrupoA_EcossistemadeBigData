@@ -1,0 +1,11 @@
+﻿
+
+TerraformFmt      : APROVADO
+TerraformInit     : APROVADO
+TerraformValidate : APROVADO
+LockFileCriado    : True
+ProviderInstalado : True
+Resultado         : APROVADO
+
+
+

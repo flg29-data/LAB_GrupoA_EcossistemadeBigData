@@ -1,0 +1,11 @@
+﻿
+
+ArquivosCredenciais  : APROVADO
+RegiaoConfigurada    : us-east-1
+IdentidadeAWS        : VALIDADA
+DNS_STS              : APROVADO
+EvidenciaAnonimizada : True
+Resultado            : APROVADO
+
+
+

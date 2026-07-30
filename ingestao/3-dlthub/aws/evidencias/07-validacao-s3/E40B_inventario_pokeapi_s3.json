@@ -1,0 +1,27 @@
+[
+    {
+        "Key": "pokeapi/_dlt_loads/rest_api__1785438053.9629052.jsonl",
+        "Size": 186,
+        "LastModified": "2026-07-30T19:00:56+00:00"
+    },
+    {
+        "Key": "pokeapi/_dlt_pipeline_state/ingestao_pokeapi_dlt__1785438053.9629052__5f5f24f2d2f6d36586ba8529a3e1833c4baa8fc2d202828c51f0a29ccda320ef.jsonl",
+        "Size": 516,
+        "LastModified": "2026-07-30T19:00:56+00:00"
+    },
+    {
+        "Key": "pokeapi/_dlt_version/rest_api__1785438054.9271708__5f5f24f2d2f6d36586ba8529a3e1833c4baa8fc2d202828c51f0a29ccda320ef.jsonl",
+        "Size": 3581,
+        "LastModified": "2026-07-30T19:00:55+00:00"
+    },
+    {
+        "Key": "pokeapi/init",
+        "Size": 41,
+        "LastModified": "2026-07-30T19:00:55+00:00"
+    },
+    {
+        "Key": "pokeapi/pokemon/1785438053.9629052.cd4d0b0c69.parquet",
+        "Size": 47063,
+        "LastModified": "2026-07-30T19:00:56+00:00"
+    }
+]

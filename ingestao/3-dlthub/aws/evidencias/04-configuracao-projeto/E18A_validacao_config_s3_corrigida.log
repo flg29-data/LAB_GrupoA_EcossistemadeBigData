@@ -1,0 +1,12 @@
+======================================================================
+VALIDAÇÃO DA CONFIGURAÇÃO S3 CORRIGIDA — DLT
+======================================================================
+ConfigFile=/home/ec2-user/projeto_dlthub/.dlt/config.toml
+BucketURL=s3://650379606721-ingestao-lab-20260729181445719900000002
+CredentialsSectionPresent=NAO
+AWSRegion=us-east-1
+AWSDefaultRegion=us-east-1
+AWSCredentialMethod=iam-role
+AWSStaticCredentialsPresent=NAO
+S3HeadBucketHTTPStatus=200
+Resultado=APROVADO

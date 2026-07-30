@@ -1,0 +1,28 @@
+====================================================
+OBJETOS DO DATASET POSTGRES
+====================================================
+2026-07-30 18:55:24  199 Bytes postgres/_dlt_loads/ingestao_postgres_dlt__1785437722.2868414.jsonl
+2026-07-30 18:56:55  199 Bytes postgres/_dlt_loads/ingestao_postgres_dlt__1785437813.6685205.jsonl
+2026-07-30 18:55:24  505 Bytes postgres/_dlt_pipeline_state/ingestao_postgres_dlt__1785437722.2868414__9aac3aff1e16e84536e906e73208ff9fa20376c65bf4e1df96315ca9546f56d5.jsonl
+2026-07-30 18:55:23    4.1 KiB postgres/_dlt_version/ingestao_postgres_dlt__1785437722.7151227__9aac3aff1e16e84536e906e73208ff9fa20376c65bf4e1df96315ca9546f56d5.jsonl
+2026-07-30 18:55:23   41 Bytes postgres/init
+2026-07-30 18:56:55    9.0 KiB postgres/vendas/1785437813.6685205.944e366583.parquet
+
+Total Objects: 6
+   Total Size: 14.0 KiB
+
+postgres_list_exit_code=0
+
+====================================================
+OBJETOS DO DATASET POKÉAPI
+====================================================
+2026-07-30 19:00:56  186 Bytes pokeapi/_dlt_loads/rest_api__1785438053.9629052.jsonl
+2026-07-30 19:00:56  516 Bytes pokeapi/_dlt_pipeline_state/ingestao_pokeapi_dlt__1785438053.9629052__5f5f24f2d2f6d36586ba8529a3e1833c4baa8fc2d202828c51f0a29ccda320ef.jsonl
+2026-07-30 19:00:55    3.5 KiB pokeapi/_dlt_version/rest_api__1785438054.9271708__5f5f24f2d2f6d36586ba8529a3e1833c4baa8fc2d202828c51f0a29ccda320ef.jsonl
+2026-07-30 19:00:55   41 Bytes pokeapi/init
+2026-07-30 19:00:56   46.0 KiB pokeapi/pokemon/1785438053.9629052.cd4d0b0c69.parquet
+
+Total Objects: 5
+   Total Size: 50.2 KiB
+
+pokeapi_list_exit_code=0

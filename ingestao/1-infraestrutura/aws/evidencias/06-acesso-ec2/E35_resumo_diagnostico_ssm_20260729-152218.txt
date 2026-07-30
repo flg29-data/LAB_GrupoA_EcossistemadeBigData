@@ -1,0 +1,17 @@
+﻿
+
+InstanciaGerenciadaSSM : True
+PingStatusSSM          : Online
+VersaoSSMAgent         : 3.3.4624.0
+ComandoSSM             : NÃO EXECUTADO
+SSMAgentAtivo          : False
+SSHDAtivo              : False
+Porta22Escutando       : False
+UserData               : PENDENTE OU FALHOU
+ClientePSQL            : AUSENTE
+Docker                 : AUSENTE
+CausaProvavel          : COMANDO_SSM_NAO_CONCLUIDO
+Resultado              : REVISAR
+
+
+

@@ -1,0 +1,135 @@
+====================================================
+TUTORIAL 2 AWS - CONFIGURACAO POSTGRES E PARQUET
+====================================================
+Data=2026-07-30T15:37:31+00:00
+Projeto=/home/ec2-user/projeto_ingestao
+MeltanoVersion=meltano, version 4.2.1
+
+[2m2026-07-30T15:37:40.309623Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:37:40.311791Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-postgres' setting 'host' was set in `meltano.yml`: 'ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com'
+[2m2026-07-30T15:37:41.763074Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:37:41.765314Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-postgres' setting 'port' was set in `meltano.yml`: 5432
+[2m2026-07-30T15:37:43.260123Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:37:43.262332Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-postgres' setting 'user' was set in `meltano.yml`: 'ecommerce'
+[2m2026-07-30T15:37:44.727073Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:37:44.729510Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-postgres' setting 'database' was set in `meltano.yml`: 'ecommerce'
+host_exit_code=0
+port_exit_code=0
+user_exit_code=0
+database_exit_code=0
+[2m2026-07-30T15:38:14.975213Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:38:14.977700Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Extractor 'tap-postgres' setting 'password' was set in `.env`: (redacted)
+password_config_exit_code=0
+ quantidade_vendas 
+-------------------
+               200
+(1 row)
+
+psql_count_exit_code=0
+Senha removida da variavel temporaria.
+env_file_exit_code=0
+PermissoesEnv=600 ProprietarioEnv=ec2-user
+Conteudo seguro do .gitignore:
+.env
+.meltano/
+output/
+[2m2026-07-30T15:38:53.777751Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:38:53.780054Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Loader 'target-parquet' setting 'destination_path' was set in `meltano.yml`: 'output'
+parquet_config_exit_code=0
+
+CONFIGURACAO SEGURA DO TAP-POSTGRES
+[2m2026-07-30T15:38:59.553141Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:38:59.555276Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+{
+  "database": "ecommerce",
+  "dates_as_string": false,
+  "default_replication_method": "FULL_TABLE",
+  "host": "ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com",
+  "json_as_object": false,
+  "password": "*****",
+  "port": 5432,
+  "replication_idle_exit_seconds": 60,
+  "replication_max_run_seconds": 600,
+  "replication_slot_name": "tappostgres",
+  "ssh_tunnel": {
+    "enable": false,
+    "port": 22
+  },
+  "ssl_certificate_authority": "~/.postgresql/root.crl",
+  "ssl_client_certificate": "~/.postgresql/postgresql.crt",
+  "ssl_client_certificate_enable": false,
+  "ssl_client_private_key": "*****",
+  "ssl_enable": false,
+  "ssl_mode": "verify-full",
+  "ssl_storage_directory": ".secrets",
+  "user": "ecommerce"
+}
+
+CONFIGURACAO DO TARGET-PARQUET
+[2m2026-07-30T15:39:01.756041Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano config`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:39:01.763048Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+{
+  "compression_method": "gzip",
+  "destination_path": "output",
+  "load_method": "append-only",
+  "max_batch_size": 10000,
+  "max_flatten_level": 100,
+  "max_pyarrow_table_size": 800,
+  "validate_records": true
+}
+config_print_exit_code=0
+parquet_print_exit_code=0
+
+DESCOBERTA DAS TABELAS POSTGRESQL
+discover_exit_code=0
+public_vendas_encontrada_exit_code=0
+[2m2026-07-30T15:39:31.477898Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano select`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:39:31.479728Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+select_public_vendas_exit_code=0
+SELECAO ATUAL:
+[2m2026-07-30T15:39:32.860776Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mThe default environment 'dev' will be ignored for `meltano select`. To configure a specific environment, please use the option `--environment=<environment name>`.[0m
+[2m2026-07-30T15:39:32.862640Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+Legend:
+	selected
+	excluded
+	automatic
+	unsupported
+
+Enabled patterns:
+	public-vendas.*
+
+Selected properties:
+	[selected   ] public-vendas.cliente_id
+	[selected   ] public-vendas.data_venda
+	[selected   ] public-vendas.desconto
+	[selected   ] public-vendas.produto_id
+	[selected   ] public-vendas.quantidade
+	[selected   ] public-vendas.valor_unitario
+	[automatic  ] public-vendas.venda_id
+select_list_exit_code=0
+
+====================================================
+RESUMO DA ETAPA 6
+====================================================
+HostExitCode=0
+PortExitCode=0
+UserExitCode=0
+DatabaseExitCode=0
+PasswordConfigExitCode=0
+PsqlCountExitCode=0
+EnvFileExitCode=0
+ParquetConfigExitCode=0
+ConfigPrintExitCode=0
+ParquetPrintExitCode=0
+DiscoverExitCode=0
+PublicVendasEncontradaExitCode=0
+SelectPublicVendasExitCode=0
+SelectListExitCode=0
+SenhaExibida=NAO
+Resultado=APROVADO

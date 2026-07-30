@@ -1,0 +1,13 @@
+====================================================
+ESTRUTURA DO PROJETO DLT
+====================================================
+Data=2026-07-30T18:47:24+00:00
+Projeto=/home/ec2-user/projeto_dlthub
+
+.dlt/config.toml | 162 bytes
+.gitignore | 245 bytes
+config.env.example | 314 bytes
+
+ArquivoSecretoForaDoProjeto=SIM
+SecretPermission=600
+SegredosExibidos=NAO

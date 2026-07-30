@@ -1,0 +1,11 @@
+[2m2026-07-30T15:33:11.529706Z[0m [[33mwarning  [0m] [36mmeltano     [0m [1mA new version of Meltano is available (v4.2.2) and you are currently running v4.2.1. For more information, visit: https://docs.meltano.com/getting-started/installation.[0m
+[2m2026-07-30T15:33:11.982170Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mFetching plugin definition from Meltano Hub[0m
+Added extractor 'tap-postgres' to your project
+Variant:	meltanolabs (default)
+Repository:	https://github.com/MeltanoLabs/tap-postgres
+Documentation:	https://hub.meltano.com/extractors/tap-postgres--meltanolabs
+
+[2m2026-07-30T15:33:12.131181Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mInstalling extractor 'tap-postgres'[0m
+[2m2026-07-30T15:33:14.847564Z[0m [[32minfo     [0m] [36mmeltano     [0m [1mInstalled extractor 'tap-postgres'[0m
+
+To learn more about extractor 'tap-postgres', visit https://hub.meltano.com/extractors/tap-postgres--meltanolabs

@@ -1,0 +1,1 @@
+7741b9fca022076415e5cc4f90168a5d4881b717a7d79a8f696a77784994af5a  /home/ec2-user/projeto_dlthub/pipeline_postgres.py

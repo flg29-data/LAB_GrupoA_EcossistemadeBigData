@@ -1,0 +1,164 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260729151437
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 16692
+PSVersion: 5.1.26100.8894
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8894
+BuildVersion: 10.0.26100.8894
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\05-terraform-apply\E23_execucao_apply_20260729-151437.log
+
+====================================================
+1. VERIFICAÇÕES ANTES DO APPLY
+====================================================
+
+Plano encontrado:
+
+Name         Length LastWriteTime
+----         ------ -------------
+tfplan.local  10251 29/07/2026 15:14:19
+
+
+Sessão AWS válida.
+Conta anonimizada: ********6721
+Região: us-east-1
+
+====================================================
+2. TERRAFORM APPLY
+====================================================
+
+aws_security_group.ingestao: Creating...
+aws_db_subnet_group.ingestao: Creating...
+aws_s3_bucket.datalake: Creating...
+aws_db_subnet_group.ingestao: Creation complete after 2s [id=ingestao-db-subnet-20260729181445717100000001]
+aws_security_group.ingestao: Creation complete after 4s [id=sg-0be8efd12443a2a59]
+aws_db_instance.postgres: Creating...
+aws_s3_bucket.datalake: Creation complete after 4s [id=650379606721-ingestao-lab-20260729181445719900000002]
+aws_s3_bucket_public_access_block.datalake: Creating...
+aws_s3_bucket_public_access_block.datalake: Creation complete after 1s [id=650379606721-ingestao-lab-20260729181445719900000002]
+aws_instance.runner: Creating...
+aws_db_instance.postgres: Still creating... [00m10s elapsed]
+aws_instance.runner: Still creating... [00m10s elapsed]
+aws_instance.runner: Creation complete after 14s [id=i-0db119c4f19fd868e]
+aws_db_instance.postgres: Still creating... [00m20s elapsed]
+aws_db_instance.postgres: Still creating... [00m30s elapsed]
+aws_db_instance.postgres: Still creating... [00m40s elapsed]
+aws_db_instance.postgres: Still creating... [00m50s elapsed]
+aws_db_instance.postgres: Still creating... [01m00s elapsed]
+aws_db_instance.postgres: Still creating... [01m10s elapsed]
+aws_db_instance.postgres: Still creating... [01m20s elapsed]
+aws_db_instance.postgres: Still creating... [01m30s elapsed]
+aws_db_instance.postgres: Still creating... [01m40s elapsed]
+aws_db_instance.postgres: Still creating... [01m50s elapsed]
+aws_db_instance.postgres: Still creating... [02m00s elapsed]
+aws_db_instance.postgres: Still creating... [02m10s elapsed]
+aws_db_instance.postgres: Still creating... [02m20s elapsed]
+aws_db_instance.postgres: Still creating... [02m30s elapsed]
+aws_db_instance.postgres: Still creating... [02m40s elapsed]
+aws_db_instance.postgres: Still creating... [02m50s elapsed]
+aws_db_instance.postgres: Still creating... [03m00s elapsed]
+aws_db_instance.postgres: Still creating... [03m10s elapsed]
+aws_db_instance.postgres: Still creating... [03m20s elapsed]
+aws_db_instance.postgres: Still creating... [03m30s elapsed]
+aws_db_instance.postgres: Still creating... [03m40s elapsed]
+aws_db_instance.postgres: Still creating... [03m50s elapsed]
+aws_db_instance.postgres: Still creating... [04m00s elapsed]
+aws_db_instance.postgres: Still creating... [04m10s elapsed]
+aws_db_instance.postgres: Still creating... [04m20s elapsed]
+aws_db_instance.postgres: Still creating... [04m30s elapsed]
+aws_db_instance.postgres: Still creating... [04m40s elapsed]
+aws_db_instance.postgres: Still creating... [04m50s elapsed]
+aws_db_instance.postgres: Still creating... [05m00s elapsed]
+aws_db_instance.postgres: Creation complete after 5m9s [id=db-TBPIPWYPKF3L6MXVSWNJE3JTXM]
+
+Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+account_id = "650379606721"
+aws_region = "us-east-1"
+db_name = "ecommerce"
+db_username = "ecommerce"
+ec2_instance_id = "i-0db119c4f19fd868e"
+ec2_public_ip = "54.165.115.149"
+rds_endpoint = "ingestao-postgres-20260729181449897700000004.csoa8fqdbrgu.us-east-1.rds.amazonaws.com"
+rds_port = 5432
+s3_bucket = "650379606721-ingestao-lab-20260729181445719900000002"
+ssh_command = "ssh -i $HOME/.ssh/labsuser.pem ec2-user@54.165.115.149"
+
+apply_exit_code=0
+
+====================================================
+3. RECURSOS NO ESTADO DO TERRAFORM
+====================================================
+
+data.aws_ami.amazon_linux_2023
+data.aws_caller_identity.current
+data.aws_subnets.default
+data.aws_subnets.ec2
+data.aws_vpc.default
+aws_db_instance.postgres
+aws_db_subnet_group.ingestao
+aws_instance.runner
+aws_s3_bucket.datalake
+aws_s3_bucket_public_access_block.datalake
+aws_security_group.ingestao
+
+Quantidade no state: 11
+
+Outputs obtidos.
+EC2 Instance ID: i-0db119c4f19fd868e
+IP público anonimizado: 54.165.***.***
+RDS: ingestao-postgres-20260729181449897700000004
+S3 anonimizado: ************-ingestao-lab-20260729181445719900000002
+Senha exibida: NÃO
+
+====================================================
+4. VALIDAÇÃO DIRETA NA AWS
+====================================================
+
+EC2 estado: running
+EC2 verificações: running	ok	ok
+RDS estado: available
+S3 head-bucket exit_code=0
+Bloqueio público S3: True	True	True	True
+
+====================================================
+RESUMO DA ETAPA 6
+====================================================
+
+
+
+TerraformApply     : APROVADO
+ApplyComplete      : True
+RecursosNoState    : 11
+EC2Estado          : running
+RDSEstado          : available
+S3Validado         : SIM
+AcessoPublicoS3    : BLOQUEADO
+OutputsRegistrados : True
+Resultado          : REVISAR
+
+
+
+
+Evidências geradas:
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\05-terraform-apply\E24_terraform_apply_20260729-151437.log
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\05-terraform-apply\E25_terraform_state_list_20260729-151437.txt
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\05-terraform-apply\E26_outputs_anonimizados_20260729-151437.txt
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\05-terraform-apply\E27_validacao_recursos_aws_20260729-151437.txt
+D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\evidencias\05-terraform-apply\E28_resumo_apply_20260729-151437.txt
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260729152016
+**********************

@@ -1,0 +1,19 @@
+====================================================
+RESUMO DA ETAPA 8
+====================================================
+Data=2026-07-30T15:53:34+00:00
+Origem=/home/ec2-user/projeto_ingestao/output/public-vendas
+Destino=s3://650379606721-ingestao-lab-20260729181445719900000002/meltano/vendas
+ArquivosOrigem=1
+CleanS3ExitCode=0
+SyncS3ExitCode=0
+ListagemS3ExitCode=0
+ArquivosParquetS3=1
+TotalBytesS3=4785
+DownloadS3ExitCode=0
+HashesIguais=SIM
+TotalLinhasS3=200
+ContentValidationExitCode=0
+ResultadoConteudo=APROVADO
+TotalEsperado=200
+Resultado=APROVADO

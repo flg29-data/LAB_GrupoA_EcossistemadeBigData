@@ -1,0 +1,23 @@
+======================================================================
+PIPELINE POKÉAPI → S3 — DLT
+======================================================================
+Origem=https://pokeapi.co/api/v2/pokemon
+Recurso=pokemon
+Paginacao=offset
+OffsetInicial=0
+LimitePorPagina=100
+TotalPath=count
+MaximumOffset=NAO_APLICADO
+Destino=filesystem/S3
+Dataset=pokeapi
+Formato=parquet
+CredencialAPI=NAO_NECESSARIA
+
+Pipeline ingestao_pokeapi_dlt load step completed in 0.52 seconds
+1 load package(s) were loaded to destination filesystem and into dataset pokeapi
+The filesystem destination used s3://650379606721-ingestao-lab-20260729181445719900000002 location to store data
+Load package 1785438053.9629052 is LOADED and contains no failed jobs
+
+PipelineName=ingestao_pokeapi_dlt
+DatasetName=pokeapi
+Resultado=EXECUCAO_CONCLUIDA

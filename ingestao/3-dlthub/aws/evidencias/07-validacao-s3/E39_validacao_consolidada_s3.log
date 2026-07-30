@@ -1,0 +1,33 @@
+========================================================================
+VALIDAÇÃO CONSOLIDADA — TUTORIAL 3 DLT
+========================================================================
+Bucket=650379606721-ingestao-lab-20260729181445719900000002
+
+----------------------------------------------------
+POSTGRESQL
+----------------------------------------------------
+PostgresArquivosParquet=1
+Arquivo=650379606721-ingestao-lab-20260729181445719900000002/postgres/vendas/1785437813.6685205.944e366583.parquet | Linhas=200 | TamanhoBytes=9184
+PostgresTotalLinhas=200
+PostgresColunas=venda_id,cliente_id,produto_id,data_venda,quantidade,valor_unitario,desconto,_dlt_load_id,_dlt_id
+PostgresTotalEsperado=200
+PostgresResultado=APROVADO
+
+----------------------------------------------------
+POKÉAPI
+----------------------------------------------------
+PokeAPIArquivosParquet=1
+Arquivo=650379606721-ingestao-lab-20260729181445719900000002/pokeapi/pokemon/1785438053.9629052.cd4d0b0c69.parquet | Linhas=1351 | TamanhoBytes=47063
+PokeAPIResultadosSnapshot=1351
+PokeAPITotalLinhas=1351
+PokeAPINomesUnicos=1351
+PokeAPIColunas=name,url,_dlt_load_id,_dlt_id
+PokeAPIBulbasaurPresente=SIM
+PokeAPIRegistrosAusentes=0
+PokeAPIRegistrosExtras=0
+PokeAPIResultado=APROVADO
+
+----------------------------------------------------
+RESULTADO FINAL
+----------------------------------------------------
+Resultado=APROVADO

@@ -1,0 +1,237 @@
+﻿**********************
+Início da transcrição do Windows PowerShell
+Hora de início: 20260730150744
+Nome de Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Executar como Usuário: LAPTOP-ACPKG3QM\Breno Tostes Garcia
+Nome da Configuração: 
+Computador: LAPTOP-ACPKG3QM (Microsoft Windows NT 10.0.26200.0)
+Aplicativo Host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+ID do Processo: 8944
+PSVersion: 5.1.26100.8972
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8972
+BuildVersion: 10.0.26100.8972
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcrição iniciada, o arquivo de saída é D:\GitHub\LAB_GrupoA_EcossistemadeBigData\ingestao\3-dlthub\aws\evidencias\00-preparacao\E00_diagnostico_inicial_dlt_20260730-150744.log
+
+====================================================
+1. SESSAO AWS
+====================================================
+--------------------------------------------------------------------------------------------------------
+|                                           GetCallerIdentity                                          |
++---------+--------------------------------------------------------------------------------------------+
+|  Account|  650379606721                                                                              |
+|  Arn    |  arn:aws:sts::650379606721:assumed-role/voclabs/user5098101=Breno_Tostes_de_Gomes_Garcia   |
+|  UserId |  AROAZO3NFHLAYRHUFHW2D:user5098101=Breno_Tostes_de_Gomes_Garcia                            |
++---------+--------------------------------------------------------------------------------------------+
+sts_exit_code=0
+
+====================================================
+2. VALIDACAO DO TERRAFORM
+====================================================
+Success! The configuration is valid.
+terraform_validate_exit_code=0
+
+====================================================
+3. PLANO TERRAFORM
+====================================================
+data.aws_ami.amazon_linux_2023: Reading...
+data.aws_caller_identity.current: Reading...
+data.aws_vpc.default: Reading...
+data.aws_ec2_managed_prefix_list.ec2_instance_connect: Reading...
+data.aws_caller_identity.current: Read complete after 1s [id=650379606721]
+aws_s3_bucket.datalake: Refreshing state... [id=650379606721-ingestao-lab-20260729181445719900000002]
+aws_s3_bucket_public_access_block.datalake: Refreshing state... [id=650379606721-ingestao-lab-20260729181445719900000002]
+
+Note: Objects have changed outside of Terraform
+
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+
+  # aws_s3_bucket.datalake has been deleted
+  - resource "aws_s3_bucket" "datalake" {
+      - bucket                      = "650379606721-ingestao-lab-20260729181445719900000002" -> null
+        id                          = "650379606721-ingestao-lab-20260729181445719900000002"
+        tags                        = {
+            "Environment" = "AWS Academy Learner Lab"
+            "ManagedBy"   = "Terraform"
+            "Name"        = "ingestao-lab-datalake"
+            "Project"     = "ingestao-lab"
+        }
+        # (12 unchanged attributes hidden)
+
+        # (3 unchanged blocks hidden)
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform planned the following actions, but then encountered a problem:
+
+  # aws_s3_bucket.datalake will be created
+  + resource "aws_s3_bucket" "datalake" {
+      + acceleration_status         = (known after apply)
+      + acl                         = (known after apply)
+      + arn                         = (known after apply)
+      + bucket                      = (known after apply)
+      + bucket_domain_name          = (known after apply)
+      + bucket_prefix               = "650379606721-ingestao-lab-"
+      + bucket_regional_domain_name = (known after apply)
+      + force_destroy               = true
+      + hosted_zone_id              = (known after apply)
+      + id                          = (known after apply)
+      + object_lock_enabled         = (known after apply)
+      + policy                      = (known after apply)
+      + region                      = (known after apply)
+      + request_payer               = (known after apply)
+      + tags                        = {
+          + "Environment" = "AWS Academy Learner Lab"
+          + "ManagedBy"   = "Terraform"
+          + "Name"        = "ingestao-lab-datalake"
+          + "Project"     = "ingestao-lab"
+        }
+      + tags_all                    = {
+          + "Environment" = "AWS Academy Learner Lab"
+          + "ManagedBy"   = "Terraform"
+          + "Name"        = "ingestao-lab-datalake"
+          + "Project"     = "ingestao-lab"
+        }
+      + website_domain              = (known after apply)
+      + website_endpoint            = (known after apply)
+
+      + cors_rule (known after apply)
+
+      + grant (known after apply)
+
+      + lifecycle_rule (known after apply)
+
+      + logging (known after apply)
+
+      + object_lock_configuration (known after apply)
+
+      + replication_configuration (known after apply)
+
+      + server_side_encryption_configuration (known after apply)
+
+      + versioning (known after apply)
+
+      + website (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  ~ s3_bucket   = "650379606721-ingestao-lab-20260729181445719900000002" -> (known after apply)
+terraform :
+No linha:68 caractere:5
++     terraform plan `
++     ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+Error: reading EC2 Managed Prefix List: operation error EC2: DescribeManagedPrefixLists, https response error StatusCode: 403, RequestID: 0226ed73-0747-4141-ad8d-415be62db7b5, api error UnauthorizedOperation:
+You are not authorized to perform this operation. User: arn:aws:sts::650379606721:assumed-role/voclabs/user5098101=Breno_Tostes_de_Gomes_Garcia is not authorized to perform: ec2:DescribeManagedPrefixLists with
+an explicit deny in an identity-based policy: arn:aws:iam::650379606721:policy/voc-cancel-cred
+
+  with data.aws_ec2_managed_prefix_list.ec2_instance_connect,
+  on main.tf line 1, in data "aws_ec2_managed_prefix_list" "ec2_instance_connect":
+   1: data "aws_ec2_managed_prefix_list" "ec2_instance_connect" {
+
+
+Error: reading EC2 VPC: operation error EC2: DescribeVpcs, https response error StatusCode: 403, RequestID: a165bca2-a97d-4bbd-8924-0c99232efe23, api error UnauthorizedOperation: You are not authorized to
+perform this operation. User: arn:aws:sts::650379606721:assumed-role/voclabs/user5098101=Breno_Tostes_de_Gomes_Garcia is not authorized to perform: ec2:DescribeVpcs with an explicit deny in an identity-based
+policy: arn:aws:iam::650379606721:policy/voc-cancel-cred
+
+  with data.aws_vpc.default,
+  on main.tf line 7, in data "aws_vpc" "default":
+   7: data "aws_vpc" "default" {
+
+
+Error: reading EC2 AMIs: operation error EC2: DescribeImages, https response error StatusCode: 403, RequestID: bfe3aa99-6290-4615-84ee-fa4dedd35698, api error UnauthorizedOperation: You are not authorized to
+perform this operation. User: arn:aws:sts::650379606721:assumed-role/voclabs/user5098101=Breno_Tostes_de_Gomes_Garcia is not authorized to perform: ec2:DescribeImages with an explicit deny in an identity-based
+policy: arn:aws:iam::650379606721:policy/voc-cancel-cred
+
+  with data.aws_ami.amazon_linux_2023,
+  on main.tf line 30, in data "aws_ami" "amazon_linux_2023":
+  30: data "aws_ami" "amazon_linux_2023" {
+
+
+Error: reading S3 Bucket Public Access Block (650379606721-ingestao-lab-20260729181445719900000002): operation error S3: GetPublicAccessBlock, https response error StatusCode: 403, RequestID: P69WSMA6G9V2TBFD,
+HostID: uq4Gz0+Ir3u2+KC57hrbgyDVWPTjsUZ4M78eCtMFDJa1iMInwRn0A+1lTwgzRlKersExKAOlzjBGvBdMJxRN3nQjgweeUzTp, api error AccessDenied: User:
+arn:aws:sts::650379606721:assumed-role/voclabs/user5098101=Breno_Tostes_de_Gomes_Garcia is not authorized to perform: s3:GetBucketPublicAccessBlock on resource:
+"arn:aws:s3:::650379606721-ingestao-lab-20260729181445719900000002" with an explicit deny in an identity-based policy: arn:aws:iam::650379606721:policy/voc-cancel-cred
+
+  with aws_s3_bucket_public_access_block.datalake,
+  on main.tf line 75, in resource "aws_s3_bucket_public_access_block" "datalake":
+  75: resource "aws_s3_bucket_public_access_block" "datalake" {
+
+terraform_plan_exit_code=1
+
+====================================================
+4. EC2
+====================================================
+EC2Id=i-0db119c4f19fd868e
+EC2Status=
+EC2PrivateIp=
+EC2SecurityGroup=
+ec2_exit_code=254
+
+====================================================
+5. RDS
+====================================================
+RDSId=ingestao-postgres-20260729181449897700000004
+RDSStatus=
+RDSEndpoint=
+RDSDatabase=
+RDSUser=
+rds_exit_code=254
+
+====================================================
+6. BUCKET S3
+====================================================
+
+aws: [ERROR]: An error occurred (403) when calling the HeadBucket operation: Forbidden
+S3Bucket=650379606721-ingestao-lab-20260729181445719900000002
+s3_exit_code=254
+
+====================================================
+RESUMO DA ETAPA 0 - DLT
+====================================================
+
+
+
+SessaoAWS         : VALIDADA
+TerraformValidate : APROVADO
+TerraformSemDrift : ERRO
+EC2Id             : i-0db119c4f19fd868e
+EC2Estado         :
+EC2IpPrivado      :
+EC2SecurityGroup  :
+RDSId             : ingestao-postgres-20260729181449897700000004
+RDSEstado         :
+RDSEndpoint       :
+RDSBanco          :
+RDSUsuario        :
+S3Bucket          : 650379606721-ingestao-lab-20260729181445719900000002
+S3Acessivel       : False
+SegredosExibidos  : NAO
+Resultado         : REVISAR
+
+
+
+**********************
+Fim da transcrição do Windows PowerShell
+Hora de término: 20260730150817
+**********************

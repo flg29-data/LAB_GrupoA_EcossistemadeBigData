@@ -1,0 +1,20 @@
+﻿OUTPUTS DA INFRAESTRUTURA - VERSÃO ANONIMIZADA
+
+Data: 29/07/2026 15:20:07
+Região: us-east-1
+Conta: ********6721
+
+EC2
+Instance ID: i-0db119c4f19fd868e
+IP público anonimizado: 54.165.***.***
+
+RDS POSTGRESQL
+Identificador: ingestao-postgres-20260729181449897700000004
+Endpoint anonimizado: ingestao-postgres-20260729181449897700000004.***.us-east-1.rds.amazonaws.com
+Porta: 5432
+Banco: ecommerce
+Usuário: ecommerce
+Senha exibida: NÃO
+
+S3
+Bucket anonimizado: ************-ingestao-lab-20260729181445719900000002
